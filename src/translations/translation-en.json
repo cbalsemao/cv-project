@@ -22,7 +22,7 @@
       },
       {
         "name": "English",
-        "level": "Fluent"
+        "level": "Intermediate"
       },
       {
         "name": "Italian",
@@ -84,7 +84,7 @@
       },
       {
         "role": "QA Tester",
-        "company": "Tensai (internship)",
+        "company": "Tensai - Internship",
         "date": "August 2021- December 2021",
         "description": [
           "Developed and executed functional test cases for mobile and web apps, performing detailed testing to ensure high quality and optimal user experience.",
@@ -102,11 +102,7 @@
         "school": "UdelaR (FING) - CETP",
         "date": "2022"
       },
-      {
-        "degree": "BS - Chemistry",
-        "school": "UdelaR - chemistry Faculty",
-        "date": "2016"
-      },
+
       {
         "degree": "BS - Psychology",
         "school": "UdelaR - Psychology Faculty",

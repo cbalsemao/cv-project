@@ -33,8 +33,9 @@ const ExperiencesSection = () => {
             <ul>
               {experience.projects.map((project, projIndex) => (
                 <li key={projIndex}>
-                  <h4>{project.name}</h4>
-                  <h5>{project.date}</h5>
+                  <h4>
+                    {project.name} {project.date}
+                  </h4>
                   <ul>
                     {project.description.map((desc, descIndex) => (
                       <li key={descIndex}>{desc}</li>
