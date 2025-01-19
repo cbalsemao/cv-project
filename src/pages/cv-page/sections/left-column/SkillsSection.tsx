@@ -1,27 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import Section from '../../../../components/Section';
 
-const SKILL_LIST = [
-  'React',
-  'Typescript',
-  'Zustand',
-  'Graphql',
-  'Redux',
-  'HTML/CSS',
-  'Git/SVN',
-  'Java Spring',
-  'Hibernate',
-  'Rest/Soap',
-  'Mysql/Mongo',
-  'NodeJs',
-  'Express/Nest',
-  'ELK',
-  'Redis',
-  'Docker',
-  'Kubernetes',
-  'Jenkins',
-  'Openshift',
-];
+const SKILL_LIST = ['React', 'Redux', 'TypeScript', 'CSS/HTML'];
 
 const SkillsSection = () => {
   const { t } = useTranslation();
