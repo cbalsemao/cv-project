@@ -32,7 +32,10 @@
   },
 
   "contact": {
-    "title": "Contact"
+    "title": "Contact",
+    "location": "Milan, Italy",
+    "email": "cbalsemaod@gmail.com",
+    "phone": "+39 351 480 5611"
   },
 
   "experience": {
