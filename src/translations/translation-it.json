@@ -1,0 +1,31 @@
+{
+  "avatar": {
+    "fullName": "Lucas Fernandez",
+    "role": "FullStack Developer"
+  },
+
+  "profile": {
+    "title": "Profilo",
+    "description": "Sono un FullStack Developer con 3 anni di esperienza. Mi piace lavorare con React, Node.js e MongoDB."
+  },
+
+  "skills": {
+    "title": "Competenze"
+  },
+
+  "languages": {
+    "title": "Lingue"
+  },
+
+  "contact": {
+    "title": "Contatti"
+  },
+
+  "experience": {
+    "title": "Esperienze Lavorative"
+  },
+
+  "education": {
+    "title": "Educazione"
+  }
+}
