@@ -95,6 +95,23 @@
   },
 
   "education": {
-    "title": "Education"
+    "title": "Education",
+    "info": [
+      {
+        "degree": "BS - Computer Science",
+        "school": "UdelaR (FING) - CETP",
+        "date": "2022"
+      },
+      {
+        "degree": "BS - Chemistry",
+        "school": "UdelaR - chemistry Faculty",
+        "date": "2016"
+      },
+      {
+        "degree": "BS - Psychology",
+        "school": "UdelaR - Psychology Faculty",
+        "date": "2014"
+      }
+    ]
   }
 }
