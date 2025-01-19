@@ -1,31 +1,45 @@
 {
   "avatar": {
     "fullName": "Camila Balsemao",
-    "role": "FullStack Developer"
+    "role": "Frontend Developer"
   },
 
   "profile": {
-    "title": "Profilo",
-    "description": "Sono un FullStack Developer con 3 anni di esperienza. Mi piace lavorare con React, Node.js e MongoDB."
+    "title": "Profile",
+    "description": "I am a frontend developer with a strong foundation in software testing, which has honed my attention to detail and commitment to delivering high-quality applications. My expertise lies in building dynamic, user-friendly interfaces with React, focusing on functionality, performance, and seamless user experiences. I approach challenges with curiosity and a practical mindset, collaborating effectively with teams to develop solutions that improve both user satisfaction and application performance."
   },
 
   "skills": {
-    "title": "Competenze"
+    "title": "Skills"
   },
 
   "languages": {
-    "title": "Lingue"
+    "title": "Languages",
+    "info": [
+      {
+        "name": "Spanish",
+        "level": "Native"
+      },
+      {
+        "name": "English",
+        "level": "Fluent"
+      },
+      {
+        "name": "Italian",
+        "level": "Basic"
+      }
+    ]
   },
 
   "contact": {
-    "title": "Contatti"
+    "title": "Contact"
   },
 
   "experience": {
-    "title": "Esperienze Lavorative"
+    "title": "Work Experience"
   },
 
   "education": {
-    "title": "Educazione"
+    "title": "Education"
   }
 }
