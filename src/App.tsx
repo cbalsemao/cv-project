@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router';
 import CvPage from './pages/cv-page/CvPage';
-import LandPage from './pages/LandPage';
+import LandPage from './pages/landing-page/LandPage';
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import esTranslation from './translations/translation-es.json';
