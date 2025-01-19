@@ -23,6 +23,7 @@ const AboutMeSection = () => {
           </p>
         </Grid>
         <Grid>
+          <h2>Skills</h2>
           <ul>
             <li>React</li>
             <li>Typescript</li>
