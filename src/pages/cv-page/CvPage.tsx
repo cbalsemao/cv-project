@@ -50,10 +50,10 @@ const CvPage = () => {
           <ContactSection />
           <SkillsSection />
           <LanguagesSection />
+          <EducationSection />
         </LeftColumn>
         <RightColumn size={6} direction="column">
           <ExperiencesSection />
-          <EducationSection />
         </RightColumn>
       </Grid>
     </PageWrapper>

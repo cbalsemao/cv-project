@@ -15,7 +15,7 @@ const EducationSection = () => {
   }) as Education[];
 
   return (
-    <Section title={t('education.title')} side={'right'}>
+    <Section title={t('education.title')}>
       <div>
         {educationInfo.map((edu, index) => (
           <div key={index}>

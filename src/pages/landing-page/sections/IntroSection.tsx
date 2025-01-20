@@ -11,9 +11,11 @@ const IntroSection = () => {
       sx={{
         justifyContent: 'center',
         alignItems: 'center',
-        height: '100vh',
         flexDirection: 'column',
-        backgroundColor: 'pink',
+        backgroundColor: 'black',
+        color: 'white',
+        height: '100%',
+        width: '100%',
       }}
     >
       <h1>Hello, I'm Camila</h1>
