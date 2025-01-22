@@ -1,60 +1,81 @@
-import { Button, Typography } from '@mui/material';
+import { Box, Button, styled, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
-import { ReactNode, RefObject, useLayoutEffect, useRef } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { useNavigate } from 'react-router-dom';
+import { TextSplitter } from '../../../utils/utils';
 
 const ButtonOpenCV = () => {
   const navigate = useNavigate();
+  const [hover, setHover] = useState(false);
 
   return (
     <Button
       variant="contained"
       onClick={() => navigate('/cv')}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
       sx={{
         mt: 4,
         backgroundColor: 'white',
         fontWeight: 'bold',
         color: 'black',
+        fontSize: '1.2rem',
+        borderRadius: '20px',
+        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+        width: '120px',
         '&:hover': {
           backgroundColor: 'gray',
         },
-        fontSize: '1.2rem',
-        padding: '10px 20px',
-        borderRadius: '20px',
-        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
       }}
     >
-      Open CV
+      {hover ? 'open' : 'resume'}
     </Button>
   );
 };
 
-const IntroTextContainer = ({
-  children,
-  sectionRef,
-}: {
-  children: ReactNode;
-  sectionRef: RefObject<HTMLDivElement>;
-}) => {
-  return (
-    <Grid
-      container
-      ref={sectionRef}
-      sx={{
-        backgroundColor: 'black',
-        justifyContent: 'center',
-        alignItems: 'center',
-        flexDirection: 'column',
-        color: 'white',
-        height: '100vh',
-        width: '100%',
-      }}
-    >
-      {children}
-    </Grid>
-  );
-};
+const IntroTextContainer = styled(Grid)({
+  backgroundColor: 'black',
+  justifyContent: 'center',
+  alignItems: 'center',
+  flexDirection: 'column',
+  color: 'white',
+  height: '100vh',
+  width: '100%',
+});
+
+const IntroNameTextTypography = styled(Typography)(({ theme }) => ({
+  fontWeight: 'bold',
+  fontSize: theme.breakpoints.values.xs ? '2rem' : 'inherit',
+  [theme.breakpoints.up('xs')]: {
+    fontSize: '2rem',
+  },
+  [theme.breakpoints.up('sm')]: {
+    fontSize: '3rem',
+  },
+  [theme.breakpoints.up('md')]: {
+    fontSize: '4rem',
+  },
+  [theme.breakpoints.up('lg')]: {
+    fontSize: '5rem',
+  },
+}));
+
+const IntroGreetingTextTypography = styled(Typography)(({ theme }) => ({
+  fontSize: theme.breakpoints.values.xs ? '2rem' : 'inherit',
+  [theme.breakpoints.up('xs')]: {
+    fontSize: '2rem',
+  },
+  [theme.breakpoints.up('sm')]: {
+    fontSize: '3rem',
+  },
+  [theme.breakpoints.up('md')]: {
+    fontSize: '4rem',
+  },
+  [theme.breakpoints.up('lg')]: {
+    fontSize: '5rem',
+  },
+}));
 
 const IntroSection = () => {
   const textRef = useRef<HTMLDivElement>(null);
@@ -66,7 +87,9 @@ const IntroSection = () => {
         const [entry] = entries;
         if (entry.isIntersecting && textRef.current) {
           // Trigger animation when the section is in view
-          const letters = textRef.current.querySelectorAll('.char');
+          const letters = textRef.current.querySelectorAll(
+            '.section__title__char'
+          );
           gsap.fromTo(
             letters,
             {
@@ -82,7 +105,7 @@ const IntroSection = () => {
           );
         }
       },
-      { threshold: 0.5 } // Animation starts when 50% of the section is visible
+      { threshold: 1 } // Animation starts when 50% of the section is visible
     );
 
     if (sectionRef.current) {
@@ -97,45 +120,16 @@ const IntroSection = () => {
   }, []);
 
   return (
-    <IntroTextContainer sectionRef={sectionRef}>
-      <div ref={textRef}>
-        <Typography
-          variant="h1"
-          sx={{
-            fontWeight: 'bold',
-            fontSize: {
-              xs: '2rem',
-              sm: '3rem',
-              md: '4rem',
-              lg: '5rem',
-            },
-          }}
-        >
-          {'Hi, I am Camila'.split('').map((char, index) => (
-            <span key={index} className="char">
-              {char === ' ' ? '\u00A0' : char}
-            </span>
-          ))}
-        </Typography>
-        <Typography
-          variant="h1"
-          sx={{
-            fontSize: {
-              xs: '2rem',
-              sm: '3rem',
-              md: '4rem',
-              lg: '5rem',
-            },
-          }}
-        >
-          {'Welcome to my portfolio!'.split('').map((char, index) => (
-            <span key={index} className="char">
-              {char === ' ' ? '\u00A0' : char}
-            </span>
-          ))}
-        </Typography>
+    <IntroTextContainer ref={sectionRef} container>
+      <Box ref={textRef}>
+        <IntroNameTextTypography>
+          <TextSplitter text="Hi, I'm Camila." />
+        </IntroNameTextTypography>
+        <IntroGreetingTextTypography>
+          <TextSplitter text="Welcome to my portfolio!" />
+        </IntroGreetingTextTypography>
         <ButtonOpenCV />
-      </div>
+      </Box>
     </IntroTextContainer>
   );
 };
