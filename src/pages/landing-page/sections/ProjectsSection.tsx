@@ -5,7 +5,7 @@ const ProjectsSection = () => {
     <Grid
       container
       sx={{
-        backgroundColor: 'lightgreen',
+        // backgroundColor: 'lightgreen',
         flexDirection: 'row',
         display: 'flex',
         justifyContent: 'space-around',

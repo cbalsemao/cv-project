@@ -5,13 +5,11 @@ const AboutMeSection = () => {
     <Grid
       container
       sx={{
-        backgroundColor: 'lightblue',
         flexDirection: 'row',
         display: 'flex',
-        justifyContent: 'space-around',
-        alignItems: 'center',
         width: '100%',
         height: '100vh',
+        color: 'white',
       }}
     >
       <Grid>
