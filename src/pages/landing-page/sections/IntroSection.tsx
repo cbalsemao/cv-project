@@ -1,38 +1,9 @@
-import { Box, Button, styled, Typography } from '@mui/material';
+import { Box, styled, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
-import { useLayoutEffect, useRef, useState } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { useNavigate } from 'react-router-dom';
 import { TextSplitter } from '../../../utils/utils';
-
-const ButtonOpenCV = () => {
-  const navigate = useNavigate();
-  const [hover, setHover] = useState(false);
-
-  return (
-    <Button
-      variant="contained"
-      onClick={() => navigate('/cv')}
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-      sx={{
-        mt: 4,
-        backgroundColor: 'white',
-        fontWeight: 'bold',
-        color: 'black',
-        fontSize: '1.2rem',
-        borderRadius: '20px',
-        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
-        width: '120px',
-        '&:hover': {
-          backgroundColor: 'gray',
-        },
-      }}
-    >
-      {hover ? 'open' : 'resume'}
-    </Button>
-  );
-};
+import { ButtonOpenCV } from '../../../components/ButtonOpenCV';
 
 const IntroTextContainer = styled(Grid)({
   backgroundColor: 'black',
