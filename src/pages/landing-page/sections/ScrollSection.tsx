@@ -11,30 +11,27 @@ const ScrollSection = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   useLayoutEffect(() => {
-    const pin = gsap.fromTo(
-      sectionRef.current,
-      {
-        translateX: 0,
-      },
-      {
-        translateX: '-100vw', //depends of the width of the section, direction and how many sections you have
-        ease: 'none',
-        duration: 1,
-        scrollTrigger: {
-          trigger: triggerRef.current,
-          start: 'top top',
-          end: '2000 top',
-          scrub: 0.5,
-          pin: true,
+    const ctx = gsap.context(() => {
+      const pin = gsap.fromTo(
+        sectionRef.current,
+        {
+          translateX: 0,
         },
-      }
-    );
-    return () => {
-      {
-        /* A return function for killing the animation on component unmount */
-      }
-      pin.kill();
-    };
+        {
+          translateX: '-100vw',
+          ease: 'none',
+          duration: 1,
+          scrollTrigger: {
+            trigger: triggerRef.current,
+            start: 'top top',
+            end: '2000 top',
+            scrub: 0.5,
+            pin: true,
+          },
+        }
+      );
+    }, sectionRef);
+    return () => ctx.revert();
   }, []);
 
   return (

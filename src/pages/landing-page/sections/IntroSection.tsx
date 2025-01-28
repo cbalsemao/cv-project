@@ -1,9 +1,12 @@
 import { Box, styled, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
-import { useLayoutEffect, useRef } from 'react';
+import { useEffect, useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { TextSplitter } from '../../../utils/utils';
 import { ButtonOpenCV } from '../../../components/ButtonOpenCV';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const IntroTextContainer = styled(Grid)({
   backgroundColor: 'black',
@@ -18,81 +21,65 @@ const IntroTextContainer = styled(Grid)({
 const IntroNameTextTypography = styled(Typography)(({ theme }) => ({
   fontWeight: 'bold',
   fontSize: theme.breakpoints.values.xs ? '2rem' : 'inherit',
-  [theme.breakpoints.up('xs')]: {
-    fontSize: '2rem',
-  },
-  [theme.breakpoints.up('sm')]: {
-    fontSize: '3rem',
-  },
-  [theme.breakpoints.up('md')]: {
-    fontSize: '4rem',
-  },
-  [theme.breakpoints.up('lg')]: {
-    fontSize: '5rem',
-  },
+  [theme.breakpoints.up('xs')]: { fontSize: '2rem' },
+  [theme.breakpoints.up('sm')]: { fontSize: '3rem' },
+  [theme.breakpoints.up('md')]: { fontSize: '4rem' },
+  [theme.breakpoints.up('lg')]: { fontSize: '5rem' },
+  overflow: 'hidden',
 }));
 
 const IntroGreetingTextTypography = styled(Typography)(({ theme }) => ({
   fontSize: theme.breakpoints.values.xs ? '2rem' : 'inherit',
-  [theme.breakpoints.up('xs')]: {
-    fontSize: '2rem',
-  },
-  [theme.breakpoints.up('sm')]: {
-    fontSize: '3rem',
-  },
-  [theme.breakpoints.up('md')]: {
-    fontSize: '4rem',
-  },
-  [theme.breakpoints.up('lg')]: {
-    fontSize: '5rem',
-  },
+  [theme.breakpoints.up('xs')]: { fontSize: '2rem' },
+  [theme.breakpoints.up('sm')]: { fontSize: '3rem' },
+  [theme.breakpoints.up('md')]: { fontSize: '4rem' },
+  [theme.breakpoints.up('lg')]: { fontSize: '5rem' },
+  overflow: 'hidden',
 }));
 
 const IntroSection = () => {
-  const textRef = useRef<HTMLDivElement>(null);
-  const sectionRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef(null);
 
-  useLayoutEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const [entry] = entries;
-        if (entry.isIntersecting && textRef.current) {
-          // Trigger animation when the section is in view
-          const letters = textRef.current.querySelectorAll(
-            '.section__title__char'
-          );
-          gsap.fromTo(
-            letters,
-            {
-              y: 200,
-              opacity: 0,
-            },
-            {
-              y: 0,
-              opacity: 1,
-              stagger: 0.1,
-              ease: 'power4.out',
-            }
-          );
-        }
-      },
-      { threshold: 1 } // Animation starts when 50% of the section is visible
-    );
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const letters = gsap.utils.toArray('.section__title__char');
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+      gsap.set(letters, { y: 100, opacity: 0 });
 
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
+      const animation = gsap.to(letters, {
+        y: 0,
+        opacity: 1,
+        stagger: 0.05,
+        ease: 'power4.out',
+        duration: 1.2,
+        paused: true,
+      });
+
+      ScrollTrigger.create({
+        trigger: sectionRef.current,
+        start: 'top 75%', // Starts when 75% of the section is in view
+        end: 'bottom top', // Ends when the section leaves
+        toggleActions: 'restart none none none', // Restart animation every time
+        onEnter: () => {
+          animation.restart();
+        },
+        onLeave: () => {
+          animation.pause().progress(0); // Reset animation when leaving
+        },
+        onEnterBack: () => {
+          animation.restart(); // Restart when coming back into view
+        },
+      });
+
+      ScrollTrigger.refresh();
+    }, sectionRef);
+
+    return () => ctx.revert(); // Cleanup when component unmounts
   }, []);
 
   return (
     <IntroTextContainer ref={sectionRef} container>
-      <Box ref={textRef}>
+      <Box>
         <IntroNameTextTypography>
           <TextSplitter text="Hi, I'm Camila." />
         </IntroNameTextTypography>
