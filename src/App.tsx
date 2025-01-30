@@ -6,6 +6,7 @@ import { initReactI18next } from 'react-i18next';
 import esTranslation from './translations/translation-es.json';
 import enTranslation from './translations/translation-en.json';
 import itTranslation from './translations/translation-it.json';
+import './styles/globals.css';
 
 i18n.use(initReactI18next).init({
   resources: {

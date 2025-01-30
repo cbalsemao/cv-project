@@ -3,6 +3,7 @@ import { Box, keyframes, styled, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import { TextSplitter } from '../../../utils/utils';
 import { useTextAnimation } from '../../../hooks/useTextAnimation';
+import { StyledSectionTitle } from '../../../styled-components/stylesSection';
 
 const slideAnimation = keyframes`
   0% {
@@ -36,25 +37,6 @@ const IntroContainer = styled(Grid)({
   padding: 5,
   overflow: 'hidden',
 });
-
-const StyledSectionTitle = styled(Typography)(({ theme }) => ({
-  fontWeight: 'bold',
-  fontSize: '2rem',
-  overflow: 'visible',
-  display: 'flex',
-  height: 'calc(2.5rem * 1.5)',
-  color: 'darkgray',
-
-  [theme.breakpoints.up('sm')]: {
-    fontSize: '3rem',
-  },
-  [theme.breakpoints.up('md')]: {
-    fontSize: '4rem',
-  },
-  [theme.breakpoints.up('lg')]: {
-    fontSize: '10rem',
-  },
-}));
 
 const AboutMeSection = () => {
   const aboutRef = useRef<HTMLInputElement>(null);

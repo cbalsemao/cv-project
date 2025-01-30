@@ -5,13 +5,14 @@ const ProjectsSection = () => {
     <Grid
       container
       sx={{
-        // backgroundColor: 'lightgreen',
+        backgroundColor: 'lightgreen',
         flexDirection: 'row',
         display: 'flex',
         justifyContent: 'space-around',
         alignItems: 'center',
         width: '100%',
         height: '100vh',
+        color: 'black',
       }}
     >
       ProjectsSection
