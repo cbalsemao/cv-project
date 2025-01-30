@@ -1,11 +1,8 @@
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { Box, keyframes, styled, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { TextSplitter } from '../../../utils/utils';
-
-gsap.registerPlugin(ScrollTrigger);
+import { useTextAnimation } from '../../../hooks/useTextAnimation';
 
 const slideAnimation = keyframes`
   0% {
@@ -60,51 +57,24 @@ const StyledSectionTitle = styled(Typography)(({ theme }) => ({
 }));
 
 const AboutMeSection = () => {
-  const aboutRef = useRef(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const charElements = gsap.utils.toArray('.section__title__char');
-
-      gsap.set(charElements, {
-        yPercent: (i) => (i % 2 === 0 ? -100 : 0),
-        opacity: 0,
-      });
-
-      // Create animation for the letters
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: aboutRef.current,
-            start: 'top 50%',
-            end: 'top 0%',
-            toggleActions: 'play reverse play reverse',
-          },
-        })
-        .to(charElements, {
-          yPercent: 0,
-          opacity: 1,
-          ease: 'power2.out',
-          duration: 1.5,
-          stagger: 0.05,
-        });
-    }, aboutRef);
-
-    return () => {
-      ctx.revert();
-    };
-  }, []);
+  const aboutRef = useRef<HTMLInputElement>(null);
+  useTextAnimation(aboutRef, '.section__title__char');
 
   return (
     <IntroContainer container ref={aboutRef}>
-      <Grid size={12} sx={{ padding: 10 }} className="section">
-        <StyledSectionTitle className="section__title section__title--3">
-          <TextSplitter text={'about me.'} />
+      <Grid size={12} sx={{ padding: 10 }}>
+        <StyledSectionTitle>
+          <TextSplitter text={'about me.'} className={'section__title__char'} />
         </StyledSectionTitle>
       </Grid>
       <Grid
         size={12}
-        sx={{ display: 'flex', gap: 20, padding: 10, paddingTop: 0 }}
+        sx={{
+          display: 'f</IntroContainer>lex',
+          gap: 20,
+          padding: 10,
+          paddingTop: 0,
+        }}
         justifyContent={'start'}
         alignItems={'start'}
       >
@@ -137,24 +107,29 @@ const AboutMeSection = () => {
       >
         <AnimatedLogoContainer>
           <img
-            src="/public/typescriptLogo.png"
+            src="/public/html-logo.png"
+            alt="About me image"
+            className="html-logo"
+          />
+          <img
+            src="/public/css-logo.png"
+            alt="About me image"
+            className="css-logo"
+          />
+          <img
+            src="/public/typescript-logo.png"
             alt="About me image"
             className="ts-logo"
           />
           <img
-            src="/public/reactLogo.png"
+            src="/public/react-logo.png"
             alt="About me image"
             className="react-logo"
           />
           <img
-            src="/public/reactLogo.png"
+            src="/public/redux-logo.png"
             alt="About me image"
-            className="react-logo"
-          />
-          <img
-            src="/public/reactLogo.png"
-            alt="About me image"
-            className="react-logo"
+            className="redux-logo"
           />
         </AnimatedLogoContainer>
       </Grid>

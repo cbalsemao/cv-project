@@ -1,12 +1,9 @@
 import { Box, styled, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
-import { useEffect, useLayoutEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useRef } from 'react';
 import { TextSplitter } from '../../../utils/utils';
 import { ButtonOpenCV } from '../../../components/ButtonOpenCV';
-
-gsap.registerPlugin(ScrollTrigger);
+import { useTitleAnimation } from '../../../hooks/useTitleAnimation';
 
 const IntroTextContainer = styled(Grid)({
   backgroundColor: 'black',
@@ -39,52 +36,22 @@ const IntroGreetingTextTypography = styled(Typography)(({ theme }) => ({
 
 const IntroSection = () => {
   const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const letters = gsap.utils.toArray('.section__title__char');
-
-      gsap.set(letters, { y: 100, opacity: 0 });
-
-      const animation = gsap.to(letters, {
-        y: 0,
-        opacity: 1,
-        stagger: 0.05,
-        ease: 'power4.out',
-        duration: 1.2,
-        paused: true,
-      });
-
-      ScrollTrigger.create({
-        trigger: sectionRef.current,
-        start: 'top 75%', // Starts when 75% of the section is in view
-        end: 'bottom top', // Ends when the section leaves
-        toggleActions: 'restart none none none', // Restart animation every time
-        onEnter: () => {
-          animation.restart();
-        },
-        onLeave: () => {
-          animation.pause().progress(0); // Reset animation when leaving
-        },
-        onEnterBack: () => {
-          animation.restart(); // Restart when coming back into view
-        },
-      });
-
-      ScrollTrigger.refresh();
-    }, sectionRef);
-
-    return () => ctx.revert(); // Cleanup when component unmounts
-  }, []);
+  useTitleAnimation(sectionRef, '.section__title__char');
 
   return (
     <IntroTextContainer ref={sectionRef} container>
       <Box>
         <IntroNameTextTypography>
-          <TextSplitter text="Hi, I'm Camila." />
+          <TextSplitter
+            text={"Hi, I'm Camila."}
+            className={'section__title__char'}
+          />
         </IntroNameTextTypography>
         <IntroGreetingTextTypography>
-          <TextSplitter text="Welcome to my portfolio!" />
+          <TextSplitter
+            text={'Welcome to my portfolio!'}
+            className={'section__title__char'}
+          />
         </IntroGreetingTextTypography>
         <ButtonOpenCV />
       </Box>

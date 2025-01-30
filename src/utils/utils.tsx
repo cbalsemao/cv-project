@@ -4,17 +4,17 @@ export enum LANGUAGE_INDEX {
   ITALIAN = 2,
 }
 
+interface TextSplitterProps {
+  text: string;
+  className?: string;
+}
+
 //similar functions. Change them
-export const TextSplitter = ({ text }: { text: string }) => {
-  return (
-    <>
-      {text.split('').map((char, index) => {
-        return (
-          <span key={index} className="section__title__char">
-            {char === ' ' ? '\u00A0' : char}
-          </span>
-        );
-      })}
-    </>
-  );
+
+export const TextSplitter = ({ text, className }: TextSplitterProps) => {
+  return text.split('').map((char, index) => (
+    <span key={index} className={className}>
+      {char === ' ' ? '\u00A0' : char}
+    </span>
+  ));
 };
