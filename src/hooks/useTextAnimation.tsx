@@ -1,12 +1,11 @@
 import { useEffect } from 'react';
 import { MutableRefObject } from 'react';
-//ref: MutableRefObject<HTMLElement | null> ??
-
 import gsap from 'gsap';
 
 export const useTextAnimation = (
   ref: MutableRefObject<HTMLElement | null>,
-  className: string
+  className: string,
+  start: string = 'top 50%'
 ) => {
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -22,7 +21,7 @@ export const useTextAnimation = (
         .timeline({
           scrollTrigger: {
             trigger: ref.current,
-            start: 'top 50%',
+            start: start,
             end: 'top 0%',
             toggleActions: 'play reverse play reverse',
           },
@@ -39,5 +38,5 @@ export const useTextAnimation = (
     return () => {
       ctx.revert();
     };
-  }, []);
+  }, [ref, className, start]);
 };

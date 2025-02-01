@@ -8,8 +8,6 @@ const ScrollSection = () => {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
 
-  gsap.registerPlugin(ScrollTrigger);
-
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       const pin = gsap.fromTo(
@@ -30,17 +28,12 @@ const ScrollSection = () => {
           },
         }
       );
-    }, sectionRef);
+    });
     return () => ctx.revert();
-  }, []);
+  }, [sectionRef]);
 
   return (
     <section className="scroll-section-outer">
-      {/* The section up act just as a wrapper. If the trigger (below) is the
-      first jsx element in the component, you get an error on route change */}
-
-      {/* The div below act just as a trigger. As the doc suggests, the trigger and 
-      the animation should alway be two separated refs */}
       <div ref={triggerRef}>
         <div ref={sectionRef} className="scroll-section-inner">
           <div className="scroll-section">
