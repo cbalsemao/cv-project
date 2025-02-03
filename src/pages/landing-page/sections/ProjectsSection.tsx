@@ -1,4 +1,3 @@
-// ProjectsSection.tsx
 import Grid from '@mui/material/Grid2';
 import { StyledSectionTitle } from '../../../styled-components/stylesSection';
 import { TextSplitter } from '../../../utils/utils';
@@ -20,15 +19,17 @@ const ProjectsSection = () => {
   useTextAnimation(
     projectsRef,
     '.section__title__char',
-    'left 100%',
-    'bottom 100%'
+    'left center',
+    'right center'
   );
 
   return (
     <IntroContainer container ref={projectsRef}>
-      <StyledSectionTitle>
-        <TextSplitter text={'projects.'} className={'section__title__char'} />
-      </StyledSectionTitle>
+      <Grid size={12} sx={{ padding: 10 }}>
+        <StyledSectionTitle>
+          <TextSplitter text={'projects.'} className={'section__title__char'} />
+        </StyledSectionTitle>
+      </Grid>
     </IntroContainer>
   );
 };

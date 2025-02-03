@@ -90,27 +90,23 @@ const AboutMeSection = () => {
       >
         <AnimatedLogoContainer>
           <img
-            src="/public/html-logo.png"
+            src="/html-logo.png"
             alt="About me image"
             className="html-logo"
           />
+          <img src="/css-logo.png" alt="About me image" className="css-logo" />
           <img
-            src="/public/css-logo.png"
-            alt="About me image"
-            className="css-logo"
-          />
-          <img
-            src="/public/typescript-logo.png"
+            src="/typescript-logo.png"
             alt="About me image"
             className="ts-logo"
           />
           <img
-            src="/public/react-logo.png"
+            src="/react-logo.png"
             alt="About me image"
             className="react-logo"
           />
           <img
-            src="/public/redux-logo.png"
+            src="/redux-logo.png"
             alt="About me image"
             className="redux-logo"
           />
