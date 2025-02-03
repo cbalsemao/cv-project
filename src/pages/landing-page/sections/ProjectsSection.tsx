@@ -1,3 +1,4 @@
+// ProjectsSection.tsx
 import Grid from '@mui/material/Grid2';
 import { StyledSectionTitle } from '../../../styled-components/stylesSection';
 import { TextSplitter } from '../../../utils/utils';
@@ -15,17 +16,19 @@ const IntroContainer = styled(Grid)({
 });
 
 const ProjectsSection = () => {
-  const aboutRef = useRef<HTMLInputElement>(null);
-  useTextAnimation(aboutRef, '.section__title__char');
+  const projectsRef = useRef<HTMLInputElement>(null);
+  useTextAnimation(
+    projectsRef,
+    '.section__title__char',
+    'left 100%',
+    'bottom 100%'
+  );
 
   return (
-    <IntroContainer container ref={aboutRef}>
-      <Grid size={12} sx={{ padding: 10 }}>
-        <StyledSectionTitle>
-          {/* <TextSplitter text={'projects.'} className={'section__title__char'} /> */}
-          <h1>projects.</h1>
-        </StyledSectionTitle>
-      </Grid>
+    <IntroContainer container ref={projectsRef}>
+      <StyledSectionTitle>
+        <TextSplitter text={'projects.'} className={'section__title__char'} />
+      </StyledSectionTitle>
     </IntroContainer>
   );
 };

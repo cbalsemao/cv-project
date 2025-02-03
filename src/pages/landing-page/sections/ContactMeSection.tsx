@@ -49,6 +49,7 @@ const ContactMeSection = () => {
           />
         </StyledSectionTitle>
       </Grid>
+      {/* cuando la pantalla es grande */}
       <Grid size={3}></Grid>
       <StyledFormContainer
         size={6} //12 cuando es mobile

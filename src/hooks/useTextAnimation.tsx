@@ -5,7 +5,8 @@ import gsap from 'gsap';
 export const useTextAnimation = (
   ref: MutableRefObject<HTMLElement | null>,
   className: string,
-  start: string = 'top 50%'
+  start: string,
+  end: string
 ) => {
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -16,13 +17,12 @@ export const useTextAnimation = (
         opacity: 0,
       });
 
-      // Create animation for the letters
       gsap
         .timeline({
           scrollTrigger: {
             trigger: ref.current,
             start: start,
-            end: 'top 0%',
+            end: end,
             toggleActions: 'play reverse play reverse',
           },
         })

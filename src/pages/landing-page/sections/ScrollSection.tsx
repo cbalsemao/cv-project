@@ -8,9 +8,11 @@ const ScrollSection = () => {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
 
+  gsap.registerPlugin(ScrollTrigger);
+
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      const pin = gsap.fromTo(
+      gsap.fromTo(
         sectionRef.current,
         {
           translateX: 0,

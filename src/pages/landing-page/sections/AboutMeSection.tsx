@@ -1,3 +1,4 @@
+// AboutMeSection.tsx
 import { useRef } from 'react';
 import { Box, keyframes, styled, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
@@ -40,7 +41,7 @@ const IntroContainer = styled(Grid)({
 
 const AboutMeSection = () => {
   const aboutRef = useRef<HTMLInputElement>(null);
-  useTextAnimation(aboutRef, '.section__title__char');
+  useTextAnimation(aboutRef, '.section__title__char', 'top 75%', 'top 0%');
 
   return (
     <IntroContainer container ref={aboutRef}>
