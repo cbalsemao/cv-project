@@ -14,7 +14,6 @@ const ContactMeContainer = styled(Grid)(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'center',
   backgroundImage: 'url(/wave-background.png)',
-  backgroundSize: 'cover',
   backgroundPosition: 'center',
   animation: 'moveBackground 40s linear infinite',
   '@keyframes moveBackground': {
