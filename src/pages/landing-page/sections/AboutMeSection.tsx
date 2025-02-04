@@ -34,14 +34,14 @@ const AnimatedLogoContainer = styled(Box)({
 const IntroContainer = styled(Grid)({
   height: '100vh',
   color: 'white',
-  backgroundColor: 'black',
+  backgroundColor: '#121212',
   padding: 5,
   overflow: 'hidden',
 });
 
 const AboutMeSection = () => {
   const aboutRef = useRef<HTMLInputElement>(null);
-  useTextAnimation(aboutRef, '.section__title__char', 'top 75%', 'top 0%');
+  useTextAnimation(aboutRef, '.section__title__char', 'left center');
 
   return (
     <IntroContainer container ref={aboutRef}>

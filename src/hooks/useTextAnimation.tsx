@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useLayoutEffect } from 'react';
 import { MutableRefObject } from 'react';
 import gsap from 'gsap';
 
@@ -6,9 +6,9 @@ export const useTextAnimation = (
   ref: MutableRefObject<HTMLElement | null>,
   className: string,
   start: string,
-  end: string
+  end?: string
 ) => {
-  useEffect(() => {
+  useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       const charElements = gsap.utils.toArray(className);
 
@@ -23,6 +23,7 @@ export const useTextAnimation = (
             trigger: ref.current,
             start: start,
             end: end,
+            //markers: true,
             toggleActions: 'play reverse play reverse',
           },
         })

@@ -8,7 +8,7 @@ import { useRef } from 'react';
 const IntroContainer = styled(Grid)({
   height: '100vh',
   color: 'white',
-  backgroundColor: 'black',
+  backgroundColor: '#121212',
   padding: 5,
   overflow: 'hidden',
   width: '100%',
@@ -16,12 +16,7 @@ const IntroContainer = styled(Grid)({
 
 const ProjectsSection = () => {
   const projectsRef = useRef<HTMLInputElement>(null);
-  useTextAnimation(
-    projectsRef,
-    '.section__title__char',
-    'left center',
-    'right center'
-  );
+  useTextAnimation(projectsRef, '.section__title__char', 'top right');
 
   return (
     <IntroContainer container ref={projectsRef}>
