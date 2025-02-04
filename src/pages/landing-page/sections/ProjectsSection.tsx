@@ -8,7 +8,7 @@ import { useRef } from 'react';
 const IntroContainer = styled(Grid)({
   height: '100vh',
   color: 'white',
-  backgroundColor: '#121212',
+  backgroundColor: 'black',
   padding: 5,
   overflow: 'hidden',
   width: '100%',

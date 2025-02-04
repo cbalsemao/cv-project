@@ -1,8 +1,9 @@
-import Grid from '@mui/material/Grid';
-import { StyledSectionTitle } from '../../../styled-components/stylesSection';
-import { TextSplitter } from '../../../utils/utils';
-import { Button, styled, TextField, Typography } from '@mui/material';
+import { useEffect } from 'react';
+import { gsap } from 'gsap';
+import Grid from '@mui/material/Grid2';
+import { styled, TextField, Typography } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import ButtonSend from '../../../components/ButtonSend';
 
 const ContactMeContainer = styled(Grid)(({ theme }) => ({
   height: '100vh',
@@ -12,6 +13,15 @@ const ContactMeContainer = styled(Grid)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
+  backgroundImage: 'url(/wave-background.png)',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  animation: 'moveBackground 40s linear infinite',
+  '@keyframes moveBackground': {
+    '0%': { backgroundPosition: '0% 0%' },
+    '50%': { backgroundPosition: '100% 100%' },
+    '100%': { backgroundPosition: '0% 0%' },
+  },
 }));
 
 const StyledFormContainer = styled(Grid)(({ theme }) => ({
@@ -49,9 +59,23 @@ const StyledTextField = styled(TextField)({
 const ContactMeSection = () => {
   const isMobile = useMediaQuery('(max-width:600px)');
 
+  useEffect(() => {
+    gsap.fromTo(
+      '.form-container',
+      { y: -5 },
+      {
+        y: 5,
+        repeat: -1,
+        yoyo: true,
+        duration: 1,
+        ease: 'power1.inOut',
+      }
+    );
+  }, []);
+
   return (
     <ContactMeContainer container>
-      <StyledFormContainer>
+      <StyledFormContainer className="form-container">
         <Typography
           variant={isMobile ? 'h4' : 'h3'}
           align="center"
@@ -99,16 +123,7 @@ const ContactMeSection = () => {
             autoComplete="off"
           />
 
-          <Button
-            type="submit"
-            variant="contained"
-            sx={{
-              backgroundColor: '#c3195d',
-              '&:hover': { backgroundColor: '#d81b60' },
-            }}
-          >
-            Send
-          </Button>
+          <ButtonSend />
         </form>
       </StyledFormContainer>
     </ContactMeContainer>
