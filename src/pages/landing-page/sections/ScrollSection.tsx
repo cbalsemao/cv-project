@@ -38,12 +38,8 @@ const ScrollSection = () => {
     <section className="scroll-section-outer">
       <div ref={triggerRef}>
         <div ref={sectionRef} className="scroll-section-inner">
-          <div className="scroll-section">
-            <AboutMeSection />
-          </div>
-          <div className="scroll-section">
-            <ProjectsSection />
-          </div>
+          <AboutMeSection />
+          <ProjectsSection />
         </div>
       </div>
     </section>

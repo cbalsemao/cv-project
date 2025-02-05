@@ -1,12 +1,12 @@
 import IntroSection from './sections/IntroSection';
 import ContactMeSection from './sections/ContactMeSection';
 import ScrollSection from './sections/ScrollSection';
-import DesktopMenu from '../../components/navbar/DesktopMenu';
+import Navbar from '../../components/navbar/NavBar';
 
 const LandPage = () => {
   return (
     <>
-      <DesktopMenu />
+      <Navbar />
       <IntroSection />
       <ScrollSection />
       <ContactMeSection />

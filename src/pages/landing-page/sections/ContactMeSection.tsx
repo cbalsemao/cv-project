@@ -73,7 +73,7 @@ const ContactMeSection = () => {
   }, []);
 
   return (
-    <ContactMeContainer container>
+    <ContactMeContainer container id={'contact'}>
       <StyledFormContainer className="form-container">
         <Typography
           variant={isMobile ? 'h4' : 'h3'}

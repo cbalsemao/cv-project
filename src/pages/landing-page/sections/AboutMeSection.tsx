@@ -34,7 +34,7 @@ const AnimatedLogoContainer = styled(Box)({
 const IntroContainer = styled(Grid)({
   height: '100vh',
   color: 'white',
-  backgroundColor: '#121212',
+  backgroundColor: 'black',
   padding: 5,
   overflow: 'hidden',
 });
@@ -44,7 +44,12 @@ const AboutMeSection = () => {
   useTextAnimation(aboutRef, '.section__title__char', 'left center');
 
   return (
-    <IntroContainer container ref={aboutRef}>
+    <IntroContainer
+      container
+      className="scroll-section"
+      ref={aboutRef}
+      id={'about-me'}
+    >
       <Grid size={12} sx={{ padding: 10 }}>
         <StyledSectionTitle>
           <TextSplitter text={'about me.'} className={'section__title__char'} />

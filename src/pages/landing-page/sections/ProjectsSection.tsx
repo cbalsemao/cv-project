@@ -19,8 +19,12 @@ const ProjectsSection = () => {
   useTextAnimation(projectsRef, '.section__title__char', 'top right');
 
   return (
-    <IntroContainer container ref={projectsRef}>
-      <Grid size={12} sx={{ padding: 10 }}>
+    <IntroContainer
+      className="scroll-section-projects"
+      ref={projectsRef}
+      id={'projects'}
+    >
+      <Grid size={12}>
         <StyledSectionTitle>
           <TextSplitter text={'projects.'} className={'section__title__char'} />
         </StyledSectionTitle>

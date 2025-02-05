@@ -6,7 +6,7 @@ import { ButtonOpenCV } from '../../../components/ButtonOpenCV';
 import { useTitleAnimation } from '../../../hooks/useTitleAnimation';
 
 const IntroTextContainer = styled(Grid)({
-  backgroundColor: '#121212',
+  backgroundColor: 'black',
   justifyContent: 'center',
   alignItems: 'center',
   flexDirection: 'column',
