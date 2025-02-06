@@ -37,13 +37,9 @@ export const theme = createTheme({
 export const palette = {
   white: '#FBFBFB',
   darkWhite: '#f7f4ef',
-  lightPurple: '#cdb5d9',
-  darkPurple: '#5e3183',
-  purple: '#8c6ca6',
-  darkGreen: '#2b5b2e',
-  green: '#94ac6c',
-  lightGreen: '#e0e6d7',
   black: '#000000',
+  purple: '#680747',
+  gray: '#1e1e1e',
 };
 
 export const sectionStyle = {

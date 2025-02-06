@@ -4,9 +4,10 @@ import { useRef } from 'react';
 import { TextSplitter } from '../../../utils/utils';
 import { ButtonOpenCV } from '../../../components/ButtonOpenCV';
 import { useTitleAnimation } from '../../../hooks/useTitleAnimation';
+import { palette } from '../../../utils/styleguide';
 
 const IntroTextContainer = styled(Grid)({
-  backgroundColor: 'black',
+  backgroundColor: palette.black,
   justifyContent: 'center',
   alignItems: 'center',
   flexDirection: 'column',
@@ -39,7 +40,7 @@ const IntroSection = () => {
   useTitleAnimation(sectionRef, '.section__title__char');
 
   return (
-    <IntroTextContainer ref={sectionRef} container>
+    <IntroTextContainer id={'intro'} ref={sectionRef} container>
       <Box>
         <IntroNameTextTypography>
           <TextSplitter

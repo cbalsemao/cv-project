@@ -4,11 +4,12 @@ import Grid from '@mui/material/Grid2';
 import { styled, TextField, Typography } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import ButtonSend from '../../../components/ButtonSend';
+import { palette } from '../../../utils/styleguide';
 
 const ContactMeContainer = styled(Grid)(({ theme }) => ({
   height: '100vh',
   color: 'white',
-  backgroundColor: '#121212',
+  backgroundColor: palette.black,
   padding: theme.spacing(4),
   display: 'flex',
   alignItems: 'center',
@@ -24,7 +25,7 @@ const ContactMeContainer = styled(Grid)(({ theme }) => ({
 }));
 
 const StyledFormContainer = styled(Grid)(({ theme }) => ({
-  background: '#1e1e1e',
+  background: palette.gray,
   padding: theme.spacing(5),
   borderRadius: theme.shape.borderRadius,
   boxShadow: '0 4px 10px rgba(255, 255, 255, 0.1)',
@@ -44,14 +45,14 @@ const StyledTextField = styled(TextField)({
       borderColor: 'white',
     },
     '&.Mui-focused fieldset': {
-      borderColor: '#680747',
+      borderColor: palette.purple,
     },
   },
   '& label': {
     color: 'gray',
   },
   '& label.Mui-focused': {
-    color: '#680747',
+    color: palette.purple,
   },
 });
 

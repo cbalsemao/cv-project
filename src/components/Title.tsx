@@ -1,5 +1,6 @@
 import { Typography } from '@mui/material';
 import React from 'react';
+import { palette } from '../utils/styleguide';
 
 type TitleProps = {
   label: React.ReactNode;
@@ -10,7 +11,7 @@ const Title: React.FC<TitleProps> = ({ label, side = 'left' }) => {
   return (
     <Typography
       sx={{
-        backgroundColor: 'black',
+        backgroundColor: palette.black,
         color: 'white',
         padding: '5px',
         paddingLeft: '20px',

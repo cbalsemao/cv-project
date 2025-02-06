@@ -9,20 +9,22 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import Grid from '@mui/material/Grid2';
-import { formattedId, PAGES_NAMES, handleScrollTo } from '../../utils/utils';
+import { formattedId, PAGES_NAMES } from '../../utils/utils';
+import { palette } from '../../utils/styleguide';
 
 type SmallMenuProps = {
   handleDrawerToggle: () => void;
   drawerOpen: boolean;
+  handleScroll: (sectionId: string) => void;
 };
 
 export const MobileMenu = ({
   handleDrawerToggle,
+  handleScroll,
   drawerOpen,
 }: SmallMenuProps) => {
   const onNavItemHandler = (page: string) => {
-    const sectionId = formattedId(page);
-    handleScrollTo(sectionId);
+    handleScroll(formattedId(page));
     handleDrawerToggle();
   };
 
@@ -31,7 +33,7 @@ export const MobileMenu = ({
       <IconButton
         size="large"
         onClick={handleDrawerToggle}
-        sx={{ color: 'red' }}
+        sx={{ color: palette.darkWhite }}
       >
         <MenuIcon />
       </IconButton>
@@ -44,7 +46,7 @@ export const MobileMenu = ({
           '& .MuiDrawer-paper': {
             height: '100%',
             position: 'relative',
-            backgroundColor: 'black',
+            backgroundColor: palette.black,
           },
         }}
         transitionDuration={{

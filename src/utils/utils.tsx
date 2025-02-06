@@ -1,5 +1,5 @@
 export const OFFSET = 55;
-export const PAGES_NAMES = ['about me', 'projects', 'contact'];
+export const PAGES_NAMES = ['intro', 'about me', 'projects', 'contact'];
 export const formattedId = (page: string) =>
   page.toLowerCase().replace(' ', '-');
 export enum LANGUAGE_INDEX {

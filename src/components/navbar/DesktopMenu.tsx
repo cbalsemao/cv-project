@@ -1,6 +1,11 @@
-import { Box, Button } from '@mui/material';
+import { useState, useEffect } from 'react';
+import { Box } from '@mui/material';
 import { formattedId, PAGES_NAMES } from '../../utils/utils';
-import { useViewPort } from '../../hooks/useViewport';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ButtonDesktopNavbar } from './navbar-styles/ButtonDesktopNavbar';
+
+gsap.registerPlugin(ScrollTrigger);
 
 type DesktopMenuProps = {
   handleScroll: (sectionId: string) => void;
@@ -9,36 +14,43 @@ type DesktopMenuProps = {
 const ButtonSectionNavbar = ({
   page,
   onNavItemHandler,
-  isDesktop,
+  isActive,
 }: {
   page: string;
   onNavItemHandler: (page: string) => void;
-  isDesktop: boolean;
+  isActive: boolean;
 }) => {
   return (
-    <Button
+    <ButtonDesktopNavbar
       key={page}
       onClick={() => onNavItemHandler(page)}
       sx={{
-        color: 'white',
-        fontWeight: 'bold',
-        fontSize: isDesktop ? '25px' : '20px',
-        textTransform: 'lowercase',
-        cursor: 'pointer',
-        backgroundColor: 'transparent',
-        '&:hover': {
-          color: 'purple',
-          backgroundColor: 'transparent',
-        },
+        color: isActive ? 'purple' : 'white',
+        fontWeight: isActive ? 'bold' : 'normal',
+        transition: 'color 0.3s ease-in-out',
       }}
     >
       {page}
-    </Button>
+    </ButtonDesktopNavbar>
   );
 };
 
 export const DesktopMenu = ({ handleScroll }: DesktopMenuProps) => {
-  const { isDesktop } = useViewPort();
+  const [activeSection, setActiveSection] = useState('');
+
+  useEffect(() => {
+    PAGES_NAMES.forEach((page) => {
+      ScrollTrigger.create({
+        trigger: `#${formattedId(page)}`,
+        start: 'top 30%',
+        end: 'bottom 30%',
+        onEnter: () => setActiveSection(page),
+        onEnterBack: () => setActiveSection(page),
+      });
+    });
+
+    return () => ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+  }, []);
 
   const onNavItemHandler = (page: string) => {
     handleScroll(formattedId(page));
@@ -71,7 +83,7 @@ export const DesktopMenu = ({ handleScroll }: DesktopMenuProps) => {
             key={page}
             page={page}
             onNavItemHandler={onNavItemHandler}
-            isDesktop={isDesktop}
+            isActive={activeSection === page}
           />
         ))}
       </Box>

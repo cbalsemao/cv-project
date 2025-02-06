@@ -4,7 +4,8 @@ import { Box, keyframes, styled, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import { TextSplitter } from '../../../utils/utils';
 import { useTextAnimation } from '../../../hooks/useTextAnimation';
-import { StyledSectionTitle } from '../../../styled-components/stylesSection';
+import { StyledSectionTitle } from './styles-section/stylesSection';
+import { palette } from '../../../utils/styleguide';
 
 const slideAnimation = keyframes`
   0% {
@@ -34,7 +35,7 @@ const AnimatedLogoContainer = styled(Box)({
 const IntroContainer = styled(Grid)({
   height: '100vh',
   color: 'white',
-  backgroundColor: 'black',
+  backgroundColor: palette.black,
   padding: 5,
   overflow: 'hidden',
 });

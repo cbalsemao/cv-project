@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@mui/material';
 import { useState } from 'react';
+import { palette } from '../utils/styleguide';
 
 export const ButtonOpenCV = () => {
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ export const ButtonOpenCV = () => {
         mt: 4,
         backgroundColor: 'white',
         fontWeight: 'bold',
-        color: 'black',
+        color: palette.black,
         fontSize: '1.2rem',
         borderRadius: '20px',
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
