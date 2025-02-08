@@ -15,21 +15,24 @@ export const ButtonOpenCV = () => {
       onMouseLeave={() => setHover(false)}
       sx={{
         mt: 4,
-        backgroundColor: 'white',
+        backgroundColor: palette.darkPink,
         fontWeight: 'bold',
-        color: palette.black,
+        color: palette.darkWhite,
         fontSize: '1.2rem',
         borderRadius: '20px',
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
         width: '120px',
         zIndex: 2000,
         position: 'relative',
+        transition: 'all 0.3s ease',
         '&:hover': {
           backgroundColor: 'gray',
+          transform: 'translateY(-5px)',
+          boxShadow: '0 8px 16px rgba(0, 0, 0, 0.3)',
         },
       }}
     >
-      {hover ? 'open' : 'resume'}
+      {hover ? 'Open' : 'Resume'}
     </Button>
   );
 };
