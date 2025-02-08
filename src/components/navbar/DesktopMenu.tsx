@@ -1,9 +1,27 @@
 import { useState, useEffect } from 'react';
-import { Box } from '@mui/material';
+import { Box, styled } from '@mui/material';
 import { formattedId, PAGES_NAMES } from '../../utils/utils';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ButtonDesktopNavbar } from './navbar-styles/ButtonDesktopNavbar';
+
+const DesktopMenuStyled = styled(Box)({
+  width: '100%',
+  display: 'flex',
+  alignItems: 'center',
+  marginTop: '20px',
+  justifyContent: 'flex-end',
+  paddingRight: '20px',
+});
+
+const ContainerButtonsDeskMenu = styled(Box)({
+  display: 'inline-flex',
+  alignItems: 'center',
+  padding: '15px 30px',
+  minWidth: '250px',
+  minHeight: '60px',
+  borderRadius: '15px',
+});
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -26,7 +44,7 @@ const ButtonSectionNavbar = ({
       onClick={() => onNavItemHandler(page)}
       sx={{
         color: isActive ? 'purple' : 'white',
-        fontWeight: isActive ? 'bold' : 'normal',
+        fontWeight: 'bold',
         transition: 'color 0.3s ease-in-out',
       }}
     >
@@ -55,27 +73,8 @@ export const DesktopMenu = ({ handleScroll }: DesktopMenuProps) => {
   };
 
   return (
-    <Box
-      sx={{
-        width: '100%',
-        display: 'flex',
-        alignItems: 'center',
-        marginTop: '20px',
-        justifyContent: 'flex-end',
-        paddingRight: '20px',
-      }}
-    >
-      <Box
-        sx={{
-          display: 'inline-flex',
-          alignItems: 'center',
-          border: '2px solid white',
-          padding: '15px 30px',
-          minWidth: '250px',
-          minHeight: '60px',
-          borderRadius: '15px',
-        }}
-      >
+    <DesktopMenuStyled>
+      <ContainerButtonsDeskMenu>
         {PAGES_NAMES.map((page) => (
           <ButtonSectionNavbar
             key={page}
@@ -84,7 +83,7 @@ export const DesktopMenu = ({ handleScroll }: DesktopMenuProps) => {
             isActive={activeSection === page}
           />
         ))}
-      </Box>
-    </Box>
+      </ContainerButtonsDeskMenu>
+    </DesktopMenuStyled>
   );
 };

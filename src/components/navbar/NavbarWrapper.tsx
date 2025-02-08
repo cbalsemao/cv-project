@@ -12,6 +12,7 @@ export const NavbarWrapper = ({ children }: { children: ReactNode }) => {
     <>
       <AppBar
         position="fixed"
+        elevation={0}
         sx={{
           backgroundColor: 'transparent',
           width: '100%',

@@ -88,11 +88,7 @@ const ContactMeSection = () => {
           method="POST"
           style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}
         >
-          <input
-            type="hidden"
-            name="_next"
-            value="https://cloverlavanderia.es/thank-you"
-          />
+          <input type="hidden" name="_next" />
 
           <StyledTextField
             label="Name"

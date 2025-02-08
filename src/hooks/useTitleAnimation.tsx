@@ -1,5 +1,4 @@
 import { MutableRefObject, useEffect } from 'react';
-
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -26,23 +25,23 @@ export const useTitleAnimation = (
 
       ScrollTrigger.create({
         trigger: ref.current,
-        start: 'top 75%', // Starts when 75% of the section is in view
-        end: 'bottom top', // Ends when the section leaves
-        toggleActions: 'restart none none none', // Restart animation every time
+        start: 'top 75%',
+        end: 'bottom top',
+        toggleActions: 'restart none none none',
         onEnter: () => {
           animation.restart();
         },
         onLeave: () => {
-          animation.pause().progress(0); // Reset animation when leaving
+          animation.pause().progress(0);
         },
         onEnterBack: () => {
-          animation.restart(); // Restart when coming back into view
+          animation.restart();
         },
       });
 
       ScrollTrigger.refresh();
     }, ref);
 
-    return () => ctx.revert(); // Cleanup when component unmounts
+    return () => ctx.revert();
   }, []);
 };

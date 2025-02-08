@@ -5,7 +5,6 @@ import { palette } from '../../../utils/styleguide';
 export const ButtonDesktopNavbar = styled(Button)`
   color: ${palette.white};
   font-weight: bold;
-  text-transform: lowercase;
   cursor: pointer;
   background-color: transparent;
   font-size: 20px;

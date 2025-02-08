@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect } from 'react';
+import { useLayoutEffect } from 'react';
 import { MutableRefObject } from 'react';
 import gsap from 'gsap';
 

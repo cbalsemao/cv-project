@@ -11,23 +11,27 @@ const ScrollSection = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   useLayoutEffect(() => {
-    let sections = gsap.utils.toArray('.horizontal-section');
-
-    let scrollTween = gsap.to(sections, {
-      xPercent: -100 * (sections.length - 1),
-      ease: 'none',
-      scrollTrigger: {
-        trigger: triggerRef.current,
-        start: 'top top',
-        end: `+=${window.innerWidth * sections.length}`,
-        scrub: 0.5,
-        pin: true,
-        anticipatePin: 1,
+    const pin = gsap.fromTo(
+      sectionRef.current,
+      {
+        translateX: 0,
       },
-    });
+      {
+        translateX: '-100vw',
+        ease: 'none',
+        duration: 1,
+        scrollTrigger: {
+          trigger: triggerRef.current,
+          start: 'top top',
+          end: '2000 top',
+          scrub: 0.6,
+          pin: true,
+        },
+      }
+    );
 
     return () => {
-      scrollTween.kill();
+      pin.kill();
     };
   }, []);
 
@@ -35,10 +39,10 @@ const ScrollSection = () => {
     <section className="scroll-section-outer">
       <div ref={triggerRef}>
         <div ref={sectionRef} className="scroll-section-inner">
-          <div className="horizontal-section">
+          <div>
             <AboutMeSection />
           </div>
-          <div className="horizontal-section">
+          <div>
             <ProjectsSection />
           </div>
         </div>

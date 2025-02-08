@@ -1,4 +1,5 @@
 import { Button } from '@mui/material';
+import { palette } from '../utils/styleguide';
 
 const ButtonSend = () => {
   return (
@@ -6,7 +7,7 @@ const ButtonSend = () => {
       type="submit"
       variant="contained"
       sx={{
-        backgroundColor: '#c3195d',
+        backgroundColor: palette.darkPink,
         '&:hover': { backgroundColor: '#d81b60' },
       }}
     >

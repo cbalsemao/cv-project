@@ -1,13 +1,13 @@
 import styled from '@emotion/styled';
 import { createTheme } from '@mui/material';
 
-export const AppWrapper = styled.div`
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-`;
+// export const AppWrapper = styled.div`
+//   margin: 0;
+//   padding: 0;
+//   display: flex;
+//   flex-direction: column;
+//   min-height: 100vh;
+// `;
 
 export const theme = createTheme({
   // palette: {
@@ -19,7 +19,7 @@ export const theme = createTheme({
   //   },
   // },
   typography: {
-    fontFamily: 'PT Serif',
+    fontFamily: 'Rockwell',
 
     fontSize: 16,
   },
@@ -40,6 +40,8 @@ export const palette = {
   black: '#000000',
   purple: '#680747',
   gray: '#1e1e1e',
+  darkPink: '#c3195d',
+  red: '#C40233',
 };
 
 export const sectionStyle = {
