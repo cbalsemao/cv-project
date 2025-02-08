@@ -10,14 +10,14 @@ export const AppWrapper = styled.div`
 `;
 
 export const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#0052cc',
-    },
-    secondary: {
-      main: '#edf2ff',
-    },
-  },
+  // palette: {
+  //   primary: {
+  //     main: '#0052cc',
+  //   },
+  //   secondary: {
+  //     main: '#edf2ff',
+  //   },
+  // },
   typography: {
     fontFamily: 'PT Serif',
 

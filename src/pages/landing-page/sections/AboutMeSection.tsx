@@ -49,7 +49,7 @@ const AboutMeSection = () => {
       container
       className="scroll-section"
       ref={aboutRef}
-      id={'about-me'}
+      id="about-me"
     >
       <Grid size={12} sx={{ padding: 10 }}>
         <StyledSectionTitle>

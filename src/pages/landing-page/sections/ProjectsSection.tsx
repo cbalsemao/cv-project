@@ -12,7 +12,7 @@ const IntroContainer = styled(Grid)({
   backgroundColor: palette.black,
   padding: 5,
   overflow: 'hidden',
-  width: '100%',
+  width: '100vw',
 });
 
 const ProjectsSection = () => {
@@ -21,9 +21,9 @@ const ProjectsSection = () => {
 
   return (
     <IntroContainer
-      className="scroll-section-projects"
+      // className="scroll-section-projects"
       ref={projectsRef}
-      id={'projects'}
+      id="projects"
     >
       <Grid size={12}>
         <StyledSectionTitle>

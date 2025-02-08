@@ -39,11 +39,9 @@ export const DesktopMenu = ({ handleScroll }: DesktopMenuProps) => {
   const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
-    PAGES_NAMES.forEach((page) => {
+    PAGES_NAMES.forEach((page, index) => {
       ScrollTrigger.create({
         trigger: `#${formattedId(page)}`,
-        start: 'top 30%',
-        end: 'bottom 30%',
         onEnter: () => setActiveSection(page),
         onEnterBack: () => setActiveSection(page),
       });
