@@ -4,6 +4,7 @@ import { formattedId, PAGES_NAMES } from '../../utils/utils';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ButtonDesktopNavbar } from './navbar-styles/ButtonDesktopNavbar';
+import { theme } from '../../utils/styleguide';
 
 const DesktopMenuStyled = styled(Box)({
   width: '100%',
@@ -46,6 +47,7 @@ const ButtonSectionNavbar = ({
         color: isActive ? 'purple' : 'white',
         fontWeight: 'bold',
         transition: 'color 0.3s ease-in-out',
+        fontFamily: theme.typography.fontFamily,
       }}
     >
       {page}

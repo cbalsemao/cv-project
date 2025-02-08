@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useRef } from 'react';
+import { useEffect, useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { styled } from '@mui/material';
 import { palette } from '../utils/styleguide';
@@ -65,7 +65,7 @@ const Cursor: React.FC<CursorProps> = ({ isHovered }) => {
     window.requestAnimationFrame(animate);
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     animate();
     window.addEventListener('mousemove', manageMouseMove);
     return () => window.removeEventListener('mousemove', manageMouseMove);
