@@ -5,18 +5,73 @@ import {
   List,
   ListItem,
   ListItemText,
+  styled,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import Grid from '@mui/material/Grid2';
 import { formattedId, PAGES_NAMES } from '../../utils/utils';
-import { palette } from '../../utils/styleguide';
+import { palette, theme } from '../../utils/styleguide';
+import { SmallMenuProps } from '../../utils/types';
 
-type SmallMenuProps = {
-  handleDrawerToggle: () => void;
-  drawerOpen: boolean;
-  handleScroll: (sectionId: string) => void;
-};
+const StyledDrawer = styled(Drawer)({
+  zIndex: 6000,
+  '& .MuiDrawer-paper': {
+    height: '100%',
+    position: 'relative',
+    backgroundColor: palette.black,
+  },
+});
+
+const ListStyled = styled(List)({
+  fontWeight: 'bold',
+  '& .MuiListItem-root': {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    cursor: 'pointer',
+    padding: 2,
+  },
+  '& .MuiListItemText-root .MuiTypography-root': {
+    fontSize: '2rem',
+    textAlign: 'center',
+  },
+});
+
+const ListItemStyled = styled(ListItem)({
+  display: 'flex',
+  flexDirection: 'column',
+  color: palette.darkPink,
+  fontFamily: theme.typography.fontFamily,
+  textTransform: 'uppercase',
+  '&:hover': {
+    color: palette.purple,
+  },
+  '& .MuiListItemText-root .MuiTypography-root': {
+    fontWeight: 'bold',
+    fontFamily: theme.typography.fontFamily,
+  },
+});
+
+const BoxIconStyled = styled(Box)({
+  display: 'flex',
+  justifyContent: 'flex-end',
+  width: '100%',
+});
+
+const BoxListStyled = styled(Box)({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  height: '100%',
+  zIndex: 7000,
+});
+
+const IconButtonStyled = styled(IconButton)({
+  transition: 'transform 0.3s',
+  '&:hover': {
+    transform: 'rotate(180deg)',
+  },
+});
 
 export const MobileMenu = ({
   handleDrawerToggle,
@@ -30,109 +85,38 @@ export const MobileMenu = ({
 
   return (
     <>
-      <IconButton
-        size="large"
-        onClick={handleDrawerToggle}
-        sx={{ color: palette.darkWhite }}
-      >
+      <IconButton onClick={handleDrawerToggle} sx={{ color: palette.darkPink }}>
         <MenuIcon />
       </IconButton>
-      <Drawer
+      <StyledDrawer
         anchor="top"
         open={drawerOpen}
         onClose={handleDrawerToggle}
-        sx={{
-          zIndex: 6000,
-          '& .MuiDrawer-paper': {
-            height: '100%',
-            position: 'relative',
-            backgroundColor: palette.black,
-          },
-        }}
         transitionDuration={{
           enter: 500,
           exit: 500,
         }}
       >
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'flex-end',
-            width: '100%',
-          }}
-        >
-          <IconButton onClick={handleDrawerToggle} color="inherit">
+        <BoxIconStyled>
+          <IconButtonStyled onClick={handleDrawerToggle}>
             <CloseIcon sx={{ fontSize: 40, color: 'white' }} />
-          </IconButton>
-        </Box>
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            height: '100%',
-            zIndex: 7000,
-          }}
-        >
-          <List
-            sx={{
-              '& .MuiListItem-root': {
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                cursor: 'pointer',
-                padding: 2,
-              },
-              '& .MuiListItemText-root .MuiTypography-root': {
-                fontSize: '2rem',
-                textAlign: 'center',
-                fontWeight: 200,
-              },
-            }}
-          >
+          </IconButtonStyled>
+        </BoxIconStyled>
+        <BoxListStyled>
+          <ListStyled>
             {PAGES_NAMES.map((page) => {
               return (
-                <ListItem
-                  component="li"
+                <ListItemStyled
                   key={page}
                   onClick={() => onNavItemHandler(page)}
-                  sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    color: 'red',
-                    textTransform: 'lowercase',
-                    '&:hover': {
-                      color: 'red',
-                    },
-                    '& .MuiListItemText-root .MuiTypography-root': {
-                      fontWeight: 'bold',
-                    },
-                  }}
                 >
                   <ListItemText primary={page} />
-                </ListItem>
+                </ListItemStyled>
               );
             })}
-
-            <Grid
-              container
-              direction="row"
-              justifyContent="center"
-              alignItems="center"
-            ></Grid>
-          </List>
-        </Box>
-        <Box
-          sx={{
-            bottom: 200,
-            left: 0,
-            right: 0,
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        ></Box>
-      </Drawer>
+          </ListStyled>
+        </BoxListStyled>
+      </StyledDrawer>
     </>
   );
 };
