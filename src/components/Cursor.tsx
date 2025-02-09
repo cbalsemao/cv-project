@@ -65,7 +65,7 @@ const Cursor: React.FC<CursorProps> = ({ isHovered }) => {
     window.requestAnimationFrame(animate);
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     animate();
     window.addEventListener('mousemove', manageMouseMove);
     return () => window.removeEventListener('mousemove', manageMouseMove);

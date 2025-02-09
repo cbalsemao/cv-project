@@ -48,6 +48,7 @@ const ButtonSectionNavbar = ({
         fontWeight: 'bold',
         transition: 'color 0.3s ease-in-out',
         fontFamily: theme.typography.fontFamily,
+        padding: 2,
       }}
     >
       {page}

@@ -1,4 +1,4 @@
-import { useLayoutEffect } from 'react';
+import { useEffect } from 'react';
 import { MutableRefObject } from 'react';
 import gsap from 'gsap';
 
@@ -8,7 +8,7 @@ export const useTextAnimation = (
   start: string,
   end?: string
 ) => {
-  useLayoutEffect(() => {
+  useEffect(() => {
     const ctx = gsap.context(() => {
       const charElements = gsap.utils.toArray(className);
 

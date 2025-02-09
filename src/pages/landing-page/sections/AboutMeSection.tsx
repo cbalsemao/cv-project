@@ -38,6 +38,7 @@ const IntroContainer = styled(Grid)({
   backgroundColor: palette.black,
   padding: 5,
   overflow: 'hidden',
+  width: '100%',
 });
 
 const AboutMeSection = () => {
@@ -45,12 +46,7 @@ const AboutMeSection = () => {
   useTextAnimation(aboutRef, '.section__title__char', 'left center');
 
   return (
-    <IntroContainer
-      container
-      className="scroll-section"
-      ref={aboutRef}
-      id="about-me"
-    >
+    <IntroContainer container ref={aboutRef} id="about-me">
       <Grid size={12} sx={{ padding: 10 }}>
         <StyledSectionTitle>
           <TextSplitter text={'about me.'} className={'section__title__char'} />
