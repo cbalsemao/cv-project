@@ -25,7 +25,7 @@ const Cursor: React.FC<CursorProps> = ({ isHovered }) => {
 
   const size = isHovered
     ? isMobile
-      ? 200
+      ? 100
       : isTablet
       ? 300
       : 400
