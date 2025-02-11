@@ -3,6 +3,7 @@ import { useEffect, useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { styled } from '@mui/material';
 import { palette } from '../utils/styleguide';
+import { useViewPort } from '../hooks/useViewport';
 
 const colors = [palette.darkPink, palette.white, palette.red, palette.purple];
 
@@ -20,7 +21,19 @@ type CursorProps = {
 };
 
 const Cursor: React.FC<CursorProps> = ({ isHovered }) => {
-  const size = isHovered ? 400 : 30;
+  const { isTablet, isMobile } = useViewPort();
+
+  const size = isHovered
+    ? isMobile
+      ? 200
+      : isTablet
+      ? 300
+      : 400
+    : isMobile
+    ? 15
+    : isTablet
+    ? 20
+    : 30;
   const delay = isHovered ? 0.015 : 0.005;
   const circles = useRef<(HTMLDivElement | null)[]>([]);
   const mouse = useRef({

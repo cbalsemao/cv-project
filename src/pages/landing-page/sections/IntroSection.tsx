@@ -12,7 +12,7 @@ const IntroTextContainer = styled(Grid)({
   justifyContent: 'center',
   alignItems: 'center',
   flexDirection: 'column',
-  color: 'white',
+  color: palette.darkWhite,
   height: '100vh',
   width: '100%',
 });

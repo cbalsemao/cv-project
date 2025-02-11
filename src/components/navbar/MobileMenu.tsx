@@ -84,6 +84,7 @@ const ArrowStyled = styled(ArrowRightAltIcon)({
   transition: 'transform 0.3s ease-in-out, color 0.3s ease-in-out',
   marginLeft: '10px',
   transformOrigin: 'left center',
+  fontSize: '3.2rem',
 });
 
 const GlobalStyles = styled('style')`

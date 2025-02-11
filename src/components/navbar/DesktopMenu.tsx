@@ -44,7 +44,7 @@ const ButtonSectionNavbar = ({
       key={page}
       onClick={() => onNavItemHandler(page)}
       sx={{
-        color: isActive ? palette.darkPink : 'white',
+        color: isActive ? palette.darkPink : palette.darkWhite,
         fontWeight: 'bold',
         transition: 'color 0.3s ease-in-out',
         fontFamily: theme.typography.fontFamily,

@@ -17,7 +17,7 @@ const IntroContainer = styled(Grid)({
 
 const ProjectsSection = () => {
   const projectsRef = useRef<HTMLInputElement>(null);
-  useTextAnimation(projectsRef, '.section__title__char', 'top right');
+  useTextAnimation(projectsRef, '.section__title__char', 'left right');
 
   return (
     <IntroContainer ref={projectsRef} id="projects">
