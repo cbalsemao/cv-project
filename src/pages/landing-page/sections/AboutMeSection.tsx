@@ -1,4 +1,3 @@
-// AboutMeSection.tsx
 import { useRef } from 'react';
 import { Box, keyframes, styled, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
@@ -6,10 +5,11 @@ import { TextSplitter } from '../../../utils/utils';
 import { useTextAnimation } from '../../../hooks/useTextAnimation';
 import { StyledSectionTitle } from './styles-section/stylesSection';
 import { palette } from '../../../utils/styleguide';
+import TextFollow from '../../../components/TextFollowAnimation';
 
 const slideAnimation = keyframes`
   0% {
-    left:  translateX(-20%);
+    transform: translateX(-20%);
   }
   
   100% {
@@ -43,11 +43,11 @@ const IntroContainer = styled(Grid)({
 
 const AboutMeSection = () => {
   const aboutRef = useRef<HTMLInputElement>(null);
-  useTextAnimation(aboutRef, '.section__title__char', 'left center');
+  useTextAnimation(aboutRef, '.section__title__char', 'top center');
 
   return (
     <IntroContainer container ref={aboutRef} id="about-me">
-      <Grid size={12} sx={{ padding: 10 }}>
+      <Grid size={12}>
         <StyledSectionTitle>
           <TextSplitter text={'about me.'} className={'section__title__char'} />
         </StyledSectionTitle>
@@ -55,7 +55,7 @@ const AboutMeSection = () => {
       <Grid
         size={12}
         sx={{
-          display: 'f</IntroContainer>lex',
+          display: 'flex',
           gap: 20,
           padding: 10,
           paddingTop: 0,
@@ -63,20 +63,11 @@ const AboutMeSection = () => {
         justifyContent={'start'}
         alignItems={'start'}
       >
-        <Box
-          sx={{
-            backgroundColor: 'gray',
-            padding: 5,
-            borderRadius: '20px',
-          }}
-        >
-          <Typography variant={'h6'}>
-            I am a frontend developer with experience in building web
-            applications using React. I have a passion for creating beautiful
-            and user-friendly interfaces.
-          </Typography>
-        </Box>
+        <Typography>
+          <TextFollow textToAnimate="I am a Frontend Developer with a passion for creating interactive and dynamic user experiences. I specialize in React, TypeScript, and modern web development technologies." />
+        </Typography>
       </Grid>
+
       <Grid
         size={12}
         sx={{

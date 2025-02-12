@@ -17,11 +17,11 @@ const IntroContainer = styled(Grid)({
 
 const ProjectsSection = () => {
   const projectsRef = useRef<HTMLInputElement>(null);
-  useTextAnimation(projectsRef, '.section__title__char', 'left right');
+  useTextAnimation(projectsRef, '.section__title__char', 'top center');
 
   return (
     <IntroContainer ref={projectsRef} id="projects">
-      <Grid size={12}>
+      <Grid size={12} sx={{ padding: 10 }}>
         <StyledSectionTitle>
           <TextSplitter text={'projects.'} className={'section__title__char'} />
         </StyledSectionTitle>

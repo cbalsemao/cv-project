@@ -14,7 +14,6 @@ const ContactMeContainer = styled(Grid)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  backgroundImage: 'url(/wave-background.png)',
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
   backgroundPosition: 'center',

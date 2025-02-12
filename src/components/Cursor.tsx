@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useLayoutEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { styled } from '@mui/material';
 import { palette } from '../utils/styleguide';
