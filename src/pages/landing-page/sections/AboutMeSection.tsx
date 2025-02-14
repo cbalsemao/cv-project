@@ -56,9 +56,6 @@ const AboutMeSection = () => {
         size={12}
         sx={{
           display: 'flex',
-          gap: 20,
-          padding: 10,
-          paddingTop: 0,
         }}
         justifyContent={'start'}
         alignItems={'start'}

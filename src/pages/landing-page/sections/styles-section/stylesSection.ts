@@ -3,15 +3,17 @@ import { palette } from '../../../../utils/styleguide';
 
 export const StyledSectionTitle = styled(Typography)(({ theme }) => ({
   fontWeight: 'bold',
-  fontSize: '2rem',
-  overflow: 'visible',
   display: 'flex',
   height: 'calc(2.5rem * 1.5)',
   paddingTop: '5rem',
   color: palette.purple,
+  paddingLeft: '5rem',
 
-  [theme.breakpoints.up('sm')]: {
+  [theme.breakpoints.up('xs')]: {
     fontSize: '3rem',
+  },
+  [theme.breakpoints.up('md')]: {
+    fontSize: '4rem',
   },
   [theme.breakpoints.up('md')]: {
     fontSize: '4rem',

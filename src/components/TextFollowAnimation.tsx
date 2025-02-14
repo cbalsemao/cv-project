@@ -1,7 +1,34 @@
+import { styled, Typography } from '@mui/material';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { useLayoutEffect } from 'react';
+import { palette } from '../utils/styleguide';
 gsap.registerPlugin(ScrollTrigger);
+
+const SpanStyled = styled('span')({
+  backgroundImage: `linear-gradient(to right, ${palette.darkWhite} 50%, ${palette.gray} 50%)`,
+  backgroundClip: 'text',
+  WebkitTextFillColor: 'transparent',
+  backgroundSize: '200%',
+  backgroundPosition: '100% 0px',
+});
+
+const TextStyled = styled(Typography)(({ theme }) => ({
+  fontSize: '1.8rem',
+
+  [theme.breakpoints.up('sm')]: {
+    fontSize: '1.0rem',
+  },
+  [theme.breakpoints.up('md')]: {
+    fontSize: '1.5rem',
+  },
+  [theme.breakpoints.up('xs')]: {
+    fontSize: '1.0rem',
+  },
+  [theme.breakpoints.up('lg')]: {
+    fontSize: '2.0rem',
+  },
+}));
 
 const TextFollow = ({ textToAnimate }: { textToAnimate: string }) => {
   const words = textToAnimate.split(' ');
@@ -23,11 +50,11 @@ const TextFollow = ({ textToAnimate }: { textToAnimate: string }) => {
 
   return (
     <div className="section">
-      <h1 className="section__title section__title--1">
+      <TextStyled className="section__title section__title--1">
         {words.map((word, index) => {
-          return <span key={index}>{word} </span>;
+          return <SpanStyled key={index}>{word} </SpanStyled>;
         })}
-      </h1>
+      </TextStyled>
     </div>
   );
 };
