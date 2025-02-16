@@ -20,6 +20,6 @@ export const StyledSectionTitle = styled(Typography)(({ theme }) => ({
     fontSize: '4rem',
   },
   [theme.breakpoints.up('lg')]: {
-    fontSize: '1.5rem',
+    fontSize: '2.0rem',
   },
 }));

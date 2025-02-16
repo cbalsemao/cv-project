@@ -47,7 +47,7 @@ const ListItemStyled = styled(ListItem)({
   textTransform: 'uppercase',
   padding: '10px 20px',
   '&:hover': {
-    color: palette.darkWhite,
+    color: palette.beige,
   },
   '& .MuiListItemText-root .MuiTypography-root': {
     fontWeight: 'bold',
@@ -55,7 +55,7 @@ const ListItemStyled = styled(ListItem)({
   },
   '&:hover .arrow': {
     animation: 'stretchArrow 1s ease-in-out infinite',
-    color: palette.darkWhite,
+    color: palette.beige,
   },
 });
 

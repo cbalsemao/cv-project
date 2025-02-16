@@ -81,6 +81,7 @@ const ContactMeSection = () => {
           variant={isMobile ? 'h4' : 'h3'}
           align="center"
           gutterBottom
+          sx={{ color: palette.beige }}
         >
           Get in Touch
         </Typography>

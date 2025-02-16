@@ -24,5 +24,5 @@ export const palette = {
   gray: '#1e1e1e',
   darkPink: '#c3195d',
   red: '#C40233',
-  beige: '#ba9b88',
+  beige: '#b7ab98',
 };
