@@ -4,10 +4,11 @@ import { palette } from '../../../../utils/styleguide';
 export const StyledSectionTitle = styled(Typography)(({ theme }) => ({
   fontWeight: 'bold',
   display: 'flex',
-  height: 'calc(2.5rem * 1.5)',
-  paddingTop: '5rem',
+  // height: 'calc(2.5rem * 1.5)',
+  paddingTop: '10rem',
   color: palette.purple,
-  paddingLeft: '5rem',
+  textTransform: 'uppercase', // Added to make text uppercase
+  //paddingLeft: '5rem',
 
   [theme.breakpoints.up('xs')]: {
     fontSize: '3rem',
@@ -19,6 +20,6 @@ export const StyledSectionTitle = styled(Typography)(({ theme }) => ({
     fontSize: '4rem',
   },
   [theme.breakpoints.up('lg')]: {
-    fontSize: '10rem',
+    fontSize: '1.5rem',
   },
 }));

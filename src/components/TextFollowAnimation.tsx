@@ -6,7 +6,7 @@ import { palette } from '../utils/styleguide';
 gsap.registerPlugin(ScrollTrigger);
 
 const SpanStyled = styled('span')({
-  backgroundImage: `linear-gradient(to right, ${palette.darkWhite} 50%, ${palette.gray} 50%)`,
+  backgroundImage: `linear-gradient(to right, ${palette.beige} 50%, ${palette.gray} 50%)`,
   backgroundClip: 'text',
   WebkitTextFillColor: 'transparent',
   backgroundSize: '200%',
@@ -14,19 +14,16 @@ const SpanStyled = styled('span')({
 });
 
 const TextStyled = styled(Typography)(({ theme }) => ({
-  fontSize: '1.8rem',
+  fontSize: '2.5rem',
 
   [theme.breakpoints.up('sm')]: {
-    fontSize: '1.0rem',
+    fontSize: '3rem',
   },
   [theme.breakpoints.up('md')]: {
-    fontSize: '1.5rem',
-  },
-  [theme.breakpoints.up('xs')]: {
-    fontSize: '1.0rem',
+    fontSize: '3.5rem',
   },
   [theme.breakpoints.up('lg')]: {
-    fontSize: '2.0rem',
+    fontSize: '4rem',
   },
 }));
 
@@ -35,13 +32,13 @@ const TextFollow = ({ textToAnimate }: { textToAnimate: string }) => {
   useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: '.section__title--1 span',
+        trigger: '.section__title span',
         scrub: 1,
         start: 'top 100%',
         end: 'top 40%',
       },
     });
-    gsap.utils.toArray('.section__title--1 span').forEach((word) => {
+    gsap.utils.toArray('.section__title span').forEach((word) => {
       tl.to(word as HTMLElement, {
         backgroundPosition: `0% 0px`,
       });
@@ -50,7 +47,7 @@ const TextFollow = ({ textToAnimate }: { textToAnimate: string }) => {
 
   return (
     <div className="section">
-      <TextStyled className="section__title section__title--1">
+      <TextStyled className="section__title">
         {words.map((word, index) => {
           return <SpanStyled key={index}>{word} </SpanStyled>;
         })}

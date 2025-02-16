@@ -36,7 +36,6 @@ const IntroContainer = styled(Grid)({
   height: '100vh',
   color: 'white',
   backgroundColor: palette.black,
-  padding: 5,
   overflow: 'hidden',
   width: '100%',
 });
@@ -46,61 +45,23 @@ const AboutMeSection = () => {
   useTextAnimation(aboutRef, '.section__title__char', 'top center');
 
   return (
-    <IntroContainer container ref={aboutRef} id="about-me">
+    <IntroContainer
+      container
+      ref={aboutRef}
+      id="about-me"
+      sx={{
+        paddingLeft: { xs: 2, sm: 10, md: 20, lg: 30, xl: 40 },
+        paddingRight: { xs: 2, sm: 10, md: 20, lg: 30, xl: 40 },
+      }}
+    >
       <Grid size={12}>
         <StyledSectionTitle>
           <TextSplitter text={'about me.'} className={'section__title__char'} />
         </StyledSectionTitle>
-      </Grid>
-      <Grid
-        size={12}
-        sx={{
-          display: 'flex',
-        }}
-        justifyContent={'start'}
-        alignItems={'start'}
-      >
-        <Typography>
-          <TextFollow textToAnimate="I am a Frontend Developer with a passion for creating interactive and dynamic user experiences. I specialize in React, TypeScript, and modern web development technologies." />
-        </Typography>
-      </Grid>
 
-      <Grid
-        size={12}
-        sx={{
-          display: 'flex',
-          gap: 20,
-          padding: 10,
-          paddingTop: 0,
-          left: '-60%',
-          position: 'relative',
-        }}
-        justifyContent={'start'}
-        alignItems={'start'}
-      >
-        <AnimatedLogoContainer>
-          <img
-            src="/html-logo.png"
-            alt="About me image"
-            className="html-logo"
-          />
-          <img src="/css-logo.png" alt="About me image" className="css-logo" />
-          <img
-            src="/typescript-logo.png"
-            alt="About me image"
-            className="ts-logo"
-          />
-          <img
-            src="/react-logo.png"
-            alt="About me image"
-            className="react-logo"
-          />
-          <img
-            src="/redux-logo.png"
-            alt="About me image"
-            className="redux-logo"
-          />
-        </AnimatedLogoContainer>
+        <Typography>
+          <TextFollow textToAnimate="I am a Frontend Developer with a passion for creating interactive and dynamic user experiences. I specialize in React ." />
+        </Typography>
       </Grid>
     </IntroContainer>
   );
