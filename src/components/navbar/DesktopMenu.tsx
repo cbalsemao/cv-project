@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react';
-import { Box, styled } from '@mui/material';
+import { Box, styled, Typography } from '@mui/material';
 import { formattedId, PAGES_NAMES } from '../../utils/utils';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ButtonDesktopNavbar } from './navbar-styles/ButtonDesktopNavbar';
 import { palette, theme } from '../../utils/styleguide';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import ContactIcons from '../ContactIcons';
 
 const DesktopMenuStyled = styled(Box)({
   width: '100%',
@@ -87,6 +90,7 @@ export const DesktopMenu = ({ handleScroll }: DesktopMenuProps) => {
           />
         ))}
       </ContainerButtonsDeskMenu>
+      <ContactIcons />
     </DesktopMenuStyled>
   );
 };

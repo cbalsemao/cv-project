@@ -2,7 +2,7 @@ import { styled, Typography } from '@mui/material';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { useLayoutEffect } from 'react';
-import { palette } from '../utils/styleguide';
+import { palette, theme } from '../utils/styleguide';
 gsap.registerPlugin(ScrollTrigger);
 
 const SpanStyled = styled('span')({
@@ -11,11 +11,13 @@ const SpanStyled = styled('span')({
   WebkitTextFillColor: 'transparent',
   backgroundSize: '200%',
   backgroundPosition: '100% 0px',
+  fontFamily: theme.typography.fontFamily,
+  fontWeight: 'bold',
 });
 
 const TextStyled = styled(Typography)(({ theme }) => ({
   fontSize: '2.5rem',
-
+  fontfamily: theme.typography.fontFamily,
   [theme.breakpoints.up('sm')]: {
     fontSize: '3rem',
   },

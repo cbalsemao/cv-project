@@ -2,7 +2,7 @@ import { createTheme } from '@mui/material';
 
 export const theme = createTheme({
   typography: {
-    fontFamily: 'Rockwell',
+    fontFamily: 'Century Gothic',
     fontSize: 16,
   },
   breakpoints: {
