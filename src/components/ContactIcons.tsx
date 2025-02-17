@@ -80,10 +80,26 @@ const ContactIcons = () => {
 
   return (
     <ContactIconsContainer>
-      <TypographyIcon variant="h6" ref={githubRef}>
+      <TypographyIcon
+        variant="h6"
+        ref={githubRef}
+        sx={{
+          '&:hover': {
+            color: palette.darkPink,
+          },
+        }}
+      >
         <GitHubIcon sx={{ fontSize: 40 }} />
       </TypographyIcon>
-      <TypographyIcon variant="h6" ref={linkedinRef}>
+      <TypographyIcon
+        variant="h6"
+        ref={linkedinRef}
+        sx={{
+          '&:hover': {
+            color: palette.darkPink,
+          },
+        }}
+      >
         <LinkedInIcon sx={{ fontSize: 40 }} />
       </TypographyIcon>
     </ContactIconsContainer>

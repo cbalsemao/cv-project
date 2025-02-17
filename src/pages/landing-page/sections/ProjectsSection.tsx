@@ -1,32 +1,187 @@
-import Grid from '@mui/material/Grid2';
-import { StyledSectionTitle } from './styles-section/stylesSection';
-import { TextSplitter } from '../../../utils/utils';
-import { styled } from '@mui/material';
-import { useTextAnimation } from '../../../hooks/useTextAnimation';
+import { useState } from 'react';
+import { Box, Typography } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import gsap from 'gsap';
 import { useRef } from 'react';
 import { palette } from '../../../utils/styleguide';
+import { useTextAnimation } from '../../../hooks/useTextAnimation';
+import { StyledSectionTitle } from './styles-section/stylesSection';
+import { TextSplitter } from '../../../utils/utils';
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
-const IntroContainer = styled(Grid)({
-  height: '100vh',
-  color: 'white',
-  backgroundColor: palette.black,
-  padding: 5,
-  overflow: 'hidden',
-  width: '100%',
+const ArrowStyled = styled(ArrowRightAltIcon)({
+  transition: 'transform 0.3s ease-in-out, color 0.3s ease-in-out',
+  transformOrigin: 'left center',
+  fontSize: '3.2rem',
+});
+
+const GlobalStyles = styled('style')`
+  @keyframes stretchArrow {
+    0% {
+      transform: scaleX(1);
+    }
+    25% {
+      transform: scaleX(1.3);
+    }
+    50% {
+      transform: scaleX(1);
+    }
+    75% {
+      transform: scaleX(1.3);
+    }
+    100% {
+      transform: scaleX(1);
+    }
+  }
+`;
+
+const projects = [
+  {
+    name: 'sharlee',
+    image:
+      'https://t4.ftcdn.net/jpg/02/66/72/41/360_F_266724172_Iy8gdKgMa7XmrhYYxLCxyhx6J7070Pr8.jpg',
+  },
+  {
+    name: 'act responsable',
+    image:
+      'https://t3.ftcdn.net/jpg/02/86/74/06/360_F_286740601_d16NX2q8zoOfzkeN8pR8JBzbkDil2xjW.jpg',
+  },
+  {
+    name: 'dua lipa',
+    image:
+      'https://cdn.theatlantic.com/thumbor/yHhIvkBiGvKKubxVHTNXvU4nCKQ=/1x122:2554x1452/1200x625/media/img/mt/2017/06/shutterstock_319985324/original.jpg',
+  },
+  {
+    name: 'cocolyze',
+    image:
+      'https://t4.ftcdn.net/jpg/02/66/72/41/360_F_266724172_Iy8gdKgMa7XmrhYYxLCxyhx6J7070Pr8.jpg',
+  },
+];
+
+const SectionContainer = styled(Box)`
+  height: 100vh;
+  background-color: ${palette.black};
+  color: ${palette.beige};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  gap: 50px;
+  padding: 0 150px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+  }
+`;
+
+const ImageContainer = styled(Box)`
+  width: 50%;
+  height: 60%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+
+  @media (max-width: 1000px) {
+    display: none;
+  }
+`;
+
+const ProjectList = styled(Box)`
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-bottom: 350px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding-bottom: 0;
+    align-items: center;
+    text-align: center;
+  }
+`;
+
+const ProjectItem = styled(Typography)({
+  fontSize: '1.5rem',
+  fontWeight: 'bold',
+  cursor: 'pointer',
+  display: 'flex',
+
+  position: 'relative',
+  padding: '10px 0',
+  transition: 'color 0.3s ease',
+  '&:hover .arrow': {
+    animation: 'stretchArrow 1s ease-in-out infinite',
+    color: palette.beige,
+  },
+  '&::after': {
+    content: '""',
+    position: 'absolute',
+    bottom: '-5px',
+    width: '100%',
+    height: '2px',
+    backgroundColor: palette.beige,
+    transition: 'width 0.3s ease',
+  },
+  '&:hover::after': {
+    width: '100%',
+    backgroundColor: palette.darkPink,
+  },
 });
 
 const ProjectsSection = () => {
+  const [activeImage, setActiveImage] = useState(projects[0].image);
+  const imageRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLInputElement>(null);
   useTextAnimation(projectsRef, '.section__title__char', 'top center');
 
+  const handleHover = (image: string) => {
+    setActiveImage(image);
+    if (imageRef.current) {
+      gsap.fromTo(
+        imageRef.current,
+        { opacity: 0, y: 5 },
+        { opacity: 0.7, y: 0, duration: 6, ease: 'power2.out' }
+      );
+    }
+  };
+
   return (
-    <IntroContainer ref={projectsRef} id="projects">
-      <Grid size={12} sx={{ padding: 10 }}>
+    <SectionContainer ref={projectsRef} id="projects">
+      <GlobalStyles />
+      <ImageContainer>
+        <Box
+          ref={imageRef}
+          component="img"
+          src={activeImage}
+          alt="Project preview"
+          sx={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            borderRadius: '10px',
+          }}
+        />
+      </ImageContainer>
+      <ProjectList>
         <StyledSectionTitle>
-          <TextSplitter text={'projects.'} className={'section__title__char'} />
+          <TextSplitter text={'projects'} className={'section__title__char'} />
         </StyledSectionTitle>
-      </Grid>
-    </IntroContainer>
+        {projects.map((project) => (
+          <ProjectItem
+            key={project.name}
+            onMouseEnter={() => handleHover(project.image)}
+          >
+            <Box display="flex" alignItems="center" gap={2}>
+              <ArrowStyled className="arrow" /> {project.name}
+            </Box>
+          </ProjectItem>
+        ))}
+      </ProjectList>
+    </SectionContainer>
   );
 };
 

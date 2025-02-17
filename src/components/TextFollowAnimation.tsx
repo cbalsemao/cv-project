@@ -22,7 +22,7 @@ const TextStyled = styled(Typography)(({ theme }) => ({
     fontSize: '3rem',
   },
   [theme.breakpoints.up('md')]: {
-    fontSize: '3.5rem',
+    fontSize: '3.0rem',
   },
   [theme.breakpoints.up('lg')]: {
     fontSize: '4rem',
