@@ -16,6 +16,7 @@ import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
 const StyledDrawer = styled(Drawer)({
   zIndex: 6000,
+
   '& .MuiDrawer-paper': {
     height: '100%',
     position: 'relative',
@@ -120,7 +121,7 @@ export const MobileMenu = ({
   return (
     <>
       <GlobalStyles />
-      <IconButton onClick={handleDrawerToggle} sx={{ color: palette.darkPink }}>
+      <IconButton onClick={handleDrawerToggle} sx={{ color: palette.beige }}>
         <MenuIcon />
       </IconButton>
       <StyledDrawer
@@ -134,7 +135,7 @@ export const MobileMenu = ({
       >
         <BoxIconStyled>
           <IconButtonStyled onClick={handleDrawerToggle}>
-            <CloseIcon sx={{ fontSize: 40, color: 'white' }} />
+            <CloseIcon sx={{ fontSize: 40, color: palette.darkWhite }} />
           </IconButtonStyled>
         </BoxIconStyled>
         <BoxListStyled>

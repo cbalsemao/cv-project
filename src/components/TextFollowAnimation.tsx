@@ -19,7 +19,7 @@ const TextStyled = styled(Typography)(({ theme }) => ({
   fontSize: '2.5rem',
   fontfamily: theme.typography.fontFamily,
   [theme.breakpoints.up('sm')]: {
-    fontSize: '3rem',
+    fontSize: '2.5rem',
   },
   [theme.breakpoints.up('md')]: {
     fontSize: '3.0rem',

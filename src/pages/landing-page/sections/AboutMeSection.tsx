@@ -7,6 +7,7 @@ import { StyledSectionTitle } from './styles-section/stylesSection';
 import { palette } from '../../../utils/styleguide';
 import TextFollow from '../../../components/TextFollowAnimation';
 import Cursor from '../../../components/Cursor';
+import SvgComponent from '../../../components/WaveAnimationSvg2';
 
 const slideAnimation = keyframes`
   0% {
@@ -47,16 +48,13 @@ const AboutMeSection = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <IntroContainer
-      container
-      ref={aboutRef}
-      id="about-me"
-      sx={{
-        paddingLeft: { xs: 2, sm: 10, md: 20, lg: 30, xl: 40 },
-        paddingRight: { xs: 2, sm: 10, md: 20, lg: 30, xl: 40 },
-      }}
-    >
-      <Grid size={12}>
+    <IntroContainer container ref={aboutRef} id="about-me">
+      <Grid
+        sx={{
+          paddingLeft: { xs: 2, sm: 10, md: 20, lg: 30, xl: 40 },
+          paddingRight: { xs: 2, sm: 10, md: 20, lg: 30, xl: 40 },
+        }}
+      >
         <StyledSectionTitle>
           <TextSplitter text={'about me'} className={'section__title__char'} />
         </StyledSectionTitle>
@@ -74,6 +72,7 @@ const AboutMeSection = () => {
         </Typography>
         <Cursor isHovered={isHovered} />
       </Grid>
+      <SvgComponent />
     </IntroContainer>
   );
 };

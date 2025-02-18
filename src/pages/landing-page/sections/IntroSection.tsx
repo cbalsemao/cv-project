@@ -6,15 +6,31 @@ import { ButtonOpenCV } from '../../../components/ButtonOpenCV';
 import { useTitleAnimation } from '../../../hooks/useTitleAnimation';
 import { palette } from '../../../utils/styleguide';
 import Cursor from '../../../components/Cursor';
+import WaveAnimationSvg from '../../../components/WaveAnimationSvg';
 
 const IntroTextContainer = styled(Grid)({
-  backgroundColor: palette.black,
   justifyContent: 'center',
   alignItems: 'center',
   flexDirection: 'column',
   color: palette.beige,
   height: '100vh',
   width: '100%',
+  backgroundColor: palette.black,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  animation: 'backgroundAnimation 10s infinite alternate',
+
+  '@keyframes backgroundAnimation': {
+    '0%': {
+      backgroundPosition: 'center',
+    },
+    '50%': {
+      backgroundPosition: 'top',
+    },
+    '100%': {
+      backgroundPosition: 'center',
+    },
+  },
 });
 
 const IntroNameTextTypography = styled(Typography)(({ theme }) => ({
@@ -48,6 +64,7 @@ const IntroSection = () => {
 
   return (
     <IntroTextContainer id={'intro'} ref={sectionRef} container>
+      <WaveAnimationSvg />
       <Box>
         <IntroNameTextTypography
           onMouseEnter={() => {
