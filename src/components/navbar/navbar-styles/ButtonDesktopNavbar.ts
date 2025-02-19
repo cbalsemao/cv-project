@@ -1,11 +1,11 @@
-import { styled } from '@mui/material';
+import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import { palette } from '../../../utils/styleguide';
 
 export const ButtonDesktopNavbar = styled(Button)`
   color: ${palette.white};
   font-weight: bold;
-  cursor: none;
+
   background-color: transparent;
   font-size: 20px;
 

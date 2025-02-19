@@ -62,7 +62,7 @@ export const DesktopMenu = ({ handleScroll }: DesktopMenuProps) => {
   const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
-    PAGES_NAMES.forEach((page, index) => {
+    PAGES_NAMES.forEach((page) => {
       ScrollTrigger.create({
         trigger: `#${formattedId(page)}`,
         onEnter: () => setActiveSection(page),

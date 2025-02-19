@@ -12,7 +12,7 @@ const Navbar = () => {
 
   const handleScroll = (sectionId: string) => {
     const topOffsetPosition = getOffsetBySectionId(sectionId);
-    handleScrollTo(topOffsetPosition);
+    handleScrollTo(topOffsetPosition.top);
     setDrawerOpen(false);
   };
 

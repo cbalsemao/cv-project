@@ -15,7 +15,7 @@ const SpanStyled = styled('span')({
   fontWeight: 'bold',
 });
 
-const TextStyled = styled(Typography)(({ theme }) => ({
+const TextStyled = styled('div')({
   fontSize: '2.5rem',
   fontfamily: theme.typography.fontFamily,
   [theme.breakpoints.up('sm')]: {
@@ -27,7 +27,7 @@ const TextStyled = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.up('lg')]: {
     fontSize: '4rem',
   },
-}));
+});
 
 const TextFollow = ({ textToAnimate }: { textToAnimate: string }) => {
   const words = textToAnimate.split(' ');

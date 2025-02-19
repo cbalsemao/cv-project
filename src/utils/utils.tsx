@@ -30,7 +30,11 @@ export const handleScrollTo = (targetTop: number) => {
 
 export const getOffsetBySectionId = (sectionId: string) => {
   const section = document.getElementById(sectionId);
-  const sectionPosition = section?.getBoundingClientRect().top || 0;
-  const topSectionPosition = sectionPosition + window.scrollY - OFFSET;
-  return topSectionPosition;
+  const sectionPosition = section?.getBoundingClientRect() || {
+    top: 0,
+    left: 0,
+  };
+  const topSectionPosition = sectionPosition.top + window.scrollY - OFFSET;
+  const leftSectionPosition = sectionPosition.left + window.scrollX - OFFSET;
+  return { top: topSectionPosition, left: leftSectionPosition };
 };

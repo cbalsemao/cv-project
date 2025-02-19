@@ -107,9 +107,7 @@ const ProjectList = styled(Box)`
 const ProjectItem = styled(Typography)({
   fontSize: '1.5rem',
   fontWeight: 'bold',
-  cursor: 'pointer',
   display: 'flex',
-
   position: 'relative',
   padding: '10px 0',
   transition: 'color 0.3s ease',
@@ -133,7 +131,7 @@ const ProjectItem = styled(Typography)({
 });
 
 const ProjectsSection = () => {
-  const [activeImage, setActiveImage] = useState(projects[0].image);
+  const [activeImage, setActiveImage] = useState(projects[0].image); //TODO
   const imageRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLInputElement>(null);
   useTextAnimation(projectsRef, '.section__title__char', 'top center');
@@ -144,7 +142,7 @@ const ProjectsSection = () => {
       gsap.fromTo(
         imageRef.current,
         { opacity: 0, y: 5 },
-        { opacity: 0.7, y: 0, duration: 6, ease: 'power2.out' }
+        { opacity: 0.7, y: 0, duration: 1, ease: 'power2.out' }
       );
     }
   };
@@ -162,7 +160,7 @@ const ProjectsSection = () => {
             width: '100%',
             height: '100%',
             objectFit: 'cover',
-            borderRadius: '10px',
+            borderRadius: '50px',
           }}
         />
       </ImageContainer>

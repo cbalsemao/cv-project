@@ -18,11 +18,11 @@ export const theme = createTheme({
 
 export const palette = {
   white: '#FBFBFB',
-  darkWhite: '#f7f4ef',
+  darkWhite: '#F4CCE9',
   black: '#0c0c0c',
-  purple: '#680747',
+  purple: '#56021F',
   gray: '#1e1e1e',
-  darkPink: '#c3195d',
+  darkPink: '#7D1C4A',
   red: '#C40233',
   beige: '#b7ab98',
 };

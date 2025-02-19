@@ -9,7 +9,6 @@ const LandPage = () => {
     <>
       <Navbar />
       <IntroSection />
-      {/* <ScrollSection /> */}
       <AboutMeSection />
       <ProjectsSection />
       <ContactMeSection />
