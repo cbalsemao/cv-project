@@ -11,7 +11,8 @@ export const ButtonDesktopNavbar = styled(Button)`
 
   &:hover {
     background-color: transparent;
-    text-decoration: underline;
+    text-decoration: underline overline;
+    color: ${palette.darkWhite};
   }
 
   @media (max-width: 1024px) {
