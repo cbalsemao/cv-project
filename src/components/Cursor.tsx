@@ -5,7 +5,7 @@ import { styled } from '@mui/material';
 import { palette } from '../utils/styleguide';
 import { useViewPort } from '../hooks/useViewport';
 
-const colors = [palette.darkPink, palette.white, palette.burgundy];
+const colors = [palette.maroon, palette.white, palette.burgundy];
 
 const CursorCircle = styled('div')({
   position: 'fixed',

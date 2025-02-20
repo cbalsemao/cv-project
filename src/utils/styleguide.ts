@@ -22,7 +22,7 @@ export const palette = {
   black: '#0c0c0c',
   burgundy: '#56021F',
   gray: '#1e1e1e',
-  darkPink: '#7D1C4A',
+  maroon: '#8D0B41',
   red: '#C40233',
   beige: '#b7ab98',
 };

@@ -15,7 +15,7 @@ export const ButtonOpenCV = () => {
       onMouseLeave={() => setHover(false)}
       sx={{
         mt: 4,
-        backgroundColor: palette.darkPink,
+        backgroundColor: palette.burgundy,
         fontWeight: 'bold',
         color: palette.darkWhite,
         fontSize: '1.2rem',
@@ -26,7 +26,7 @@ export const ButtonOpenCV = () => {
         position: 'relative',
         transition: 'all 0.3s ease',
         '&:hover': {
-          backgroundColor: 'gray',
+          backgroundColor: palette.maroon,
           transform: 'translateY(-5px)',
           boxShadow: '0 8px 16px rgba(0, 0, 0, 0.3)',
         },

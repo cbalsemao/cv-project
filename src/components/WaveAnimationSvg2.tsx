@@ -17,7 +17,7 @@ const SvgComponent = (props: SVGProps<SVGSVGElement>) => (
   >
     <defs>
       <linearGradient id="a" x1={0} x2={1} y1={0} y2={0}>
-        <stop offset={0} stopColor={palette.darkPink} />
+        <stop offset={0} stopColor={palette.maroon} />
         <stop offset={1} stopColor={palette.burgundy} />
       </linearGradient>
 

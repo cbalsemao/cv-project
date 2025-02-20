@@ -126,7 +126,7 @@ const ProjectItem = styled(Typography)({
   },
   '&:hover::after': {
     width: '100%',
-    backgroundColor: palette.darkPink,
+    backgroundColor: palette.maroon,
   },
 });
 

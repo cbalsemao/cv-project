@@ -20,7 +20,7 @@ const ContactIconsContainer = ({ children }: { children: React.ReactNode }) => {
         paddingLeft: { xs: '0', md: '20px' },
         alignItems: { xs: 'center', md: 'flex-start' },
         marginTop: { xs: '0', md: '0' },
-        color: palette.beige,
+        color: { xs: palette.white, md: palette.beige },
       }}
     >
       {children}

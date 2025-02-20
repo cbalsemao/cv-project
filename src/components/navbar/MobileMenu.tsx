@@ -43,7 +43,7 @@ const ListItemStyled = styled(ListItem)({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  color: palette.darkPink,
+  color: palette.maroon,
   fontFamily: theme.typography.fontFamily,
   textTransform: 'uppercase',
   padding: '10px 20px',

@@ -10,7 +10,7 @@ const ButtonSend = () => {
         fontWeight: 'bold',
         color: palette.beige,
         backgroundColor: palette.burgundy,
-        '&:hover': { backgroundColor: palette.darkPink },
+        '&:hover': { backgroundColor: palette.maroon },
       }}
     >
       Send
