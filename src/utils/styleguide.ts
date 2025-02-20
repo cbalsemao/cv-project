@@ -20,7 +20,7 @@ export const palette = {
   white: '#FBFBFB',
   darkWhite: '#F4CCE9',
   black: '#0c0c0c',
-  purple: '#56021F',
+  burgundy: '#56021F',
   gray: '#1e1e1e',
   darkPink: '#7D1C4A',
   red: '#C40233',

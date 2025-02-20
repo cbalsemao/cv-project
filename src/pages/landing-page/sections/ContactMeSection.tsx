@@ -47,14 +47,14 @@ const StyledTextField = styled(TextField)({
       borderColor: 'white',
     },
     '&.Mui-focused fieldset': {
-      borderColor: palette.purple,
+      borderColor: palette.burgundy,
     },
   },
   '& label': {
     color: 'gray',
   },
   '& label.Mui-focused': {
-    color: palette.purple,
+    color: palette.burgundy,
   },
 });
 

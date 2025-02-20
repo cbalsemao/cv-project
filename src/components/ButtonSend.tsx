@@ -7,8 +7,10 @@ const ButtonSend = () => {
       type="submit"
       variant="contained"
       sx={{
-        backgroundColor: palette.darkPink,
-        '&:hover': { backgroundColor: '#d81b60' },
+        fontWeight: 'bold',
+        color: palette.beige,
+        backgroundColor: palette.burgundy,
+        '&:hover': { backgroundColor: palette.darkPink },
       }}
     >
       Send

@@ -1,4 +1,4 @@
-import { styled, Typography } from '@mui/material';
+import { styled } from '@mui/material';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { useLayoutEffect } from 'react';
@@ -16,16 +16,16 @@ const SpanStyled = styled('span')({
 });
 
 const TextStyled = styled('div')({
-  fontSize: '2.5rem',
+  fontSize: '2.0rem',
   fontfamily: theme.typography.fontFamily,
   [theme.breakpoints.up('sm')]: {
-    fontSize: '2.5rem',
+    fontSize: '2.0rem',
   },
   [theme.breakpoints.up('md')]: {
     fontSize: '3.0rem',
   },
   [theme.breakpoints.up('lg')]: {
-    fontSize: '4rem',
+    fontSize: '3.5rem',
   },
 });
 

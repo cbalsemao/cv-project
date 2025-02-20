@@ -85,7 +85,7 @@ const ContactIcons = () => {
         ref={githubRef}
         sx={{
           '&:hover': {
-            color: palette.darkPink,
+            color: palette.darkWhite,
           },
         }}
       >
@@ -96,7 +96,7 @@ const ContactIcons = () => {
         ref={linkedinRef}
         sx={{
           '&:hover': {
-            color: palette.darkPink,
+            color: palette.darkWhite,
           },
         }}
       >

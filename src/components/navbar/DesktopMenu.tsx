@@ -20,7 +20,7 @@ const DesktopMenuStyled = styled(Box)({
 const ContainerButtonsDeskMenu = styled(Box)({
   display: 'inline-flex',
   alignItems: 'center',
-  padding: '15px 30px',
+
   minWidth: '250px',
   minHeight: '60px',
   borderRadius: '15px',
@@ -35,7 +35,6 @@ type DesktopMenuProps = {
 const ButtonSectionNavbar = ({
   page,
   onNavItemHandler,
-  isActive,
 }: {
   page: string;
   onNavItemHandler: (page: string) => void;
@@ -46,7 +45,7 @@ const ButtonSectionNavbar = ({
       key={page}
       onClick={() => onNavItemHandler(page)}
       sx={{
-        color: isActive ? palette.darkPink : palette.beige,
+        color: palette.beige,
         fontWeight: 'bold',
         transition: 'color 0.3s ease-in-out',
         fontFamily: theme.typography.fontFamily,

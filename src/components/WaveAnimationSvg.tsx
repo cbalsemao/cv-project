@@ -62,7 +62,7 @@ const WaveAnimationSvg = (props: SVGProps<SVGSVGElement>) => (
         d="M14.464 0c0 5.024 1.893 3.642-.619 7.993s-2.262 2.021-6.613 4.533-2.208 3.46-7.232 3.46-2.88-.947-7.232-3.46-4.1-.181-6.613-4.533-.62-2.969-.62-7.993-1.892-3.642.62-7.993 2.262-2.021 6.613-4.533 2.208-3.46 7.232-3.46 2.88.947 7.232 3.46 4.1.181 6.613 4.533.62 2.969.62 7.993"
         opacity={0.42}
         style={{
-          fill: palette.purple,
+          fill: palette.burgundy,
           transform: 'matrix(1,0,0,1,0,0)',
           animation: 'pathAnimation 10s infinite',
         }}

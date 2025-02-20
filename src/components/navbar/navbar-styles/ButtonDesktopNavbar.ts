@@ -3,15 +3,15 @@ import Button from '@mui/material/Button';
 import { palette } from '../../../utils/styleguide';
 
 export const ButtonDesktopNavbar = styled(Button)`
-  color: ${palette.white};
+  color: ${palette.beige};
   font-weight: bold;
 
   background-color: transparent;
   font-size: 20px;
 
   &:hover {
-    color: ${palette.purple};
     background-color: transparent;
+    text-decoration: underline;
   }
 
   @media (max-width: 1024px) {
