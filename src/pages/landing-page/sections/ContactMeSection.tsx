@@ -9,6 +9,9 @@ import SvgComponent2 from '../../../components/WaveAnimationSvg3';
 
 const ContactMeContainer = styled(Grid)(({ theme }) => ({
   height: '100vh',
+  width: '100%',
+  overflow: 'hidden',
+  // width: '100%',
   color: 'white',
   backgroundColor: palette.black,
   padding: theme.spacing(4),
@@ -24,6 +27,8 @@ const ContactMeContainer = styled(Grid)(({ theme }) => ({
     '50%': { backgroundPosition: '100% 100%' },
     '100%': { backgroundPosition: '0% 0%' },
   },
+  position: 'relative', // Asegúrate de que el contenedor tenga posición relativa
+  zIndex: 0, // Establece zIndex en 0
 }));
 
 const StyledFormContainer = styled(Grid)(({ theme }) => ({
@@ -33,6 +38,8 @@ const StyledFormContainer = styled(Grid)(({ theme }) => ({
   boxShadow: '0 4px 10px rgba(255, 255, 255, 0.1)',
   maxWidth: 500,
   width: '100%',
+  position: 'relative', // Asegúrate de que el contenedor del formulario tenga posición relativa
+  zIndex: 200, // Aumenta el zIndex para que esté encima del SVG
 }));
 
 const StyledTextField = styled(TextField)({

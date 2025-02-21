@@ -8,7 +8,7 @@ const SvgStyled = styled('svg')({
   backgroundPositionY: 0,
   backgroundSize: 'auto',
   background: palette.black,
-  width: 1920,
+  width: 1952,
   height: 911,
   position: 'absolute',
 });

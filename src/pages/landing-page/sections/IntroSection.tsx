@@ -65,7 +65,7 @@ const IntroSection = () => {
 
   return (
     <IntroTextContainer id={'intro'} ref={sectionRef} container>
-      <WaveAnimationSvg />
+      {/* <WaveAnimationSvg /> */}
 
       <Box>
         <IntroNameTextTypography
