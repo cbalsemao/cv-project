@@ -1,4 +1,3 @@
-// AboutMeSection.tsx
 import { useRef, useState } from 'react';
 import { styled, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
@@ -8,7 +7,7 @@ import { StyledSectionTitle } from './styles-section/stylesSection';
 import { palette } from '../../../utils/styleguide';
 import TextFollow from '../../../components/TextFollowAnimation';
 import Cursor from '../../../components/Cursor';
-import SvgComponent from '../../../components/WaveAnimationSvg2';
+import SvgComponent from '../../../components/ValleyAnimationSvg';
 
 const IntroContainer = styled(Grid)({
   height: '100vh',

@@ -15,15 +15,15 @@ const SvgComponent2 = (props: SVGProps<SVGSVGElement>) => (
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      preserveAspectRatio="xMidYMid slice" // Cambiado a slice
+      preserveAspectRatio="xMidYMid slice"
       style={{
         shapeRendering: 'auto',
         display: 'block',
         background: palette.black,
         width: '100%',
-        height: '100%', // Mantén la altura al 100%
+        height: '100%',
       }}
-      viewBox="0 0 1920 911" // Mantén el viewBox original
+      viewBox="0 0 1920 911"
       {...props}
     >
       <style>
