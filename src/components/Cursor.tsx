@@ -60,7 +60,7 @@ const Cursor: React.FC<CursorProps> = ({ isHovered }) => {
   const moveCircle = (x: number, y: number) => {
     if (!circles.current) return;
 
-    circles.current.forEach((circle, i) => {
+    circles.current.forEach((circle) => {
       if (circle) {
         gsap.set(circle, { x, y, xPercent: -50, yPercent: -50 });
       }

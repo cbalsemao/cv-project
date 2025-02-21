@@ -7,6 +7,7 @@ import { useTitleAnimation } from '../../../hooks/useTitleAnimation';
 import { palette } from '../../../utils/styleguide';
 import Cursor from '../../../components/Cursor';
 import WaveAnimationSvg from '../../../components/WaveAnimationSvg';
+import CatGif from '../../../components/CatAnimation';
 
 const IntroTextContainer = styled(Grid)({
   justifyContent: 'center',
@@ -65,6 +66,7 @@ const IntroSection = () => {
   return (
     <IntroTextContainer id={'intro'} ref={sectionRef} container>
       <WaveAnimationSvg />
+
       <Box>
         <IntroNameTextTypography
           onMouseEnter={() => {
@@ -73,11 +75,14 @@ const IntroSection = () => {
           onMouseLeave={() => {
             setIsHovered(false);
           }}
+          display="flex"
+          alignItems="center"
         >
           <TextSplitter
-            text={"Hi, I'm Camila."}
+            text={"Hi, I'm Camila"}
             className={'section__title__char'}
           />
+          <CatGif />
         </IntroNameTextTypography>
         <IntroGreetingTextTypography
           onMouseEnter={() => {
