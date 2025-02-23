@@ -5,13 +5,13 @@ import { styled, TextField, Typography } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import ButtonSend from '../../../components/ButtonSend';
 import { palette } from '../../../utils/styleguide';
-import SvgComponent2 from '../../../components/WaveAnimationSvg3';
+import SvgComponent2 from '../../../components/OceanAnimationSvg';
 
 const ContactMeContainer = styled(Grid)(({ theme }) => ({
   height: '100vh',
   width: '100%',
   overflow: 'hidden',
-  // width: '100%',
+
   color: 'white',
   backgroundColor: palette.black,
   padding: theme.spacing(4),

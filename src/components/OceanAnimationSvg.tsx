@@ -1,7 +1,7 @@
 import { SVGProps } from 'react';
 import { palette } from '../utils/styleguide';
 
-const SvgComponent2 = (props: SVGProps<SVGSVGElement>) => (
+const OceanAnimationSvg = (props: SVGProps<SVGSVGElement>) => (
   <div
     style={{
       display: 'flex',
@@ -126,4 +126,4 @@ const SvgComponent2 = (props: SVGProps<SVGSVGElement>) => (
   </div>
 );
 
-export default SvgComponent2;
+export default OceanAnimationSvg;
