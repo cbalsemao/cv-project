@@ -1,5 +1,5 @@
-import { palette } from '../utils/styleguide';
 import { styled } from '@mui/material';
+import { palette } from '../../utils/styleguide';
 
 const ValleySvgStyled = styled('svg')({
   shapeRendering: 'auto',

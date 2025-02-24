@@ -1,4 +1,4 @@
-import { palette } from '../utils/styleguide';
+import { palette } from '../../utils/styleguide';
 import { styled } from '@mui/material';
 
 const SvgStyled = styled('svg')({

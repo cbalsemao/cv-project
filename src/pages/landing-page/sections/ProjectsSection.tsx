@@ -4,10 +4,11 @@ import { styled } from '@mui/material/styles';
 import gsap from 'gsap';
 import { useRef } from 'react';
 import { palette } from '../../../utils/styleguide';
-import { useTextAnimation } from '../../../hooks/useTextAnimation';
 import { StyledSectionTitle } from './styles-section/stylesSection';
 import { TextSplitter } from '../../../utils/utils';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import useTextAnimation from '../../../hooks/useTextAnimation';
+import { PROJECTS_INITIAL } from '../../../utils/types';
 
 const ArrowStyled = styled(ArrowRightAltIcon)({
   transition: 'transform 0.3s ease-in-out, color 0.3s ease-in-out',
@@ -131,7 +132,9 @@ const ProjectItem = styled(Typography)({
 });
 
 const ProjectsSection = () => {
-  const [activeImage, setActiveImage] = useState(projects[0].image); //TODO
+  const [activeImage, setActiveImage] = useState(
+    projects[PROJECTS_INITIAL].image
+  );
   const imageRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLInputElement>(null);
   useTextAnimation(projectsRef, '.section__title__char', 'top center');

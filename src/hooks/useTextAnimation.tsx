@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { MutableRefObject } from 'react';
 import gsap from 'gsap';
 
-export const useTextAnimation = (
+const useTextAnimation = (
   ref: MutableRefObject<HTMLElement | null>,
   className: string,
   start: string,
@@ -23,8 +23,7 @@ export const useTextAnimation = (
             trigger: ref.current,
             start: start,
             end: end,
-            //markers: true,
-            toggleActions: 'play reverse play reverse',
+            toggleActions: 'play none none none',
           },
         })
         .to(charElements, {
@@ -41,3 +40,5 @@ export const useTextAnimation = (
     };
   }, [ref, className, start]);
 };
+
+export default useTextAnimation;

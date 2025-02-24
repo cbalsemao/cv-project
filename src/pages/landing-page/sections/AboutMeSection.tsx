@@ -2,12 +2,12 @@ import { useRef, useState } from 'react';
 import { styled, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import { TextSplitter } from '../../../utils/utils';
-import { useTextAnimation } from '../../../hooks/useTextAnimation';
 import { StyledSectionTitle } from './styles-section/stylesSection';
 import { palette } from '../../../utils/styleguide';
-import TextFollow from '../../../components/TextFollowAnimation';
 import Cursor from '../../../components/Cursor';
-import SvgComponent from '../../../components/ValleyAnimationSvg';
+import TextFollow from '../../../components/animations/TextFollowAnimation';
+import ValleyAnimationSvg from '../../../components/animations-background/ValleyAnimationSvg';
+import useTextAnimation from '../../../hooks/useTextAnimation';
 
 const IntroContainer = styled(Grid)({
   height: '100vh',
@@ -48,7 +48,7 @@ const AboutMeSection = () => {
         </Typography>
         <Cursor isHovered={isHovered} />
       </Grid>
-      <SvgComponent />
+      <ValleyAnimationSvg />
     </IntroContainer>
   );
 };

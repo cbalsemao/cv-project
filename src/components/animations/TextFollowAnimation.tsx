@@ -2,7 +2,7 @@ import { styled } from '@mui/material';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { useLayoutEffect } from 'react';
-import { palette, theme } from '../utils/styleguide';
+import { palette, theme } from '../../utils/styleguide';
 gsap.registerPlugin(ScrollTrigger);
 
 const SpanStyled = styled('span')({

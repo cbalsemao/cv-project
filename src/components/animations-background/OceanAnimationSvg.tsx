@@ -1,48 +1,72 @@
 import { SVGProps } from 'react';
-import { palette } from '../utils/styleguide';
+import { palette } from '../../utils/styleguide';
+import { styled } from '@mui/material';
+
+const ContainerStyled = styled('div')({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  width: '100%',
+  height: '100vh',
+  zIndex: 1,
+  position: 'absolute',
+});
+
+const SvgStyled = styled('svg')({
+  shapeRendering: 'auto',
+  display: 'block',
+  background: palette.black,
+  width: '100%',
+  height: '100%',
+});
+
+const GlobalStylesAnimation = styled('style')`
+  @keyframes wave {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  .wave1 {
+    animation: wave 6s ease-in-out infinite;
+  }
+  .wave2 {
+    animation: wave 6s ease-in-out infinite 0.5s;
+  }
+  .wave3 {
+    animation: wave 6s ease-in-out infinite 1s;
+  }
+  .wave4 {
+    animation: wave 6s ease-in-out infinite 1.5s;
+  }
+  .wave5 {
+    animation: wave 6s ease-in-out infinite 2s;
+  }
+  .wave6 {
+    animation: wave 6s ease-in-out infinite 2.5s;
+  }
+  .wave7 {
+    animation: wave 6s ease-in-out infinite 3s;
+  }
+  .wave8 {
+    animation: wave 6s ease-in-out infinite 3.5s;
+  }
+`;
 
 const OceanAnimationSvg = (props: SVGProps<SVGSVGElement>) => (
-  <div
-    style={{
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      width: '100%',
-      height: '100vh',
-      zIndex: 1,
-      position: 'absolute',
-    }}
-  >
-    <svg
+  <ContainerStyled>
+    <SvgStyled
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="xMidYMid slice"
-      style={{
-        shapeRendering: 'auto',
-        display: 'block',
-        background: palette.black,
-        width: '100%',
-        height: '100%',
-      }}
       viewBox="0 0 1920 911"
       {...props}
     >
-      <style>
-        {`
-        @keyframes wave {
-          0% { transform: translateY(0px); }
-          50% { transform: translateY(10px); }
-          100% { transform: translateY(0px); }
-        }
-        .wave1 { animation: wave 6s ease-in-out infinite; }
-        .wave2 { animation: wave 6s ease-in-out infinite 0.5s; }
-        .wave3 { animation: wave 6s ease-in-out infinite 1s; }
-        .wave4 { animation: wave 6s ease-in-out infinite 1.5s; }
-        .wave5 { animation: wave 6s ease-in-out infinite 2s; }
-        .wave6 { animation: wave 6s ease-in-out infinite 2.5s; }
-        .wave7 { animation: wave 6s ease-in-out infinite 3s; }
-        .wave8 { animation: wave 6s ease-in-out infinite 3.5s; }
-      `}
-      </style>
+      <GlobalStylesAnimation />
       <path
         className="wave1"
         d="M-100 546.32c34.54-2.68 35.04-2.6 68.39-2.6s35.8-5.12 68.38-5.12 36.26-1.1 68.39-1.1 35.34 11.74 68.39 11.74 35.05-16.54 68.39-16.54 34.47 7.84 68.38 7.84 35.05 5.1 68.39 5.1 35.98-14.47 68.39-14.47 36.02 13.07 68.38 13.07 36.41-7.58 68.39-7.58 35.4-1.82 68.39-1.82 35.15-5.15 68.39-5.15 34.52 5.39 68.38 5.39 34.79 5.45 68.39 5.45 35.92-1.18 68.39-1.18 36.35 10.29 68.38 10.29 34.79 1.32 68.39 1.32 34.7-3.61 68.39-3.61 35.28-13.68 68.38-13.68 35.94 7.59 68.39 7.59 34.88-1.49 68.39-1.49 36.08-5.27 68.39-5.27 36.25 1.43 68.38 1.43 36.46-.28 68.39-.28 35.36-.54 68.39-.54 35.18 7.43 68.38 7.43 35.13 7.96 68.39 7.96 35.28-14.27 68.39-14.27 35.03-7.47 68.39-7.47 34.99 15.05 68.38 15.05 34.99-11.75 68.39-11.75 35.64-.19 68.39-.19L2020 911H-100Z"
@@ -122,8 +146,8 @@ const OceanAnimationSvg = (props: SVGProps<SVGSVGElement>) => (
         }}
         transform="translate(3.586)"
       />
-    </svg>
-  </div>
+    </SvgStyled>
+  </ContainerStyled>
 );
 
 export default OceanAnimationSvg;

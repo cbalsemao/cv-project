@@ -31,12 +31,12 @@ export const useTitleAnimation = (
         onEnter: () => {
           animation.restart();
         },
-        onLeave: () => {
-          animation.pause().progress(0);
-        },
-        onEnterBack: () => {
-          animation.restart();
-        },
+        // onLeave: () => {
+        //   animation.pause().progress(0);
+        // },
+        // onEnterBack: () => {
+        //   animation.restart();
+        // },
       });
 
       ScrollTrigger.refresh();

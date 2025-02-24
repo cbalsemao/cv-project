@@ -6,7 +6,7 @@ import { ButtonOpenCV } from '../../../components/ButtonOpenCV';
 import { useTitleAnimation } from '../../../hooks/useTitleAnimation';
 import { palette } from '../../../utils/styleguide';
 import Cursor from '../../../components/Cursor';
-import WaveAnimationSvg from '../../../components/WaveAnimationSvg';
+import WaveAnimationSvg from '../../../components/animations-background/WaveAnimationSvg';
 import CatGif from '../../../components/CatAnimation';
 
 const IntroTextContainer = styled(Grid)({
