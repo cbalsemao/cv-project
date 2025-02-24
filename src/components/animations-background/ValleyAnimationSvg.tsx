@@ -91,7 +91,7 @@ const ValleyAnimationSvg = () => (
     </defs>
 
     <path
-      className="wave1"
+      className="valley1"
       fill="url(#a)"
       d="M0 760.077q192-43.605 384-43.753t384-69.522 384-37.959 384 2.877 384-9.33V198.363q-192-20.523-384-25.708t-384 33.811-384-48.542-384-26.028T0 58.924Z"
       opacity={0.4}

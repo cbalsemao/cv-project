@@ -5,7 +5,7 @@ import { styled, TextField, Typography } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import ButtonSend from '../../../components/ButtonSend';
 import { palette } from '../../../utils/styleguide';
-import SvgComponent2 from '../../../components/animations-background/OceanAnimationSvg';
+import OceanAnimationSvg from '../../../components/animations-background/OceanAnimationSvg';
 
 const ContactMeContainer = styled(Grid)(({ theme }) => ({
   height: '100vh',
@@ -84,7 +84,7 @@ const ContactMeSection = () => {
 
   return (
     <ContactMeContainer container id={'contact'}>
-      <SvgComponent2 />
+      <OceanAnimationSvg />
       <StyledFormContainer className="form-container">
         <Typography
           variant={isMobile ? 'h4' : 'h3'}

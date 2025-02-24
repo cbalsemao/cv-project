@@ -89,7 +89,10 @@ const ContactIcons = () => {
           },
         }}
       >
-        <GitHubIcon sx={{ fontSize: 40 }} />
+        <GitHubIcon
+          sx={{ fontSize: 40 }}
+          onClick={() => window.open('https://github.com/cbalsemao', '_blank')}
+        />
       </TypographyIcon>
       <TypographyIcon
         variant="h6"
