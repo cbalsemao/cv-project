@@ -1,49 +1,36 @@
+import Lottie from 'lottie-react';
+import animationData from '../assets/cat-animation-lottie.json';
 import { styled } from '@mui/material';
-import catGif from '../assets/catMugGif.gif';
-import catStatic from '../assets/catMugStatic.png';
-import { useState } from 'react';
 import { useViewPort } from '../hooks/useViewport';
 
-type CatGifProps = {
+type CatAnimationProps = {
   isMobile: boolean;
-  isDesktop: boolean;
   isTablet: boolean;
+  isDesktop: boolean;
 };
 
-const StyledCatGif = styled('img')<CatGifProps>(
-  ({ isMobile, isTablet, isDesktop }) => ({
-    width: isMobile
-      ? '40px'
-      : isTablet
-      ? '70px'
-      : isDesktop
-      ? '100px'
-      : '200px',
-    height: isMobile
-      ? '40px'
-      : isTablet
-      ? '70px'
-      : isDesktop
-      ? '100px'
-      : '200px',
-  })
-);
+const StyledLottie = styled(Lottie, {
+  shouldForwardProp: (prop) =>
+    prop !== 'isMobile' && prop !== 'isTablet' && prop !== 'isDesktop',
+})<CatAnimationProps>`
+  flex-shrink: 0;
+  width: ${({ isMobile, isTablet, isDesktop }) =>
+    isMobile ? '45px' : isTablet ? '70px' : isDesktop ? '100px' : '150px'};
+  height: ${({ isMobile, isTablet, isDesktop }) =>
+    isMobile ? '45px' : isTablet ? '70px' : isDesktop ? '100px' : '150px'};
+`;
 
-const CatGif = () => {
-  const [isHovered, setIsHovered] = useState(false);
+const CatAnimation = () => {
   const { isMobile, isDesktop, isTablet } = useViewPort();
 
   return (
-    <StyledCatGif
-      src={isHovered ? catGif : catStatic}
-      alt="Animated GIF"
+    <StyledLottie
+      animationData={animationData}
       isMobile={isMobile}
       isTablet={isTablet}
       isDesktop={isDesktop}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     />
   );
 };
 
-export default CatGif;
+export default CatAnimation;
