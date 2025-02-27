@@ -1,17 +1,15 @@
-import { Box, Typography, useTheme } from '@mui/material';
+import { Box, styled, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import {
   Javascript,
   IntegrationInstructions,
-  Palette,
-  Coffee,
-  Cloud,
   Storage,
 } from '@mui/icons-material';
-import { palette } from '../../../utils/styleguide';
+import { palette, theme } from '../../../utils/styleguide';
 import { useViewPort } from '../../../hooks/useViewport';
 import { StyledSectionTitle } from './styles-section/stylesSection';
 import { TextSplitter } from '../../../utils/utils';
+import useTextAnimation from '../../../hooks/useTextAnimation';
 
 type SkillProps = {
   title: string;
@@ -29,32 +27,42 @@ const skills = [
   },
 
   {
-    title: 'PostgreSQL',
+    title: 'CSS',
+    icon: <Storage sx={{ fontSize: 40, color: 'white' }} />,
+  },
+  {
+    title: 'HTML',
+    icon: <Storage sx={{ fontSize: 40, color: 'white' }} />,
+  },
+  {
+    title: 'HTML',
+    icon: <Storage sx={{ fontSize: 40, color: 'white' }} />,
+  },
+  {
+    title: 'HTML',
     icon: <Storage sx={{ fontSize: 40, color: 'white' }} />,
   },
 ];
 
-const SkillCard = ({ title, icon }: SkillProps) => {
-  const theme = useTheme();
+const SkillCardContainer = styled(Box)({
+  border: `1px solid ${palette.beige}`,
+  borderRadius: '10px',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  padding: '20px',
+  minHeight: '150px',
+  backgroundColor: palette.black,
+  '&:hover': {
+    backgroundColor: theme.palette.grey[900],
+    transition: '0.3s',
+  },
+});
 
+const SkillCard = ({ title, icon }: SkillProps) => {
   return (
-    <Box
-      sx={{
-        border: `1px solid ${palette.beige}`,
-        borderRadius: '10px',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: '20px',
-        minHeight: '150px',
-        backgroundColor: palette.black,
-        '&:hover': {
-          backgroundColor: theme.palette.grey[900],
-          transition: '0.3s',
-        },
-      }}
-    >
+    <SkillCardContainer>
       {icon}
       <Typography
         variant="h6"
@@ -62,14 +70,20 @@ const SkillCard = ({ title, icon }: SkillProps) => {
       >
         {title}
       </Typography>
-    </Box>
+    </SkillCardContainer>
   );
 };
 
+import { useRef } from 'react';
+
 const SkillsSection = () => {
+  const skillsRef = useRef<HTMLDivElement>(null);
   const { isMobile, isDesktop, isTablet } = useViewPort();
+  useTextAnimation(skillsRef, '.section__title__char', 'top center');
+
   return (
     <Box
+      ref={skillsRef}
       sx={{
         backgroundColor: palette.black,
         padding: isMobile
