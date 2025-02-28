@@ -4,7 +4,7 @@ import Grid from '@mui/material/Grid2';
 import { styled, TextField, Typography } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import ButtonSend from '../../../components/ButtonSend';
-import { palette } from '../../../utils/styleguide';
+import { palette, theme } from '../../../utils/styleguide';
 import OceanAnimationSvg from '../../../components/animations-background/OceanAnimationSvg';
 
 const ContactMeContainer = styled(Grid)(({ theme }) => ({
@@ -90,7 +90,11 @@ const ContactMeSection = () => {
           variant={isMobile ? 'h4' : 'h3'}
           align="center"
           gutterBottom
-          sx={{ color: palette.beige }}
+          sx={{
+            color: palette.beige,
+            fontFamily: theme.typography.fontFamily,
+            fontWeight: 'bold',
+          }}
         >
           Get in Touch
         </Typography>

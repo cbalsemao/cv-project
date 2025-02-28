@@ -38,24 +38,28 @@ const GlobalStyles = styled('style')`
 
 const projects = [
   {
-    name: 'sharlee',
+    name: 'art shop',
     image:
       'https://t4.ftcdn.net/jpg/02/66/72/41/360_F_266724172_Iy8gdKgMa7XmrhYYxLCxyhx6J7070Pr8.jpg',
+    description: 'E-commerce de arte',
   },
   {
-    name: 'act responsable',
+    name: 'the hangman',
     image:
       'https://t3.ftcdn.net/jpg/02/86/74/06/360_F_286740601_d16NX2q8zoOfzkeN8pR8JBzbkDil2xjW.jpg',
+    description: 'the famous game of the hangman',
   },
   {
-    name: 'dua lipa',
+    name: 'TODO list',
     image:
       'https://cdn.theatlantic.com/thumbor/yHhIvkBiGvKKubxVHTNXvU4nCKQ=/1x122:2554x1452/1200x625/media/img/mt/2017/06/shutterstock_319985324/original.jpg',
+    description: 'a simple todoList',
   },
   {
-    name: 'cocolyze',
+    name: 'memory store',
     image:
       'https://t4.ftcdn.net/jpg/02/66/72/41/360_F_266724172_Iy8gdKgMa7XmrhYYxLCxyhx6J7070Pr8.jpg',
+    description: 'application to save your memories',
   },
 ];
 
