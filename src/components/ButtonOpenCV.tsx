@@ -17,7 +17,7 @@ export const ButtonOpenCV = () => {
         mt: 4,
         backgroundColor: palette.burgundy,
         fontWeight: 'bold',
-        color: palette.darkWhite,
+        color: palette.beige,
         fontSize: '1.2rem',
         borderRadius: '20px',
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',

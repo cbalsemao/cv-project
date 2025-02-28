@@ -1,15 +1,14 @@
 import { Box, styled, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
-import {
-  Javascript,
-  IntegrationInstructions,
-  Storage,
-} from '@mui/icons-material';
+import { Javascript } from '@mui/icons-material';
 import { palette, theme } from '../../../utils/styleguide';
 import { useViewPort } from '../../../hooks/useViewport';
 import { StyledSectionTitle } from './styles-section/stylesSection';
 import { TextSplitter } from '../../../utils/utils';
 import useTextAnimation from '../../../hooks/useTextAnimation';
+import { FaReact, FaCss3Alt, FaHtml5 } from 'react-icons/fa';
+import { BiLogoTypescript } from 'react-icons/bi';
+import { DiMongodb } from 'react-icons/di';
 
 type SkillProps = {
   title: string;
@@ -19,28 +18,29 @@ type SkillProps = {
 const skills = [
   {
     title: 'React',
-    icon: <Javascript sx={{ fontSize: 40, color: 'white' }} />,
+    icon: <FaReact style={{ fontSize: 40, color: palette.darkWhite }} />,
   },
   {
     title: 'Typescript',
-    icon: <IntegrationInstructions sx={{ fontSize: 40, color: 'white' }} />,
+    icon: (
+      <BiLogoTypescript style={{ fontSize: 40, color: palette.darkWhite }} />
+    ),
   },
-
   {
     title: 'CSS',
-    icon: <Storage sx={{ fontSize: 40, color: 'white' }} />,
+    icon: <FaCss3Alt style={{ fontSize: 40, color: palette.darkWhite }} />,
   },
   {
     title: 'HTML',
-    icon: <Storage sx={{ fontSize: 40, color: 'white' }} />,
+    icon: <FaHtml5 style={{ fontSize: 40, color: palette.darkWhite }} />,
   },
   {
-    title: 'HTML',
-    icon: <Storage sx={{ fontSize: 40, color: 'white' }} />,
+    title: 'MongoDB',
+    icon: <DiMongodb style={{ fontSize: 40, color: palette.darkWhite }} />,
   },
   {
-    title: 'HTML',
-    icon: <Storage sx={{ fontSize: 40, color: 'white' }} />,
+    title: 'Javascript',
+    icon: <Javascript sx={{ fontSize: 40, color: palette.darkWhite }} />,
   },
 ];
 
