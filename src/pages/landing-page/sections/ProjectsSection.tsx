@@ -40,7 +40,7 @@ const projects = [
   {
     id: 1,
     name: 'The Hangman',
-    image: 'url(./hangman-img.png)'
+    image: 'url(./hangman-img.png)',
     description: 'The famous game of the hangman',
     url: 'https://hangman-game-topaz-phi.vercel.app/',
   },
