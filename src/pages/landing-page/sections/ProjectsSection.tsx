@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import gsap from 'gsap';
 import { useRef } from 'react';
-import { palette } from '../../../utils/styleguide';
+import { palette, theme } from '../../../utils/styleguide';
 import { StyledSectionTitle } from './styles-section/stylesSection';
 import { TextSplitter } from '../../../utils/utils';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
@@ -38,33 +38,40 @@ const GlobalStyles = styled('style')`
 
 const projects = [
   {
+    id: 1,
+    name: 'The Hangman',
+    image: '/public/hangman-img.png',
+    description: 'The famous game of the hangman',
+    url: 'https://hangman-game-topaz-phi.vercel.app/',
+  },
+  {
+    id: 2,
     name: 'Art Shop',
     image:
       'https://t4.ftcdn.net/jpg/02/66/72/41/360_F_266724172_Iy8gdKgMa7XmrhYYxLCxyhx6J7070Pr8.jpg',
     description: 'E-commerce de arte',
   },
+
   {
-    name: 'The hangman',
-    image: '/public/hangman-img.png',
-    description: 'the famous game of the hangman',
-    url: 'https://hangman-game-topaz-phi.vercel.app/',
-  },
-  {
+    id: 3,
     name: 'TODO list',
     image:
       'https://cdn.theatlantic.com/thumbor/yHhIvkBiGvKKubxVHTNXvU4nCKQ=/1x122:2554x1452/1200x625/media/img/mt/2017/06/shutterstock_319985324/original.jpg',
-    description: 'a simple todoList',
+    description: 'A simple todoList',
   },
   {
+    id: 4,
     name: 'Memory Store',
     image:
       'https://t4.ftcdn.net/jpg/02/66/72/41/360_F_266724172_Iy8gdKgMa7XmrhYYxLCxyhx6J7070Pr8.jpg',
-    description: 'application to save your memories',
+    description: 'Application to save your memories',
   },
   {
+    id: 5,
     name: 'Clover Laundry',
     image: '/public/clover-laundry.png',
-    description: 'Clover Laundry',
+    description:
+      'Clover Laundry is a laundry service based in Alicante, Spain.',
     url: 'https://cloverlavanderia.es/',
   },
 ];
@@ -86,6 +93,19 @@ const SectionContainer = styled(Box)`
     padding: 0 20px;
   }
 `;
+
+const ProjectDescripStyled = styled(Typography)({
+  position: 'absolute',
+  backgroundColor: palette.beige,
+  padding: '20px',
+  color: palette.black,
+  borderBottomLeftRadius: '10px',
+  borderBottomRightRadius: '10px',
+  fontSize: '1rem',
+  width: '100%',
+  fontFamily: theme.typography.fontFamily,
+  fontWeight: 'bold',
+});
 
 const ImageContainer = styled(Box)`
   width: 50%;
@@ -176,13 +196,16 @@ const ProjectsSection = () => {
             borderRadius: '50px',
           }}
         />
+        <ProjectDescripStyled>
+          {
+            projects.find((project) => project.image === activeImage)
+              ?.description
+          }
+        </ProjectDescripStyled>
       </ImageContainer>
       <ProjectList>
         <StyledSectionTitle>
-          <TextSplitter
-            text={'take a look at my projects'}
-            className={'section__title__char'}
-          />
+          <TextSplitter text={'Projects'} className={'section__title__char'} />
         </StyledSectionTitle>
         {projects.map((project) => (
           <ProjectItem
