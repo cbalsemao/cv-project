@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Rockwell';
+  src: url('/fonts/Rockwell.woff2') format('woff2'),
+    url('/fonts/Rockwell.woff') format('woff'),
+    url('/fonts/Rockwell.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html,
 body,
 * {
