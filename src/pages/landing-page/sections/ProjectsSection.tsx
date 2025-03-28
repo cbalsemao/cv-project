@@ -38,16 +38,16 @@ const GlobalStyles = styled('style')`
 
 const projects = [
   {
-    name: 'art shop',
+    name: 'Art Shop',
     image:
       'https://t4.ftcdn.net/jpg/02/66/72/41/360_F_266724172_Iy8gdKgMa7XmrhYYxLCxyhx6J7070Pr8.jpg',
     description: 'E-commerce de arte',
   },
   {
-    name: 'the hangman',
-    image:
-      'https://t3.ftcdn.net/jpg/02/86/74/06/360_F_286740601_d16NX2q8zoOfzkeN8pR8JBzbkDil2xjW.jpg',
+    name: 'The hangman',
+    image: '/public/hangman-img.png',
     description: 'the famous game of the hangman',
+    url: 'https://hangman-game-topaz-phi.vercel.app/',
   },
   {
     name: 'TODO list',
@@ -56,10 +56,16 @@ const projects = [
     description: 'a simple todoList',
   },
   {
-    name: 'memory store',
+    name: 'Memory Store',
     image:
       'https://t4.ftcdn.net/jpg/02/66/72/41/360_F_266724172_Iy8gdKgMa7XmrhYYxLCxyhx6J7070Pr8.jpg',
     description: 'application to save your memories',
+  },
+  {
+    name: 'Clover Laundry',
+    image: '/public/clover-laundry.png',
+    description: 'Clover Laundry',
+    url: 'https://cloverlavanderia.es/',
   },
 ];
 
@@ -173,12 +179,16 @@ const ProjectsSection = () => {
       </ImageContainer>
       <ProjectList>
         <StyledSectionTitle>
-          <TextSplitter text={'projects'} className={'section__title__char'} />
+          <TextSplitter
+            text={'take a look at my projects'}
+            className={'section__title__char'}
+          />
         </StyledSectionTitle>
         {projects.map((project) => (
           <ProjectItem
             key={project.name}
             onMouseEnter={() => handleHover(project.image)}
+            onClick={() => project.url && window.open(project.url, '_blank')}
           >
             <Box display="flex" alignItems="center" gap={2}>
               <ArrowStyled className="arrow" /> {project.name}
