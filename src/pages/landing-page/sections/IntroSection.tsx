@@ -48,7 +48,7 @@ const IntroNameTextTypography = styled(Typography)(({ theme }) => ({
 
 const IntroGreetingTextTypography = styled(Typography)(({ theme }) => ({
   fontSize: theme.breakpoints.values.xs ? '2rem' : 'inherit',
-  [theme.breakpoints.up('xs')]: { fontSize: '2rem' },
+  [theme.breakpoints.up('xs')]: { fontSize: '1.5rem' },
   [theme.breakpoints.up('sm')]: { fontSize: '3rem' },
   [theme.breakpoints.up('md')]: { fontSize: '4rem' },
   [theme.breakpoints.up('lg')]: { fontSize: '5rem' },
@@ -68,25 +68,28 @@ const IntroSection = () => {
       <WaveAnimationSvg />
 
       <Box>
-        <Box style={{display: 'flex', zIndex: 2000, position: 'relative', alignItems: 'center'}}>
-        <IntroNameTextTypography
-          onMouseEnter={() => {
-            setIsHovered(true);
+        <Box
+          style={{
+            display: 'flex',
+            zIndex: 2000,
+            position: 'relative',
+            alignItems: 'center',
           }}
-          onMouseLeave={() => {
-            setIsHovered(false);
-          }}
-         
-          
         >
-          <TextSplitter
-            text={"Hi, I'm Camila"}
-            className={'section__title__char'}
-          />
-            
-          
-        </IntroNameTextTypography>
-        <CatAnimation/>
+          <IntroNameTextTypography
+            onMouseEnter={() => {
+              setIsHovered(true);
+            }}
+            onMouseLeave={() => {
+              setIsHovered(false);
+            }}
+          >
+            <TextSplitter
+              text={"Hi, I'm Camila"}
+              className={'section__title__char'}
+            />
+          </IntroNameTextTypography>
+          <CatAnimation />
         </Box>
         <IntroGreetingTextTypography
           onMouseEnter={() => {
