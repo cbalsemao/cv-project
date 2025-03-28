@@ -40,7 +40,8 @@ const projects = [
   {
     id: 1,
     name: 'The Hangman',
-    image: 'url(./hangman-img.png)',
+    image:
+      'https://t4.ftcdn.net/jpg/02/66/72/41/360_F_266724172_Iy8gdKgMa7XmrhYYxLCxyhx6J7070Pr8.jpg',
     description: 'The famous game of the hangman',
     url: 'https://hangman-game-topaz-phi.vercel.app/',
   },
@@ -69,7 +70,7 @@ const projects = [
   {
     id: 5,
     name: 'Clover Laundry',
-    image: '/public/clover-laundry.png',
+    image: './clover-laundry.png',
     description:
       'Clover Laundry is a laundry service based in Alicante, Spain.',
     url: 'https://cloverlavanderia.es/',
