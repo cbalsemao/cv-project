@@ -44,28 +44,28 @@ const projects = [
     description: 'The famous game of the hangman',
     url: 'https://hangman-game-topaz-phi.vercel.app/',
   },
-  {
-    id: 2,
-    name: 'Art Shop',
-    image:
-      'https://t4.ftcdn.net/jpg/02/66/72/41/360_F_266724172_Iy8gdKgMa7XmrhYYxLCxyhx6J7070Pr8.jpg',
-    description: 'E-commerce de arte',
-  },
+  // {
+  //   id: 2,
+  //   name: 'Art Shop',
+  //   image:
+  //     'https://t4.ftcdn.net/jpg/02/66/72/41/360_F_266724172_Iy8gdKgMa7XmrhYYxLCxyhx6J7070Pr8.jpg',
+  //   description: 'E-commerce de arte',
+  // },
 
-  {
-    id: 3,
-    name: 'TODO list',
-    image:
-      'https://cdn.theatlantic.com/thumbor/yHhIvkBiGvKKubxVHTNXvU4nCKQ=/1x122:2554x1452/1200x625/media/img/mt/2017/06/shutterstock_319985324/original.jpg',
-    description: 'A simple todoList',
-  },
-  {
-    id: 4,
-    name: 'Memory Store',
-    image:
-      'https://t4.ftcdn.net/jpg/02/66/72/41/360_F_266724172_Iy8gdKgMa7XmrhYYxLCxyhx6J7070Pr8.jpg',
-    description: 'Application to save your memories',
-  },
+  // {
+  //   id: 3,
+  //   name: 'TODO list',
+  //   image:
+  //     'https://cdn.theatlantic.com/thumbor/yHhIvkBiGvKKubxVHTNXvU4nCKQ=/1x122:2554x1452/1200x625/media/img/mt/2017/06/shutterstock_319985324/original.jpg',
+  //   description: 'A simple todoList',
+  // },
+  // {
+  //   id: 4,
+  //   name: 'Memory Store',
+  //   image:
+  //     'https://t4.ftcdn.net/jpg/02/66/72/41/360_F_266724172_Iy8gdKgMa7XmrhYYxLCxyhx6J7070Pr8.jpg',
+  //   description: 'Application to save your memories',
+  // },
   {
     id: 5,
     name: 'Clover Laundry',
@@ -73,6 +73,13 @@ const projects = [
     description:
       'Clover Laundry is a laundry service based in Alicante, Spain.',
     url: 'https://cloverlavanderia.es/',
+  },
+  {
+    id: 6,
+    name: 'Rosemary Restaurant',
+    image: './hangman-proj-img.png',
+    description: 'The famous game of the hangman',
+    url: 'https://rosemary-one.vercel.app/',
   },
 ];
 
