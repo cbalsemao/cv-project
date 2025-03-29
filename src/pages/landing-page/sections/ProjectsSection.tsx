@@ -77,7 +77,7 @@ const projects = [
   {
     id: 6,
     name: 'Rosemary Restaurant',
-    image: './hangman-proj-img.png',
+    image: './rosemary-proj-img.png',
     description: 'The famous game of the hangman',
     url: 'https://rosemary-one.vercel.app/',
   },
@@ -199,8 +199,9 @@ const ProjectsSection = () => {
           sx={{
             width: '100%',
             height: '100%',
-            objectFit: 'cover',
+
             borderRadius: '50px',
+            objectFit: 'cover',
           }}
         />
         <ProjectDescripStyled>
