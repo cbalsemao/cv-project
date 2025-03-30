@@ -78,8 +78,8 @@ const projects = [
     id: 6,
     name: 'Rosemary Restaurant',
     image: './rosemary-proj-img.png',
-    description: 'The famous game of the hangman',
-    url: 'https://rosemary-one.vercel.app/',
+    description: 'Veggie and vegetarian restaurant based in Alicante, Spain.',
+    url: 'https://rosemary-proj.vercel.app/',
   },
 ];
 
