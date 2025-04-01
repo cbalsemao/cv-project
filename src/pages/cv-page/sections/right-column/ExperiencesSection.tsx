@@ -34,25 +34,31 @@ const ExperiencesSection = () => {
             {experience.projects && (
               <ul>
                 {experience.projects.map((project, projIndex) => (
-                  <li key={projIndex}>
-                    <h4>
-                      {project.name} {project.date}
-                    </h4>
-                    <ul>
-                      {project.description.map((desc, descIndex) => (
-                        <li key={descIndex}>{desc}</li>
-                      ))}
-                    </ul>
-                  </li>
+                  <Box sx={{ paddingLeft: 3 }} key={projIndex}>
+                    <li key={projIndex}>
+                      <h4>
+                        {project.name} {project.date}
+                      </h4>
+                      <Box sx={{ paddingLeft: 2 }}>
+                        <ul>
+                          {project.description.map((desc, descIndex) => (
+                            <li key={descIndex}>{desc}</li>
+                          ))}
+                        </ul>
+                      </Box>
+                    </li>
+                  </Box>
                 ))}
               </ul>
             )}
             {experience.description && (
-              <ul>
-                {experience.description.map((desc, descIndex) => (
-                  <li key={descIndex}>{desc}</li>
-                ))}
-              </ul>
+              <Box sx={{ paddingLeft: 3 }}>
+                <ul>
+                  {experience.description.map((desc, descIndex) => (
+                    <li key={descIndex}>{desc}</li>
+                  ))}
+                </ul>
+              </Box>
             )}
           </div>
         </Box>
