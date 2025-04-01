@@ -6,7 +6,7 @@
 
   "profile": {
     "title": "Profile",
-    "description": "I am a frontend developer with a strong foundation in software testing, which has honed my attention to detail and commitment to delivering high-quality applications. My expertise lies in building dynamic, user-friendly interfaces with React, focusing on functionality, performance, and seamless user experiences. I approach challenges with curiosity and a practical mindset, collaborating effectively with teams to develop solutions that improve both user satisfaction and application performance."
+    "description": "I am a frontend developer with a strong foundation in software testing, which has honed my attention to detail and commitment to delivering high-quality applications. My expertise lies in building dynamic, user-friendly interfaces with React, focusing on functionality, performance, and seamless user experiences."
   },
 
   "skills": {
@@ -51,9 +51,14 @@
             "date": "2024",
             "description": [
               "Developed a clean and user-friendly front-end interface using React and Material UI, tailored to the needs of a laundry business.",
-              "Enhanced code reliability and maintainability by leveraging TypeScript for static typing and improved debugging.",
-              "Designed a fully responsive layout, ensuring seamless usability across desktop, tablet, and mobile devices.",
-              "Collaborated with the client to understand requirements and deliver a polished, functional web application."
+              "Designed a fully responsive layout, ensuring seamless usability across desktop, tablet, and mobile devices."
+            ]
+          },
+          {
+            "name": "Rosemary restaurant",
+            "date": "2024",
+            "description": [
+              "Developed a user-friendly front-end interface for a restaurant using React. Implemented TypeScript to enhance code reliability and maintainability. Designed a fully responsive layout to optimize usability across all devices."
             ]
           }
         ]
@@ -63,32 +68,27 @@
         "company": "Sisteco S.A.",
         "date": "March 2023 - June 2024",
         "description": [
-          "Resolved client-reported technical issues using the Linux terminal, SSH, and database queries.",
+          "Resolved client-reported technical issues using the Linux terminal, SSH and SQL queries to solve problems.",
           "Performed functional, regression, and database testing for retail systems.",
-          "Created test cases, prepared test reports, and communicated software releases to clients.",
-          "Trained and mentored new testers to ensure efficient onboarding and performance."
+          "Performed functional, regression, and database testing for retail systems, utilizing TestLink for test case management and Mantis Bug Tracker for issue tracking.",
+          " Created test cases, prepared test reports, and communicated software releases to clients. Trained and mentored new testers to ensure efficient onboarding and performance."
         ]
       },
       {
         "role": "QA Tester",
-        "company": "CES (Centro de Ensayos de Software) - Internship",
-        "date": "December 2021 - March 2022",
+        "company": "CES (Centro de Ensayos de Software)",
+        "date": "December 2021 - March 2023",
         "description": [
-          "Created and maintained comprehensive test documentation.",
-          "Conducted regression testing and reported incidents.",
-          "Tested mobile and web applications to ensure functionality and usability.",
-          "Utilized Mantis Bug Tracker to track and manage issues effectively.",
-          "Collaborated with developers to ensure timely resolution of defects.",
-          "Designed business-aligned test cases."
+          "Collaborated within a team on a project for a major public organization in Uruguay, creating and maintaining comprehensive test documentation, designing business-aligned test cases, and conducting functional, regression, and accessibility testing for mobile and web applications. Focused on ensuring optimal functionality, usability, and compliance with accessibility standards while efficiently managing and tracking issues using Mantis Bug Tracker to facilitate timely defect resolution."
         ]
       },
       {
         "role": "QA Tester",
         "company": "Tensai - Internship",
         "date": "August 2021- December 2021",
+
         "description": [
-          "Developed and executed functional test cases for mobile and web apps, performing detailed testing to ensure high quality and optimal user experience.",
-          "Skilled in using Mantis Bug Tracker for effective bug tracking and resolution."
+          "Collaborated within the testers' team on projects for a truck tracking app and a shopping mall web application, working closely with developers to create, maintain, and execute functional test plans and cases for mobile and web applications. Ensured high quality and optimal user experience while effectively tracking and resolving bugs using Mantis Bug Tracker."
         ]
       }
     ]

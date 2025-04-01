@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import Section from '../../../../components/Section';
+import { ContainerStyled } from '../../styled-components/Components';
 
 const ContactSection = () => {
   const { t } = useTranslation();
@@ -10,19 +11,21 @@ const ContactSection = () => {
   };
   return (
     <Section title={t('contact.title')} side={'left'}>
-      <p>
-        <strong>Location: </strong>
-        {''}
-        {CONTACT_INFO.location}
-      </p>
-      <p>
-        <strong>Email:</strong> {''}
-        {CONTACT_INFO.email}
-      </p>
-      <p>
-        <strong>Phone:</strong> {''}
-        {CONTACT_INFO.phone}
-      </p>
+      <ContainerStyled>
+        <p>
+          <strong>Location: </strong>
+          {''}
+          {CONTACT_INFO.location}
+        </p>
+        <p>
+          <strong>Email:</strong> {''}
+          {CONTACT_INFO.email}
+        </p>
+        <p>
+          <strong>Phone:</strong> {''}
+          {CONTACT_INFO.phone}
+        </p>
+      </ContainerStyled>
     </Section>
   );
 };

@@ -97,6 +97,9 @@ const ContactIcons = () => {
       <TypographyIcon
         variant="h6"
         ref={linkedinRef}
+        onClick={() =>
+          window.open('https://www.linkedin.com/in/camila-balsemao/', '_blank')
+        }
         sx={{
           '&:hover': {
             color: palette.darkWhite,

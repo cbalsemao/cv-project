@@ -18,7 +18,7 @@ const PageWrapper = styled('div')<{ isA4: boolean }>(({ isA4 }) => ({
   margin: '0px auto',
   padding: '0px',
   boxSizing: 'border-box',
-  // backgroundColor: 'grey',
+
   '@media print': {
     width: A4_WIDTH,
     height: A4_HEIGHT,
@@ -44,7 +44,7 @@ const CvPage = () => {
   return (
     <PageWrapper isA4={true}>
       <Grid container spacing={2} justifyContent="center">
-        <LeftColumn size={6} spacing={10} direction="column">
+        <LeftColumn container size={6} direction="column">
           <AvatarSection />
           <ProfileInfoSection />
           <ContactSection />
@@ -52,7 +52,7 @@ const CvPage = () => {
           <LanguagesSection />
           <EducationSection />
         </LeftColumn>
-        <RightColumn size={6} direction="column">
+        <RightColumn container size={6} direction="column">
           <ExperiencesSection />
         </RightColumn>
       </Grid>
