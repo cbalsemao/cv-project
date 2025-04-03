@@ -18,7 +18,7 @@ export const theme = createTheme({
 
 export const palette = {
   white: '#FBFBFB',
-  darkWhite: '#F4CCE9',
+  darkWhite: '#F7F9F2',
   black: '#0c0c0c',
   burgundy: '#56021F',
   gray: '#1e1e1e',

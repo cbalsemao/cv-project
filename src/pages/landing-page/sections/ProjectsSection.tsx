@@ -42,6 +42,26 @@ const projects = [
     name: 'The Hangman',
     image: './hangman-proj-img.png',
     description: 'The famous game of the hangman',
+    information: [
+      {
+        nameDesc: 'Responsive Design:',
+        infoDesc:
+          'Built with Material UI, the site offers a seamless user experience across devices, ensuring adaptability from mobile to desktop.',
+      },
+      {
+        nameDesc: 'Component-Based Architecture:',
+        infoDesc:
+          'Leveraging React and Typescript, the codebase is modular and reusable, simplifying future updates and maintenance.',
+      },
+      {
+        nameDesc: 'Technology stack',
+        infoDesc: 'React, Typescript, Material UI',
+      },
+      {
+        nameDesc: 'Visit repository:',
+        infoDesc: 'https://github.com/cbalsemao/hangman-game',
+      },
+    ],
     url: 'https://hangman-game-topaz-phi.vercel.app/',
   },
   // {
@@ -73,6 +93,32 @@ const projects = [
     description:
       'Clover Laundry is a laundry service based in Alicante, Spain.',
     url: 'https://cloverlavanderia.es/',
+    information: [
+      {
+        nameDesc: 'Responsive Design:',
+        infoDesc:
+          'Built with Material UI, the site offers a seamless user experience across devices, ensuring adaptability from mobile to desktop.',
+      },
+      {
+        nameDesc: 'Component-Based Architecture:',
+        infoDesc:
+          'Leveraging React and Typescript, the codebase is modular and reusable, simplifying future updates and maintenance.',
+      },
+      {
+        nameDesc: 'Bilingual Support:',
+        infoDesc:
+          'Bilingual Support: The website includes a language switcher, offering content in English and Spanish, ensuring accessibility to a broader, multilingual audience.',
+      },
+      {
+        nameDesc: 'Technology stack:',
+        infoDesc: 'React, Typescript, Material UI',
+      },
+
+      {
+        nameDesc: 'Visit repository:',
+        infoDesc: 'https://github.com/cbalsemao/clover-laundry',
+      },
+    ],
   },
   {
     id: 6,
@@ -80,6 +126,32 @@ const projects = [
     image: './rosemary-proj-img.png',
     description: 'Veggie and vegetarian restaurant based in Alicante, Spain.',
     url: 'https://rosemary-proj.vercel.app/',
+    information: [
+      {
+        nameDesc: 'Responsive Design:',
+        infoDesc:
+          'Built with Material UI, the site offers a seamless user experience across devices, ensuring adaptability from mobile to desktop.',
+      },
+      {
+        nameDesc: 'Component-Based Architecture:',
+        infoDesc:
+          'Leveraging React and Typescript, the codebase is modular and reusable, simplifying future updates and maintenance.',
+      },
+
+      {
+        nameDesc: 'Bilingual Support:',
+        infoDesc:
+          'The website includes a language switcher, offering content in English and Spanish, ensuring accessibility to a broader, multilingual audience.',
+      },
+      {
+        nameDesc: 'Technology stack:',
+        infoDesc: 'React, Typescript, Material UI',
+      },
+      {
+        nameDesc: 'Visit repository:',
+        infoDesc: 'https://github.com/cbalsemao/rosemary',
+      },
+    ],
   },
 ];
 
@@ -103,7 +175,7 @@ const SectionContainer = styled(Box)`
 
 const ProjectDescripStyled = styled(Typography)({
   position: 'absolute',
-  backgroundColor: palette.beige,
+  backgroundColor: palette.darkWhite,
   padding: '20px',
   color: palette.black,
   borderBottomLeftRadius: '10px',
@@ -112,6 +184,7 @@ const ProjectDescripStyled = styled(Typography)({
   width: '100%',
   fontFamily: theme.typography.fontFamily,
   fontWeight: 'bold',
+  opacity: 0.9,
 });
 
 const ImageContainer = styled(Box)`
@@ -205,10 +278,32 @@ const ProjectsSection = () => {
           }}
         />
         <ProjectDescripStyled>
-          {
-            projects.find((project) => project.image === activeImage)
-              ?.description
-          }
+          <>
+            <Typography
+              sx={{
+                fontWeight: 'bold',
+                fontFamily: theme.typography.fontFamily,
+                fontSize: '1.2rem',
+              }}
+            >
+              {
+                projects.find((project) => project.image === activeImage)
+                  ?.description
+              }
+            </Typography>
+            <Box>
+              {projects
+                .find((project) => project.image === activeImage)
+                ?.information?.map((info, index) => (
+                  <Typography
+                    key={index}
+                    sx={{ fontFamily: theme.typography.fontFamily }}
+                  >
+                    <strong>{info.nameDesc}</strong> {info.infoDesc}
+                  </Typography>
+                ))}
+            </Box>
+          </>
         </ProjectDescripStyled>
       </ImageContainer>
       <ProjectList>
