@@ -90,24 +90,22 @@ const projects = [
     id: 5,
     name: 'Clover Laundry',
     image: './clover-proj-img.png',
-    description:
-      'Clover Laundry is a laundry service based in Alicante, Spain.',
+    description: 'Laundry service based in Alicante, Spain.',
     url: 'https://cloverlavanderia.es/',
     information: [
       {
         nameDesc: 'Responsive Design:',
         infoDesc:
-          'Built with Material UI, the site offers a seamless user experience across devices, ensuring adaptability from mobile to desktop.',
+          'Built with Material UI for a seamless, responsive experience',
       },
       {
         nameDesc: 'Component-Based Architecture:',
-        infoDesc:
-          'Leveraging React and Typescript, the codebase is modular and reusable, simplifying future updates and maintenance.',
+        infoDesc: 'Built with React and TypeScript for modular, reusable code.',
       },
       {
         nameDesc: 'Bilingual Support:',
         infoDesc:
-          'Bilingual Support: The website includes a language switcher, offering content in English and Spanish, ensuring accessibility to a broader, multilingual audience.',
+          'Includes a language switcher for English and Spanish accessibility.',
       },
       {
         nameDesc: 'Technology stack:',
@@ -124,24 +122,23 @@ const projects = [
     id: 6,
     name: 'Rosemary Restaurant',
     image: './rosemary-proj-img.png',
-    description: 'Veggie and vegetarian restaurant based in Alicante, Spain.',
+    description: 'Restaurant based in Alicante, Spain.',
     url: 'https://rosemary-proj.vercel.app/',
     information: [
       {
         nameDesc: 'Responsive Design:',
         infoDesc:
-          'Built with Material UI, the site offers a seamless user experience across devices, ensuring adaptability from mobile to desktop.',
+          'Built with Material UI for a seamless, responsive experience',
       },
       {
         nameDesc: 'Component-Based Architecture:',
-        infoDesc:
-          'Leveraging React and Typescript, the codebase is modular and reusable, simplifying future updates and maintenance.',
+        infoDesc: 'Built with React and TypeScript for modular, reusable code.',
       },
 
       {
         nameDesc: 'Bilingual Support:',
         infoDesc:
-          'The website includes a language switcher, offering content in English and Spanish, ensuring accessibility to a broader, multilingual audience.',
+          'Includes a language switcher for English and Spanish accessibility.',
       },
       {
         nameDesc: 'Technology stack:',
