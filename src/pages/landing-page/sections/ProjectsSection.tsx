@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import gsap from 'gsap';
 import { useRef } from 'react';
@@ -9,6 +9,25 @@ import { TextSplitter } from '../../../utils/utils';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import useTextAnimation from '../../../hooks/useTextAnimation';
 import { PROJECTS_INITIAL } from '../../../utils/types';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LanguageIcon from '@mui/icons-material/Language';
+
+const VisitButton = styled(Button)({
+  backgroundColor: 'black',
+  color: palette.white,
+  '&:hover': {
+    backgroundColor: palette.burgundy,
+  },
+  borderRadius: '30px',
+  textTransform: 'none',
+  fontSize: '1rem',
+  padding: '6px 12px',
+  minWidth: 'auto',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  gap: '6px',
+});
 
 const ArrowStyled = styled(ArrowRightAltIcon)({
   transition: 'transform 0.3s ease-in-out, color 0.3s ease-in-out',
@@ -58,8 +77,8 @@ const projects = [
         infoDesc: 'React, Typescript, Material UI',
       },
       {
-        nameDesc: 'Visit repository:',
-        infoDesc: 'https://github.com/cbalsemao/hangman-game',
+        repository: 'Visit:',
+        repositoryUrl: 'https://github.com/cbalsemao/hangman-game',
       },
     ],
     url: 'https://hangman-game-topaz-phi.vercel.app/',
@@ -113,8 +132,8 @@ const projects = [
       },
 
       {
-        nameDesc: 'Visit repository:',
-        infoDesc: 'https://github.com/cbalsemao/clover-laundry',
+        repository: 'Visit:',
+        repositoryUrl: 'https://github.com/cbalsemao/clover-laundry',
       },
     ],
   },
@@ -145,8 +164,8 @@ const projects = [
         infoDesc: 'React, Typescript, Material UI',
       },
       {
-        nameDesc: 'Visit repository:',
-        infoDesc: 'https://github.com/cbalsemao/rosemary',
+        repository: 'Visit:',
+        repositoryUrl: 'https://github.com/cbalsemao/rosemary',
       },
     ],
   },
@@ -299,6 +318,36 @@ const ProjectsSection = () => {
                     <strong>{info.nameDesc}</strong> {info.infoDesc}
                   </Typography>
                 ))}
+            </Box>
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+              <Typography sx={{ fontWeight: 'bold' }}>
+                {
+                  projects
+                    .find((project) => project.image === activeImage)
+                    ?.information.find((info) => info.repository)?.repository
+                }
+              </Typography>
+              <VisitButton
+                onClick={() => {
+                  const project = projects.find((p) => p.image === activeImage);
+                  const repoUrl = project?.information.find(
+                    (info) => info.repositoryUrl
+                  )?.repositoryUrl;
+                  if (repoUrl) window.open(repoUrl, '_blank');
+                }}
+              >
+                <GitHubIcon />
+                GitHub
+              </VisitButton>
+              <VisitButton
+                onClick={() => {
+                  const project = projects.find((p) => p.image === activeImage);
+                  if (project?.url) window.open(project.url, '_blank');
+                }} //TODO: change this, make it more generic
+              >
+                <LanguageIcon />
+                Website
+              </VisitButton>
             </Box>
           </>
         </ProjectDescripStyled>
