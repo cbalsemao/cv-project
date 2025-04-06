@@ -238,6 +238,7 @@ const ProjectItem = styled(Typography)({
   position: 'relative',
   padding: '10px 0',
   transition: 'color 0.3s ease',
+  zIndex: 2000,
   '&:hover .arrow': {
     animation: 'stretchArrow 1s ease-in-out infinite',
     color: palette.beige,
