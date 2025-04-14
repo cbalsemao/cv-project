@@ -26,10 +26,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandPage />} />
-        <Route path="cv" element={<CvPage />}>
-          {/* <Route index element={<RecentActivity />} />
-          <Route path="project/:id" element={<Project />} /> */}
-        </Route>
+        <Route path="cv" element={<CvPage />}/>
       </Routes>
     </BrowserRouter>
   );

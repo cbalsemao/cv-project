@@ -1,32 +1,28 @@
 import { Box, styled, Typography } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { useEffect, useRef } from 'react';
+import { ReactNode, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { palette } from '../utils/styleguide';
 
-const ContactIconsContainer = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <Box
-      sx={{
-        position: { xs: 'fixed', md: 'fixed' },
-        bottom: { xs: '20px', md: 'auto' },
-        top: { xs: 'auto', md: '50%' },
-        left: { xs: '50%', md: '20px' },
-        transform: { xs: 'translateX(-50%)', md: 'translateY(-50%)' },
-        display: 'flex',
-        flexDirection: { xs: 'row', md: 'column' },
-        gap: '20px',
-        paddingLeft: { xs: '0', md: '20px' },
-        alignItems: { xs: 'center', md: 'flex-start' },
-        marginTop: { xs: '0', md: '0' },
-        color: { xs: palette.white, md: palette.beige },
-      }}
-    >
-      {children}
-    </Box>
-  );
-};
+const ContactIconsContainer = styled(Box)(({ theme }) => ({
+  position: 'fixed',
+  display: 'flex',
+  gap: '20px',
+  zIndex: 1000,
+  [theme.breakpoints.up('md')]: {
+    top: '50%',
+    left: '20px',
+    transform: 'translateY(-50%)',
+    flexDirection: 'column',
+  },
+  [theme.breakpoints.down('md')]: {
+    bottom: '20px',
+    left: '50%',
+    transform: 'translateX(-50%)',
+    flexDirection: 'row',
+  },
+}));
 
 const TypographyIcon = styled(Typography)({
   fontWeight: 'bold',

@@ -16,16 +16,19 @@ const SpanStyled = styled('span')({
 });
 
 const TextStyled = styled('div')({
-  fontSize: '2.0rem',
+  fontSize: '1.5rem',
   fontfamily: theme.typography.fontFamily,
+  [theme.breakpoints.up('xs')]: {
+    fontSize: '1.7rem',
+  },
   [theme.breakpoints.up('sm')]: {
     fontSize: '2.0rem',
   },
   [theme.breakpoints.up('md')]: {
-    fontSize: '3.0rem',
+    fontSize: '2.5rem',
   },
   [theme.breakpoints.up('lg')]: {
-    fontSize: '3.5rem',
+    fontSize: '2.8rem',
   },
 });
 
@@ -48,13 +51,11 @@ const TextFollow = ({ textToAnimate }: { textToAnimate: string }) => {
   });
 
   return (
-    <div className="section">
-      <TextStyled className="section__title">
-        {words.map((word, index) => {
-          return <SpanStyled key={index}>{word} </SpanStyled>;
-        })}
-      </TextStyled>
-    </div>
+    <TextStyled className="section__title">
+      {words.map((word, index) => {
+        return <SpanStyled key={index}>{word} </SpanStyled>;
+      })}
+    </TextStyled>
   );
 };
 

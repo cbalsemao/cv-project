@@ -83,28 +83,7 @@ const projects = [
     ],
     url: 'https://hangman-game-topaz-phi.vercel.app/',
   },
-  // {
-  //   id: 2,
-  //   name: 'Art Shop',
-  //   image:
-  //     'https://t4.ftcdn.net/jpg/02/66/72/41/360_F_266724172_Iy8gdKgMa7XmrhYYxLCxyhx6J7070Pr8.jpg',
-  //   description: 'E-commerce de arte',
-  // },
 
-  // {
-  //   id: 3,
-  //   name: 'TODO list',
-  //   image:
-  //     'https://cdn.theatlantic.com/thumbor/yHhIvkBiGvKKubxVHTNXvU4nCKQ=/1x122:2554x1452/1200x625/media/img/mt/2017/06/shutterstock_319985324/original.jpg',
-  //   description: 'A simple todoList',
-  // },
-  // {
-  //   id: 4,
-  //   name: 'Memory Store',
-  //   image:
-  //     'https://t4.ftcdn.net/jpg/02/66/72/41/360_F_266724172_Iy8gdKgMa7XmrhYYxLCxyhx6J7070Pr8.jpg',
-  //   description: 'Application to save your memories',
-  // },
   {
     id: 5,
     name: 'Clover Laundry',
@@ -296,7 +275,7 @@ const ProjectsSection = () => {
         />
         <ProjectDescripStyled>
           <>
-            <Typography
+            <Box
               sx={{
                 fontWeight: 'bold',
                 fontFamily: theme.typography.fontFamily,
@@ -307,27 +286,27 @@ const ProjectsSection = () => {
                 projects.find((project) => project.image === activeImage)
                   ?.description
               }
-            </Typography>
+            </Box>
             <Box>
               {projects
                 .find((project) => project.image === activeImage)
                 ?.information?.map((info, index) => (
-                  <Typography
+                  <Box
                     key={index}
                     sx={{ fontFamily: theme.typography.fontFamily }}
                   >
                     <strong>{info.nameDesc}</strong> {info.infoDesc}
-                  </Typography>
+                  </Box>
                 ))}
             </Box>
             <Box sx={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
-              <Typography sx={{ fontWeight: 'bold' }}>
+              <Box sx={{ fontWeight: 'bold' }}>
                 {
                   projects
                     .find((project) => project.image === activeImage)
                     ?.information.find((info) => info.repository)?.repository
                 }
-              </Typography>
+              </Box>
               <VisitButton
                 onClick={() => {
                   const project = projects.find((p) => p.image === activeImage);
