@@ -54,7 +54,6 @@ const Cursor: React.FC<CursorProps> = ({ isHovered }) => {
     };
   };
 
-  //linear interpolation
   const lerp = (x: number, y: number, a: number) => x * (1 - a) + y * a;
 
   const moveCircle = (x: number, y: number) => {

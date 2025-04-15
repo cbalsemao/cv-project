@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { styled, Typography, Box } from '@mui/material';
+import { styled, Box } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import { TextSplitter } from '../../../utils/utils';
 import { StyledSectionTitle } from './styles-section/stylesSection';
