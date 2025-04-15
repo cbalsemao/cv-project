@@ -1,4 +1,4 @@
-const SRC_PATH = 'invasor-zim-picture.jpg';
+const SRC_PATH = 'resume-photo.jpg';
 
 const Photo = () => {
   return (
@@ -7,7 +7,7 @@ const Photo = () => {
       alt="Avatar"
       style={{
         height: '200px',
-        width: '100px',
+        width: '170px',
         border: '10px solid black',
       }}
     />
