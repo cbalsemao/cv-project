@@ -9,7 +9,7 @@ import useTextAnimation from '../../../hooks/useTextAnimation';
 import { FaReact, FaCss3Alt, FaHtml5 } from 'react-icons/fa';
 import { BiLogoTypescript } from 'react-icons/bi';
 import { DiMongodb, DiNodejs } from 'react-icons/di';
-import { SiExpress } from 'react-icons/si';
+import { SiExpress, SiRedux } from 'react-icons/si';
 
 type SkillProps = {
   title: string;
@@ -50,6 +50,10 @@ const skills = [
   {
     title: 'Node JS',
     icon: <DiNodejs style={{ fontSize: 40, color: palette.darkWhite }} />,
+  },
+  {
+    title: 'Redux',
+    icon: <SiRedux style={{ fontSize: 40, color: palette.darkWhite }} />,
   },
 ];
 
