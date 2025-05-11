@@ -8,7 +8,8 @@ import { TextSplitter } from '../../../utils/utils';
 import useTextAnimation from '../../../hooks/useTextAnimation';
 import { FaReact, FaCss3Alt, FaHtml5 } from 'react-icons/fa';
 import { BiLogoTypescript } from 'react-icons/bi';
-import { DiMongodb } from 'react-icons/di';
+import { DiMongodb, DiNodejs } from 'react-icons/di';
+import { SiExpress } from 'react-icons/si';
 
 type SkillProps = {
   title: string;
@@ -40,7 +41,15 @@ const skills = [
   },
   {
     title: 'Javascript',
-    icon: <Javascript sx={{ fontSize: 40, color: palette.darkWhite }} />,
+    icon: <Javascript style={{ fontSize: 40, color: palette.darkWhite }} />,
+  },
+  {
+    title: 'Express JS',
+    icon: <SiExpress style={{ fontSize: 40, color: palette.darkWhite }} />,
+  },
+  {
+    title: 'Node JS',
+    icon: <DiNodejs style={{ fontSize: 40, color: palette.darkWhite }} />,
   },
 ];
 
