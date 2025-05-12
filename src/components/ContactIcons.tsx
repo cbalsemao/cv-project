@@ -4,6 +4,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { palette } from '../utils/styleguide';
+import EmailIcon from '@mui/icons-material/Email';
 
 const ContactIconsContainer = styled(Box)(({ theme }) => ({
   position: 'fixed',
@@ -31,6 +32,7 @@ const TypographyIcon = styled(Typography)({
 const ContactIcons = () => {
   const githubRef = useRef<HTMLDivElement | null>(null);
   const linkedinRef = useRef<HTMLDivElement | null>(null);
+  const emailRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handleMouseMove = (
@@ -64,7 +66,7 @@ const ContactIcons = () => {
       });
     };
 
-    [githubRef, linkedinRef].forEach((ref) => {
+    [githubRef, linkedinRef, emailRef].forEach((ref) => {
       if (ref.current) {
         ref.current.addEventListener('mousemove', (e) =>
           handleMouseMove(e, ref)
@@ -104,6 +106,22 @@ const ContactIcons = () => {
       >
         <LinkedInIcon sx={{ fontSize: 40 }} />
       </TypographyIcon>
+      {/* <TypographyIcon
+        variant="h6"
+        ref={emailRef}
+        sx={{
+          '&:hover': {
+            color: palette.darkWhite || '#ffffff', // Fallback to white if undefined
+          },
+        }}
+      >
+        <a
+          href="mailto:cbalsemaod@gmail.com"
+          style={{ textDecoration: 'none', color: 'inherit' }}
+        >
+          <EmailIcon sx={{ fontSize: 40 }} />
+        </a>
+      </TypographyIcon> */}
     </ContactIconsContainer>
   );
 };
