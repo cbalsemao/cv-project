@@ -4,7 +4,6 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { palette } from '../utils/styleguide';
-import EmailIcon from '@mui/icons-material/Email';
 
 const ContactIconsContainer = styled(Box)(({ theme }) => ({
   position: 'fixed',
@@ -32,7 +31,6 @@ const TypographyIcon = styled(Typography)({
 const ContactIcons = () => {
   const githubRef = useRef<HTMLDivElement | null>(null);
   const linkedinRef = useRef<HTMLDivElement | null>(null);
-  const emailRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handleMouseMove = (
@@ -66,7 +64,7 @@ const ContactIcons = () => {
       });
     };
 
-    [githubRef, linkedinRef, emailRef].forEach((ref) => {
+    [githubRef, linkedinRef].forEach((ref) => {
       if (ref.current) {
         ref.current.addEventListener('mousemove', (e) =>
           handleMouseMove(e, ref)

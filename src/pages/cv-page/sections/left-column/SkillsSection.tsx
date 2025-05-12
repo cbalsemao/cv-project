@@ -2,7 +2,15 @@ import { useTranslation } from 'react-i18next';
 import Section from '../../../../components/Section';
 import { ContainerStyled } from '../../styled-components/Components';
 
-const SKILL_LIST = ['React', 'Redux', 'TypeScript', 'CSS/HTML'];
+const SKILL_LIST = [
+  'React',
+  'Redux',
+  'TypeScript',
+  'CSS/HTML',
+  'Node.js',
+  'Express',
+  'MondgoDB',
+];
 
 const SkillsSection = () => {
   const { t } = useTranslation();
