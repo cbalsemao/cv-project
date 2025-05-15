@@ -5,8 +5,8 @@
   },
 
   "profile": {
-    "title": "Profile",
-    "description": "I am a frontend developer with a strong foundation in software testing, which has honed my attention to detail and commitment to delivering high-quality applications. My expertise lies in building dynamic, user-friendly interfaces with React, focusing on functionality, performance, and seamless user experiences."
+    "title": "Profilo",
+    "description": "Sviluppatrice web con esperienza nello sviluppo frontend in React e competenze di backend. La mia formazione in investigazione cognitiva, con un focus interdisciplinario ed sperimentale, mi ha dato gli strumenti per lavorare in ambienti collaborativi diversi e analizzare problemi da diverse prospettive.  Questo percorso ha rafforzato il mio pensiero critico, le capacità analitiche e l’approccio scientifico nella risoluzione di compiti complessi con precisione e pazienza. Allo stesso tempo, la mia esperienza come QA mi ha permesso di sviluppare una comunicazione efficace all’interno del team. Ho imparato a identificare e comunicare i problemi in modo chiaro, a prioritizzare le attività in base all’impatto sul prodotto e a collaborare attivamente per migliorare la qualità del software e dei processi, rispettando le scadenze. Sono motivata a crescere professionalmente ogni giorno e mi impegno per garantire la qualità del prodotto nel rispetto delle tempistiche concordate."
   },
 
   "skills": {
@@ -14,98 +14,109 @@
   },
 
   "languages": {
-    "title": "Languages",
+    "title": "Langue",
     "info": [
       {
         "name": "Spanish",
-        "level": "Native"
+        "level": "Madrelingua"
       },
       {
         "name": "English",
-        "level": "Intermediate"
+        "level": "Intermedio"
       },
       {
         "name": "Italian",
-        "level": "Basic"
+        "level": "Base"
       }
     ]
   },
 
   "contact": {
     "title": "Contact",
-    "location": "Milan, Italy",
+    "location": "Milano, Italia",
     "email": "cbalsemaod@gmail.com",
     "phone": "+39 351 480 5611"
   },
 
   "experience": {
-    "title": "Work Experience",
+    "title": "Esperienza professionale",
     "info": [
       {
         "role": "Frontend Developer",
         "company": "Freelance",
-        "date": "2024 - Present",
-        "projects": [
-          {
-            "name": "Clover Laundry",
-            "date": "2024",
-            "description": [
-              "Developed a clean and user-friendly front-end interface using React, typescript and Material UI, tailored to the needs of a laundry business."
-            ]
-          },
-          {
-            "name": "Rosemary restaurant",
-            "date": "2024",
-            "description": [
-              "Developed a user-friendly front-end interface for a restaurant using React. Implemented TypeScript to enhance code reliability and maintainability. Designed a fully responsive layout to optimize usability across all devices."
-            ]
-          }
+        "date": "2024 - Presente",
+        "description": [
+          "Nell’ultimo anno mi sono dedicata allo studio e allo sviluppo autonomo di siti web. Ho seguito l’intero processo: raccolta dei requisiti, analisi, progettazione e rilascio. Ho realizzato siti semplici ma funzionali, responsive e user-friendly, con un approccio mobile-first e multilingua. Per lo sviluppo ho utilizzato React con Material UI, mentre per l’hosting ho utilizzato GoDaddy.Ho collaborato con due clienti in Spagna: uno per la creazione del sito di una lavanderia e l’altro per un ristorante.In parallelo, sto approfondendo le tecnologie backend come Express e MongoDB, con l’obiettivo di rafforzare il mio profilo come sviluppatrice web full stack."
         ]
       },
       {
         "role": "QA Analyst / L2 Technical Support",
         "company": "Sisteco S.A.",
-        "date": "March 2023 - June 2024",
+        "date": "2023 - 2024",
         "description": [
-          "Resolved client-reported technical issues using the Linux terminal, SSH and SQL queries to solve problems.",
-          "Performed functional, regression, and database testing for retail systems.",
-          "Performed functional, regression, and database testing for retail systems, utilizing TestLink for test case management and Mantis Bug Tracker for issue tracking.",
-          " Created test cases, prepared test reports, and communicated software releases to clients. Trained and mentored new testers to ensure efficient onboarding and performance."
+          "In questa esperienza mi sono occupata di raccogliere i requisiti dei clienti e di fare analisi funzionale. Ho partecipato anche ai test di accettazione con gli utenti. Ho dato supporto remoto ai sistemi dei clienti usando Putty e ho disegnato interfacce grafiche per i totem e le casse con il programma Xara. Ho usato il database MySQL per fare test e risolvere problemi tecnici. Per gestire i test e scrivere la documentazione ho usato TestLink, mentre per segnalare problemi e bug ho usato Mantis Bug Tracker. Dopo un po’ di tempo, sono diventata responsabile dell’onboarding: aiutavo le nuove persone ad entrare nel team e capire il modo di lavorare dell’azienda. Slack era lo strumento che usavamo per parlare e organizzarci con il team."
         ]
       },
       {
         "role": "QA Tester",
         "company": "CES (Centro de Ensayos de Software)",
-        "date": "December 2021 - March 2023",
+        "date": "Decembre 2021 - Marzo 2023",
         "description": [
-          "Collaborated within a team on a project for a major public organization in Uruguay, creating and maintaining comprehensive test documentation, designing business-aligned test cases, and conducting functional, regression, and accessibility testing for mobile and web applications. Focused on ensuring optimal functionality, usability, and compliance with accessibility standards while efficiently managing and tracking issues using Mantis Bug Tracker to facilitate timely defect resolution."
+          "Ho lavorato su un progetto che si dedicava alla gestione del sistema elettorale del Uruguay e diverse pagine con particolare esigenza sulla accesibilita’. Durante questa esperienza mi sono dedicata a disegnare ed eseguire test funzionali e di non regressione. Per garantire l'accessibilità ho utilizzato axe devTools e NVDA (Non-Visual Desktop Access). Inoltre come strumenti ho usato Mantis Bug Tracker e Selenium IDE."
         ]
       },
       {
         "role": "QA Tester",
-        "company": "Tensai - Internship",
-        "date": "August 2021- December 2021",
+        "company": "Tensai - Stage",
+        "date": "Agosto 2021- Dicembre 2021",
 
         "description": [
-          "Collaborated within the testers' team on projects for a truck tracking app and a shopping mall web application, working closely with developers to create, maintain, and execute functional test plans and cases for mobile and web applications. Ensured high quality and optimal user experience while effectively tracking and resolving bugs using Mantis Bug Tracker."
+          "In questa azienda ho lavorato su un’applicazione mobile per il tracciamento in tempo reale dei camion tramite tecnologie GPS e su una pagina web per un centro commerciale. Mi sono occupata dello svolgimento di diverse tipologie di test, tra cui test funzionali, di regressione, di usabilità e di responsività, utilizzando Responsively App. Per ciascun test eseguito, ho prodotto la relativa documentazione e scritto dei report sulle anomalie tramite Mantis Bug Tracker. Ho elaborato diversi report di avanzamento dei test e presentato i risultati al team di sviluppo. La comunicazione e il tracciamento delle attività avvenivano tramite Trello, con metodologia Kanboard."
         ]
       }
     ]
   },
 
   "education": {
-    "title": "Education",
+    "title": "Educazione",
     "info": [
       {
-        "degree": "BS - Computer Science",
+        "degree": "Informatica",
         "school": "UdelaR (FING) - CETP",
-        "date": "2022"
+        "date": "2022",
+        "info": [
+          {
+            "description": [
+              "Ho fatto diversi progetti, quello di cui sono più fiera è un DBMS fatto in C per il corso di Algoritmi e Strutture Dati.."
+            ]
+          }
+        ]
       },
 
       {
-        "degree": "BS - Psychology",
-        "school": "UdelaR - Psychology Faculty",
-        "date": "2014"
+        "degree": "Psicologia",
+        "school": "UdelaR - Facultad de Psicologia",
+        "date": "2014",
+        "info": [
+          {
+            "title": "Misurazione del pensiero orientato al futuro (2019)",
+            "description": [
+              "Ho partecipato ad un progetto di ricerca a lungo termine centrato sull'impatto della prospettiva temporale delle persone e il loro rapporto con le abitudini alimentari. Ho partecipato attivamente nel lavoro sul campo, che includeva la ricerca e seguimento dei partecipanti, applicazioni dei test, analisi dei dati mediante SPSS e presentazione dei risultati al capo progetto."
+            ]
+          },
+          {
+            "title": "Intervento psicosociale basato sugli scacchi (2020)",
+            "description": [
+              "Ho collaborato con un team interdisciplinare in un programma di stimolazione cognitiva che utilizzava il gioco degli scacchi come strumento per favorire lo sviluppo di abilità cognitive e sociali in adolescenti con Disturbo dello Spettro Autistico (ASD). Mi sono occupata di osservazione sul campo, registrazione delle interazioni, valutazione dell’impatto comportamentale e redazione di report tecnici."
+            ]
+          },
+          {
+            "title": "Analisi statistica sull’uguaglianza matematica nei bambini (2021)",
+            "description": [
+              "Ho preso parte a un progetto di ricerca sulla comprensione dell’uguaglianza matematica in bambini dai 6 agli 11 anni (campione: 221 partecipanti). Le mie attività comprendevano la progettazione dei protocolli sperimentali, l’applicazione dei test, l’analisi dei dati con SPSS e la stesura della relazione finale dei risultati."
+            ]
+          }
+        ]
       }
     ]
   }

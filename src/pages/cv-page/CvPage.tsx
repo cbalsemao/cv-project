@@ -5,6 +5,7 @@ import ExperiencesSection from './sections/ExperiencesSection';
 import EducationSection from './sections/EducationSection';
 import ProfileInfoSection from './sections/ProfileInfoSection';
 import AvatarSection from './sections/AvatarSection';
+import SwitchCVLanguage from './switchCVLanguage';
 
 const A4_WIDTH = '210mm';
 const A4_HEIGHT = '297mm';
@@ -27,6 +28,7 @@ const PageWrapper = styled('div')<{ isA4: boolean }>(({ isA4 }) => ({
 const CvPage = () => {
   return (
     <PageWrapper isA4={true}>
+      <SwitchCVLanguage />
       <Grid
         container
         spacing={2}
