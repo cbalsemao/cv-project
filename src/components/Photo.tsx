@@ -6,9 +6,8 @@ const Photo = () => {
       src={SRC_PATH}
       alt="Avatar"
       style={{
-        height: '200px',
-        width: '170px',
-        border: '10px solid black',
+        height: '160px',
+        width: '150px',
       }}
     />
   );

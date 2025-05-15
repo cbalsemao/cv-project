@@ -6,7 +6,7 @@
 
   "profile": {
     "title": "Profile",
-    "description": "I am a frontend developer with a strong foundation in software testing, which has honed my attention to detail and commitment to delivering high-quality applications. My expertise lies in building dynamic, user-friendly interfaces with React, focusing on functionality, performance, and seamless user experiences."
+    "description": "Web developer with experience in frontend development using React and knowledge of backend technologies. Thanks to my background in cognitive research, I’m used to working in diverse teams and approaching problems from different perspectives. This has strengthened my analytical thinking and attention to detail. My experience as a QA tester helped me develop clear communication, prioritize tasks effectively, and focus on software quality. I’m eager to keep growing and contribute to projects with care and responsibility."
   },
 
   "skills": {
@@ -45,21 +45,8 @@
         "role": "Frontend Developer",
         "company": "Freelance",
         "date": "2024 - Present",
-        "projects": [
-          {
-            "name": "Clover Laundry",
-            "date": "2024",
-            "description": [
-              "Developed a clean and user-friendly front-end interface using React, typescript and Material UI, tailored to the needs of a laundry business."
-            ]
-          },
-          {
-            "name": "Rosemary restaurant",
-            "date": "2024",
-            "description": [
-              "Developed a user-friendly front-end interface for a restaurant using React. Implemented TypeScript to enhance code reliability and maintainability. Designed a fully responsive layout to optimize usability across all devices."
-            ]
-          }
+        "description": [
+          "In the past year, I’ve been focused on learning and building websites independently. I’ve handled the full process—from gathering requirements to design, development, and deployment. The sites I built were simple but functional, responsive, user-friendly, and designed with a mobile-first and multilingual approach. I used React with Material UI for the frontend, and GoDaddy for hosting. I worked with two clients in Spain: one for a laundry service website, and another for a restaurant. Meanwhile, I’m also deepening my skills in backend technologies like Express and MongoDB to grow into a more complete full-stack web developer."
         ]
       },
       {
@@ -67,10 +54,7 @@
         "company": "Sisteco S.A.",
         "date": "March 2023 - June 2024",
         "description": [
-          "Resolved client-reported technical issues using the Linux terminal, SSH and SQL queries to solve problems.",
-          "Performed functional, regression, and database testing for retail systems.",
-          "Performed functional, regression, and database testing for retail systems, utilizing TestLink for test case management and Mantis Bug Tracker for issue tracking.",
-          " Created test cases, prepared test reports, and communicated software releases to clients. Trained and mentored new testers to ensure efficient onboarding and performance."
+          "In this role, I was responsible for gathering client requirements and performing functional analysis. I also took part in user acceptance testing. I provided remote support for client systems using Putty and designed graphical interfaces for totems and checkout systems with Xara. I used the MySQL database to run tests and troubleshoot technical issues. To manage test cases and documentation, I worked with TestLink, while Mantis Bug Tracker was used to report bugs and issues. After some time, I became responsible for onboarding new team members, helping them integrate into the team and understand the company’s workflows. We used Slack as our main tool for team communication and coordination."
         ]
       },
       {
@@ -78,7 +62,7 @@
         "company": "CES (Centro de Ensayos de Software)",
         "date": "December 2021 - March 2023",
         "description": [
-          "Collaborated within a team on a project for a major public organization in Uruguay, creating and maintaining comprehensive test documentation, designing business-aligned test cases, and conducting functional, regression, and accessibility testing for mobile and web applications. Focused on ensuring optimal functionality, usability, and compliance with accessibility standards while efficiently managing and tracking issues using Mantis Bug Tracker to facilitate timely defect resolution."
+          "I worked on a project focused on the management of Uruguay’s electoral system and the testing of several web pages with specific accessibility requirements. During this experience, I was responsible for designing and executing functional and regression tests. To ensure accessibility, I used tools like axe DevTools and NVDA (Non-Visual Desktop Access). I also worked with Mantis Bug Tracker and Selenium IDE."
         ]
       },
       {
@@ -87,7 +71,7 @@
         "date": "August 2021- December 2021",
 
         "description": [
-          "Collaborated within the testers' team on projects for a truck tracking app and a shopping mall web application, working closely with developers to create, maintain, and execute functional test plans and cases for mobile and web applications. Ensured high quality and optimal user experience while effectively tracking and resolving bugs using Mantis Bug Tracker."
+          "In this company, I worked on a mobile application for real-time truck tracking using GPS technologies, as well as on a website for a shopping mall. I was responsible for performing various types of tests, including functional, regression, usability, and responsiveness tests, using Responsively App. For each test, I produced the corresponding documentation and wrote reports on any issues using Mantis Bug Tracker. I also created progress reports for the tests and presented the results to the development team. Communication and task tracking were done through Trello, using the Kanboard methodology."
         ]
       }
     ]
@@ -97,15 +81,42 @@
     "title": "Education",
     "info": [
       {
-        "degree": "BS - Computer Science",
+        "degree": "Computer Science",
         "school": "UdelaR (FING) - CETP",
-        "date": "2022"
+        "date": "2022",
+        "info": [
+          {
+            "description": [
+              "I have worked on several projects, and the one I am most proud of is a DBMS made in C for the Algorithms and Data Structures course."
+            ]
+          }
+        ]
       },
 
       {
-        "degree": "BS - Psychology",
+        "degree": "Psychology",
         "school": "UdelaR - Psychology Faculty",
-        "date": "2014"
+        "date": "2014",
+        "info": [
+          {
+            "title": "Future-Oriented Thinking Measurement (2019)",
+            "description": [
+              "I participated in a long-term research project focused on how people’s time perspective affects their eating habits. I was actively involved in fieldwork, including recruiting and following up with participants, administering tests, analyzing data with SPSS, and presenting the results to the project leader."
+            ]
+          },
+          {
+            "title": "Psychosocial Intervention Using Chess (2020)",
+            "description": [
+              "I worked with an interdisciplinary team in a cognitive stimulation program using chess to help adolescents with Autism Spectrum Disorder (ASD) develop cognitive and social skills. My tasks included field observation, recording interactions, assessing behavioral impact, and writing technical reports."
+            ]
+          },
+          {
+            "title": "Statistical Analysis of Mathematical Equality in Children (2021)",
+            "description": [
+              " I took part in a research project studying how children aged 6 to 11 understand mathematical equality (sample: 221 participants). My tasks included designing experimental protocols, administering tests, analyzing data with SPSS, and writing the final research report."
+            ]
+          }
+        ]
       }
     ]
   }

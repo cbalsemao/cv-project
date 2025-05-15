@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import Section from '../../../../components/Section';
-import { ContainerStyled } from '../../styled-components/Components';
+import { ContainerStyled } from '../styled-components/Components';
+import Section from '../../../components/Section';
 
 const ProfileInfoSection = () => {
   const { t } = useTranslation();

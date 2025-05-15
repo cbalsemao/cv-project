@@ -3,14 +3,12 @@ import CvPage from './pages/cv-page/CvPage';
 import LandPage from './pages/landing-page/LandPage';
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import esTranslation from './translations/translation-es.json';
 import enTranslation from './translations/translation-en.json';
 import itTranslation from './translations/translation-it.json';
 import './styles/globals.css';
 
 i18n.use(initReactI18next).init({
   resources: {
-    es: { translation: esTranslation },
     en: { translation: enTranslation },
     it: { translation: itTranslation },
   },
@@ -26,7 +24,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandPage />} />
-        <Route path="cv" element={<CvPage />}/>
+        <Route path="cv" element={<CvPage />} />
       </Routes>
     </BrowserRouter>
   );

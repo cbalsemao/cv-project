@@ -2,7 +2,7 @@ import { Box, styled } from '@mui/material';
 import Title from './Title';
 
 type SectionProps = {
-  title: string;
+  title?: string;
   side?: 'left' | 'right';
   children: React.ReactNode;
 };
@@ -13,7 +13,7 @@ const SectionContent = styled('div')({
 
 const Section: React.FC<SectionProps> = ({ title, side, children }) => {
   return (
-    <Box style={{}}>
+    <Box>
       <Title label={title} side={side} />
       <SectionContent>{children}</SectionContent>
     </Box>

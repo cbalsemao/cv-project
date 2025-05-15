@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import Section from '../../../../components/Section';
-import { Box } from '@mui/material';
+import Section from '../../../components/Section';
+import { Box, Typography } from '@mui/material';
 
 type Project = {
   name: string;
@@ -53,11 +53,9 @@ const ExperiencesSection = () => {
             )}
             {experience.description && (
               <Box sx={{ paddingLeft: 3 }}>
-                <ul>
-                  {experience.description.map((desc, descIndex) => (
-                    <li key={descIndex}>{desc}</li>
-                  ))}
-                </ul>
+                {experience.description.map((desc, descIndex) => (
+                  <Typography key={descIndex}>{desc}</Typography>
+                ))}
               </Box>
             )}
           </div>

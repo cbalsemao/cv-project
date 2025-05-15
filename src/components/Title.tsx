@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material';
+import { Typography, Box } from '@mui/material';
 import React from 'react';
 import { palette } from '../utils/styleguide';
 
@@ -7,19 +7,44 @@ type TitleProps = {
   side?: 'left' | 'right';
 };
 
-const Title: React.FC<TitleProps> = ({ label, side = 'left' }) => {
+const Title: React.FC<TitleProps> = ({ label, side = 'right' }) => {
   return (
-    <Typography
+    <Box
       sx={{
-        backgroundColor: palette.black,
-        color: 'white',
-        padding: '5px',
-        paddingLeft: '20px',
-        borderRadius: side === 'left' ? '0 20px 20px 0' : '20px 0 0 20px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: side === 'right' ? 'flex-start' : 'flex-end',
       }}
     >
-      {label}
-    </Typography>
+      <Box
+        sx={{
+          height: '2px',
+          backgroundColor: 'skyblue',
+          width: '100%',
+          marginBottom: '5px',
+        }}
+      />
+      <Typography
+        sx={{
+          backgroundColor: palette.white,
+          color: 'black',
+          padding: '5px',
+          paddingLeft: '20px',
+          textTransform: 'uppercase',
+          fontWeight: 'bold',
+        }}
+      >
+        {label}
+      </Typography>
+      <Box
+        sx={{
+          height: '2px',
+          backgroundColor: 'skyblue',
+          width: '100%',
+          marginTop: '5px',
+        }}
+      />
+    </Box>
   );
 };
 

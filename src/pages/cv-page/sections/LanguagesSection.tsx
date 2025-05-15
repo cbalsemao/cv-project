@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
-import Section from '../../../../components/Section';
-import { LANGUAGE_INDEX } from '../../../../utils/utils';
-import { ContainerStyled } from '../../styled-components/Components';
+import { ContainerStyled } from '../styled-components/Components';
+import Section from '../../../components/Section';
+import { LANGUAGE_INDEX } from '../../../utils/utils';
 
 const LanguagesSection = () => {
   const { t } = useTranslation();
