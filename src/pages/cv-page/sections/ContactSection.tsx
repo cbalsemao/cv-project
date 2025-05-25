@@ -37,7 +37,7 @@ const ContactSection = () => {
       <p>
         {''}
         <a
-          href="https://github.com/cbalsemao"
+          href="https://cv-project-gold.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
         >
