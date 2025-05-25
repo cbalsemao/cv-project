@@ -9,7 +9,7 @@ const SKILL_LIST = [
   'CSS/HTML',
   'Node.js',
   'Express',
-  'MondgoDB',
+  'MongoDB',
 ];
 
 const SkillsSection = () => {
