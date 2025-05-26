@@ -10,6 +10,10 @@ import { FaReact, FaCss3Alt, FaHtml5 } from 'react-icons/fa';
 import { BiLogoTypescript } from 'react-icons/bi';
 import { DiMongodb, DiNodejs } from 'react-icons/di';
 import { SiExpress, SiRedux } from 'react-icons/si';
+import { useEffect, useRef } from 'react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import gsap from 'gsap';
+gsap.registerPlugin(ScrollTrigger);
 
 type SkillProps = {
   title: string;
@@ -87,12 +91,35 @@ const SkillCard = ({ title, icon }: SkillProps) => {
   );
 };
 
-import { useRef } from 'react';
-
 const SkillsSection = () => {
   const skillsRef = useRef<HTMLDivElement>(null);
+  const cardsRef = useRef<HTMLDivElement[]>([]);
   const { isMobile, isDesktop, isTablet } = useViewPort();
+
   useTextAnimation(skillsRef, '.section__title__char', 'top center');
+
+  useEffect(() => {
+    if (!skillsRef.current) return;
+
+    gsap.fromTo(
+      cardsRef.current,
+      {
+        opacity: 0,
+        y: 50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        stagger: 0.2,
+        duration: 1,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: skillsRef.current,
+          start: 'top 70%',
+        },
+      }
+    );
+  }, []);
 
   return (
     <Box
@@ -115,7 +142,13 @@ const SkillsSection = () => {
       </StyledSectionTitle>
       <Grid container spacing={2} justifyContent="center">
         {skills.map((skill, index) => (
-          <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
+          <Grid
+            size={{ xs: 12, sm: 6, md: 4 }}
+            key={index}
+            ref={(el) => {
+              if (el) cardsRef.current[index] = el;
+            }}
+          >
             <SkillCard title={skill.title} icon={skill.icon} />
           </Grid>
         ))}
