@@ -44,6 +44,7 @@ const IntroNameTextTypography = styled(Typography)(({ theme }) => ({
   overflow: 'hidden',
   zIndex: 2000,
   position: 'relative',
+  color: palette.white,
 }));
 
 const IntroGreetingTextTypography = styled(Typography)(({ theme }) => ({
@@ -51,7 +52,7 @@ const IntroGreetingTextTypography = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.up('xs')]: { fontSize: '1.5rem' },
   [theme.breakpoints.up('sm')]: { fontSize: '3rem' },
   [theme.breakpoints.up('md')]: { fontSize: '4rem' },
-  [theme.breakpoints.up('lg')]: { fontSize: '5rem' },
+  [theme.breakpoints.up('lg')]: { fontSize: '4.5rem' },
   overflow: 'hidden',
   zIndex: 2000,
   position: 'relative',

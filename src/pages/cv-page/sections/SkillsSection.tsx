@@ -10,6 +10,9 @@ const SKILL_LIST = [
   'Node.js',
   'Express',
   'MongoDB',
+  'Tailwind CSS',
+  'Material UI',
+  'Git/GitHub',
 ];
 
 const SkillsSection = () => {

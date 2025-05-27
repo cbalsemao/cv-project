@@ -323,7 +323,7 @@ const ProjectsSection = () => {
                 onClick={() => {
                   const project = projects.find((p) => p.image === activeImage);
                   if (project?.url) window.open(project.url, '_blank');
-                }} //TODO: change this, make it more generic
+                }}
               >
                 <LanguageIcon />
                 Website
