@@ -336,7 +336,7 @@ const ProjectsSection = () => {
         <StyledSectionTitle>
           <TextSplitter text={'Projects'} className={'section__title__char'} />
         </StyledSectionTitle>
-        <Typography sx={{}}>
+        <Typography sx={{ fontFamily: theme.typography.fontFamily }}>
           Here are a few things I've done recently
         </Typography>
         {projects.map((project) => (

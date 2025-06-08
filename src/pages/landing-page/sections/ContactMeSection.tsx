@@ -1,7 +1,14 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import Grid from '@mui/material/Grid2';
-import { styled, TextField, Typography } from '@mui/material';
+import {
+  IconButton,
+  Snackbar,
+  SnackbarCloseReason,
+  styled,
+  TextField,
+  Typography,
+} from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import ButtonSend from '../../../components/ButtonSend';
 import { palette, theme } from '../../../utils/styleguide';
@@ -27,8 +34,8 @@ const ContactMeContainer = styled(Grid)(({ theme }) => ({
     '50%': { backgroundPosition: '100% 100%' },
     '100%': { backgroundPosition: '0% 0%' },
   },
-  position: 'relative', // Asegúrate de que el contenedor tenga posición relativa
-  zIndex: 0, // Establece zIndex en 0
+  position: 'relative',
+  zIndex: 0,
 }));
 
 const StyledFormContainer = styled(Grid)(({ theme }) => ({
@@ -38,8 +45,8 @@ const StyledFormContainer = styled(Grid)(({ theme }) => ({
   boxShadow: '0 4px 10px rgba(255, 255, 255, 0.1)',
   maxWidth: 500,
   width: '100%',
-  position: 'relative', // Asegúrate de que el contenedor del formulario tenga posición relativa
-  zIndex: 200, // Aumenta el zIndex para que esté encima del SVG
+  position: 'relative',
+  zIndex: 200,
 }));
 
 const StyledTextField = styled(TextField)({
@@ -67,6 +74,8 @@ const StyledTextField = styled(TextField)({
 
 const ContactMeSection = () => {
   const isMobile = useMediaQuery('(max-width:600px)');
+  const [snackbarMessage, setSnackbarMessage] = useState('');
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     gsap.fromTo(
@@ -81,6 +90,29 @@ const ContactMeSection = () => {
       }
     );
   }, []);
+
+  const handleClose = (
+    event: React.SyntheticEvent | Event,
+    reason?: SnackbarCloseReason
+  ) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setOpen(false);
+  };
+
+  const action = (
+    <>
+      <IconButton
+        size="small"
+        aria-label="close"
+        color="inherit"
+        onClick={handleClose}
+      >
+        x
+      </IconButton>
+    </>
+  );
 
   return (
     <ContactMeContainer container id={'contact'}>
@@ -134,9 +166,24 @@ const ContactMeSection = () => {
             autoComplete="off"
           />
 
-          <ButtonSend />
+          <ButtonSend
+            onClick={() => {
+              setSnackbarMessage(
+                `Not working at the moment :( You can contact me at cbalsemaod@gmail.com`
+              );
+              setOpen(true);
+            }}
+          />
         </form>
       </StyledFormContainer>
+      <Snackbar
+        open={open}
+        autoHideDuration={6000}
+        onClose={handleClose}
+        message={snackbarMessage}
+        action={action}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+      />
     </ContactMeContainer>
   );
 };

@@ -1,11 +1,15 @@
 import { Button } from '@mui/material';
 import { palette } from '../utils/styleguide';
+type ButtonSendProps = {
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+};
 
-const ButtonSend = () => {
+const ButtonSend = ({ onClick }: ButtonSendProps) => {
   return (
     <Button
-      type="submit"
+      // type="submit"
       variant="contained"
+      onClick={onClick}
       sx={{
         fontWeight: 'bold',
         color: palette.beige,
