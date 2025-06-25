@@ -71,7 +71,7 @@
         "date": "August 2021- December 2021",
 
         "description": [
-          "In this company, I worked on a mobile application for real-time truck tracking using GPS technologies, as well as on a website for a shopping mall. I was responsible for performing various types of tests, including functional, regression, usability, and responsiveness tests, using Responsively App. For each test, I produced the corresponding documentation and wrote reports on any issues using Mantis Bug Tracker. I also created progress reports for the tests and presented the results to the development team. Communication and task tracking were done through Trello, using the Kanboard methodology."
+          "In this company, I worked on a mobile application for real-time truck tracking using GPS technologies, as well as on a website for a shopping mall. I was responsible for performing various types of tests, including functional, regression, usability, and responsiveness tests, using Responsively App. For each test, I produced the corresponding documentation and wrote reports on any issues using Mantis Bug Tracker. I also created progress reports for the tests and presented the results to the development team. Communication and task tracking were done through Trello, using the Kanban methodology."
         ]
       }
     ]
@@ -83,14 +83,7 @@
       {
         "degree": "Computer Science",
         "school": "UdelaR (FING) - CETP",
-        "date": "2022",
-        "info": [
-          {
-            "description": [
-              "I have worked on several projects, and the one I am most proud of is a DBMS made in C for the Algorithms and Data Structures course."
-            ]
-          }
-        ]
+        "date": "2022"
       },
 
       {

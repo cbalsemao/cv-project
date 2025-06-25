@@ -31,6 +31,7 @@ const EducationSection = () => {
                   flexDirection: 'row',
                   gap: '5px',
                   padding: '8px 0',
+                  alignItems: 'center',
                 }}
               >
                 <Typography sx={{ fontWeight: 'bold' }}>
