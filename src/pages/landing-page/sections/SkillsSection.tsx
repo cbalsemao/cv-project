@@ -42,6 +42,7 @@ const skills = [
   {
     title: 'MongoDB',
     icon: <DiMongodb style={{ fontSize: 40, color: palette.darkWhite }} />,
+    
   },
   {
     title: 'Javascript',
