@@ -54,7 +54,7 @@
         "company": "Sisteco S.A.",
         "date": "2023 - 2024",
         "description": [
-          "In questa esperienza mi sono occupata di raccogliere i requisiti dei clienti e di fare analisi funzionale. Ho partecipato anche ai test di accettazione con gli utenti. Ho dato supporto remoto ai sistemi dei clienti usando Putty e ho disegnato interfacce grafiche per i totem e le casse con il programma Xara. Ho usato il database MySQL per fare test e risolvere problemi tecnici. Per gestire i test e scrivere la documentazione ho usato TestLink, mentre per segnalare problemi e bug ho usato Mantis Bug Tracker. Dopo un po’ di tempo, sono diventata responsabile dell’onboarding: aiutavo le nuove persone ad entrare nel team e capire il modo di lavorare dell’azienda. Slack era lo strumento che usavamo per parlare e organizzarci con il team."
+          "Mi sono occupata di raccogliere i requisiti dei clienti, di fare analisi funzionale e test di accettazione con gli utenti. Ho dato supporto remoto ai sistemi dei clienti usando Putty e ho disegnato interfacce grafiche per i totem e le casse con il programma Xara. Ho usato il database MySQL per fare test e risolvere problemi tecnici. Per gestire i test e scrivere la documentazione ho usato TestLink, mentre per segnalare problemi e bug ho usato Mantis Bug Tracker. Dopo un po’ di tempo, ho partecipato all’onboarding delle nuove persone nel team di testing."
         ]
       },
       {
@@ -71,7 +71,7 @@
         "date": "Agosto 2021- Dicembre 2021",
 
         "description": [
-          "In questa azienda ho lavorato su un’applicazione mobile per il tracciamento in tempo reale dei camion tramite tecnologie GPS e su una pagina web per un centro commerciale. Mi sono occupata dello svolgimento di diverse tipologie di test, tra cui test funzionali, di regressione, di usabilità e di responsività, utilizzando Responsively App. Per ciascun test eseguito, ho prodotto la relativa documentazione e scritto dei report sulle anomalie tramite Mantis Bug Tracker. Ho elaborato diversi report di avanzamento dei test e presentato i risultati al team di sviluppo. La comunicazione e il tracciamento delle attività avvenivano tramite Trello, con metodologia Kanban."
+          "Mi sono occupata dello svolgimento di diverse tipologie di test, tra cui test funzionali (mobile e web), di regressione, di usabilità e di responsività, utilizzando Responsively App. Per ciascun test eseguito, ho prodotto la relativa documentazione e scritto dei report sulle anomalie tramite Mantis Bug Tracker.Ho elaborato diversi report di avanzamento dei test e presentato i risultati al team di sviluppo. La comunicazione e il tracciamento delle attività avvenivano tramite Trello."
         ]
       }
     ]
