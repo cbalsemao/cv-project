@@ -42,6 +42,14 @@
     "title": "Esperienza professionale",
     "info": [
       {
+        "role": "QA Engineer",
+        "company": "Motork",
+        "date": "September 2025 - present",
+        "description": [
+          "Ho lavorato sul testing di integrazioni e flussi di dati tra sistemi interni e di terze parti, verificando il corretto trasferimento e mapping delle informazioni tramite API ed eventi. Ho utilizzato Postman per i test API e Grafana per verificare l’elaborazione degli eventi e la coerenza dei dati nel CRM automotive. Mi sono occupata anche di test funzionali ed E2E e dello sviluppo e manutenzione di test automatizzati con Playwright e TypeScript. Ho utilizzato Jira per la gestione di task e bug e collaborato con gli sviluppatori all’interno di un team internazionale."
+        ]
+      },
+      {
         "role": "Frontend Developer",
         "company": "Freelance",
         "date": "Luglio 2024 - Dicembre 2024",

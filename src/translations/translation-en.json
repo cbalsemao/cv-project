@@ -42,11 +42,23 @@
     "title": "Work Experience",
     "info": [
       {
+        "role": "QA Engineer",
+        "company": "Motork",
+        "date": "September 2025 - present",
+        "description": [
+          "- API & Integration Testing: Executed API, functional, and integration tests using Postman, validating end-to-end data flows across internal and third-party systems, including file-based integrations, adapters, and data-mapping templates.",
+          "- Event-Driven Architecture: Validated event-driven flows within a Kafka-based architecture, using Grafana to monitor message processing and data consistency across systems.",
+          "- Automotive CRM: Validated integrations and business workflows across an automotive CRM platform, covering lead management, customer and vehicle data, and commercial flows such as quotations and contracts, including end-to-end consistency across systems.",
+          "- UI & Test Automation: Performed functional and E2E testing and built and maintained automated E2E test suites using Playwright and TypeScript. Leveraged Cursor and Generative AI to accelerate test authoring and maintenance.",
+          "- Agile: Worked in a multicultural, international team, with English as the primary working language. Managed tasks and defects in Jira and collaborated with developers on troubleshooting and root-cause analysis."
+        ]
+      },
+      {
         "role": "Frontend Developer",
         "company": "Freelance",
         "date": "July 2024 - December 2024",
         "description": [
-          "In the past year, I’ve been focused on learning and building websites independently. I’ve handled the full process—from gathering requirements to design, development, and deployment. The sites I built were simple but functional, responsive, user-friendly, and designed with a mobile-first and multilingual approach. I used React with Material UI for the frontend, and GoDaddy for hosting. I worked with two clients in Spain: one for a laundry service website, and another for a restaurant. Meanwhile, I’m also deepening my skills in backend technologies like Express and MongoDB to grow into a more complete full-stack web developer."
+          "In the past year, I’ve been focused on learning and building websites independently. I’ve handled the full process—from gathering requirements to design, development, and deployment. The sites I built were simple but functional, responsive, user-friendly, and designed with a mobile-first and multilingual approach. I used React with Material UI for the frontend, and GoDaddy for hosting. I worked with two clients in Spain; one for a laundry service website, and another for a restaurant. Meanwhile, I’m also deepening my skills in backend technologies like Express and MongoDB to grow into a more complete full-stack web developer."
         ]
       },
       {

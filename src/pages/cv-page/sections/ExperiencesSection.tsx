@@ -53,9 +53,21 @@ const ExperiencesSection = () => {
             )}
             {experience.description && (
               <Box sx={{ paddingLeft: 3 }}>
-                {experience.description.map((desc, descIndex) => (
-                  <Typography key={descIndex}>{desc}</Typography>
-                ))}
+                {experience.description.map((desc, descIndex) => {
+                  const colonIndex = desc.indexOf(':');
+
+                  if (colonIndex === -1) {
+                    return <Typography key={descIndex}>{desc}</Typography>;
+                  }
+
+                  return (
+                    <Typography key={descIndex}>
+                      <strong>{desc.slice(0, colonIndex)}</strong>
+                      {':'}
+                      {desc.slice(colonIndex + 1)}
+                    </Typography>
+                  );
+                })}
               </Box>
             )}
           </div>
